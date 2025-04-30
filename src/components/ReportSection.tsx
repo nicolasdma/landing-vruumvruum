@@ -8,7 +8,7 @@ interface ReportSectionProps {
 
 const ReportSection: React.FC<ReportSectionProps> = ({ section }) => {
   const getIcon = () => {
-    const baseIconStyle = "mr-2.5 text-accent";
+    const baseIconStyle = "mr-3 text-accent shrink-0";
     switch (section.icon) {
       case 'general':
         return (
@@ -45,17 +45,17 @@ const ReportSection: React.FC<ReportSectionProps> = ({ section }) => {
   };
 
   return (
-    <div className="bg-card rounded-lg border border-border mb-8 overflow-hidden">
-      <div className="bg-primary-hover text-white px-5 py-3 font-semibold flex items-center">
+    <section className="bg-card rounded-xl border border-border mb-10 shadow-sm">
+      <header className="flex items-center gap-2 px-6 py-4 bg-primary text-white rounded-t-xl">
         {getIcon()}
-        {section.title}
-      </div>
-      <ul className="p-0 m-0 list-none">
+        <h2 className="text-base font-semibold tracking-tight">{section.title}</h2>
+      </header>
+      <ul className="divide-y divide-border">
         {section.issues.map((issue: Issue, index: number) => (
           <IssueItem key={index} issue={issue} />
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

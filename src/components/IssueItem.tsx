@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Issue } from "../data/issues";
 
 interface IssueItemProps {
@@ -6,6 +6,8 @@ interface IssueItemProps {
 }
 
 const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const getPriorityClass = () => {
     switch (issue.priority) {
       case "high":
@@ -20,28 +22,52 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
   };
 
   return (
-    <li className="p-5 border-b border-border flex flex-col last:border-b-0 bg-card text-text rounded-md">
-      <div className="flex flex-col md:flex-row mb-4">
+    <li className="p-6 bg-card text-text shadow-sm hover:shadow-md transition-shadow border-t border-border last:rounded-b-xl">
+      <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1 flex flex-col justify-between">
           <div>
-            <strong className="text-lg text-text">{issue.title}</strong>
-            <p className="mt-1 text-muted">{issue.description}</p>
+            <h3 className="text-xl font-semibold text-text leading-tight">
+              {issue.title}
+            </h3>
+            <p className="mt-2 text-muted text-sm">{issue.description}</p>
           </div>
-          <div
-            className={`${getPriorityClass()} inline-block mt-3 px-2 py-1 rounded text-sm font-medium max-w-[100px] text-center`}
+          <span
+            className={`mt-4 inline-block w-fit px-3 py-1 rounded-full text-sm font-medium ${getPriorityClass()}`}
           >
             {issue.priority.charAt(0).toUpperCase() + issue.priority.slice(1)}
-          </div>
+          </span>
         </div>
-        <div className="w-full md:w-[300px] md:h-[180px] mt-4 md:mt-0 md:ml-5 bg-background border border-dashed border-border flex items-center justify-center text-muted text-sm rounded">
+
+        <div className="w-full md:w-[280px] h-[180px] bg-muted/10 border border-dashed border-border rounded-lg flex items-center justify-center overflow-hidden">
           {issue.src ? (
-            <img
-              src={issue.src}
-              alt={issue.title}
-              className="w-full h-full object-cover rounded"
-            />
+            <>
+              <div
+                className="w-full md:w-[280px] h-[180px] bg-muted/10 border border-dashed border-border rounded-lg flex items-center justify-center overflow-hidden cursor-pointer"
+                onClick={() => setIsOpen(true)}
+              >
+                <img
+                  src={issue.src}
+                  alt={issue.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              {isOpen && (
+                <div
+                  className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <img
+                    src={issue.src}
+                    alt={issue.title}
+                    className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              )}
+            </>
           ) : (
-            <span>[No image provided]</span>
+            <span className="text-muted text-xs">[No image provided]</span>
           )}
         </div>
       </div>

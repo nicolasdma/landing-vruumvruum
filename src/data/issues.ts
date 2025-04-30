@@ -61,7 +61,7 @@ export const issuesData: Section[] = [
         src: "./logo.png",
       },
       {
-        title: "Topbar right-side items are cropped",
+        title: "Topbar right-side items are cropped on middle devices",
         description: '"My Account" + "Claim GS" are cut off.',
         priority: "high",
         src: "./cut.png",
@@ -136,7 +136,7 @@ export const issuesData: Section[] = [
       {
         title: "Season Pass buttons are misaligned on middle devices",
         description: "Buttons appear uneven or improperly spaced.",
-        priority: "medium",
+        priority: "low",
         src: "./buttons.png",
       },
       {
@@ -231,17 +231,6 @@ export const issuesData: Section[] = [
         description: 'Suggest showing "Log in" instead.',
         priority: "medium",
         src: "./out.png",
-      },
-    ],
-  },
-  {
-    title: "Bug",
-    icon: "bug",
-    issues: [
-      {
-        title: "Inventory tab becomes unclickable after logout",
-        description: "Error appears after logging out, other tabs work fine.",
-        priority: "high",
       },
     ],
   },

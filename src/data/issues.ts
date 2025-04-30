@@ -42,6 +42,12 @@ export const issuesData: Section[] = [
         priority: "high",
         src: "./errors.png",
       },
+      {
+        title: "Vulnerability in the app",
+        description: "Would be good to fix the vulnerabilities before go public.",
+        priority: "high",
+        src: "./vulnerabilities.png",
+      },
     ],
   },
   {

@@ -76,7 +76,7 @@ export const issuesData: Section[] = [
       {
         title: "White bar visible at bottom on smaller screens",
         description: "Appears at the bottom of the page.",
-        priority: "medium",
+        priority: "low",
         src: "./footer.png",
       },
       {
@@ -89,7 +89,7 @@ export const issuesData: Section[] = [
         title:
           "Horizontal scroll with a white stripe appears on medium devices",
         description: "Unexpected horizontal scrolling behavior.",
-        priority: "medium",
+        priority: "low",
         src: "./horizontal.png",
       },
     ],

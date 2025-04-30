@@ -51,6 +51,19 @@ export const issuesData: Section[] = [
     ],
   },
   {
+    title: "Responsive",
+    icon: "general",
+    issues: [
+      {
+        title: "Broken layout on small devices",
+        description:
+          "On mobile devices, the layout is broken and elements overlap.",
+        priority: "high",
+        src: "./mobile.jpeg",
+      },
+    ],
+  },
+  {
     title: "Home Page",
     icon: "home",
     issues: [

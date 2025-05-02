@@ -8,6 +8,7 @@ import Documents from "./components/Documents";
 import PendingTasksSection from "./components/PendingTasksSection";
 import { activityLog } from "./data/tasks";
 import { Tab } from "@headlessui/react";
+import Suggestions from "./components/Suggestions";
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -30,10 +31,16 @@ const App: React.FC = () => {
                 </div>
               </Tab.Panel>
               <Tab.Panel>
-              <PendingTasksSection updates={activityLog} />
+                <PendingTasksSection updates={activityLog} />
               </Tab.Panel>
               <Tab.Panel>
                 <Documents />
+              </Tab.Panel>
+              <Tab.Panel>
+              <h2 className="text-xl font-semibold text-white mb-4">
+                  Suggestions
+                </h2>
+                <Suggestions />
               </Tab.Panel>
             </Tab.Panels>
           </div>

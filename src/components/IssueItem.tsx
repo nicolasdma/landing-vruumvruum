@@ -3,9 +3,10 @@ import { Issue } from "../data/issues";
 
 interface IssueItemProps {
   issue: Issue;
+  isAllDoneOrClosed: boolean; // Prop to check if all issues are done or closed
 }
 
-const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
+const IssueItem: React.FC<IssueItemProps> = ({ issue, isAllDoneOrClosed }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const getPriorityClass = () => {
@@ -28,18 +29,27 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
       case "in progress":
         return "bg-orange-900/40 text-orange-300";
       case "done":
-        return "bg-green-900/40 text-green-300";
+        return "bg-green-900/40 text-green-300 opacity-50"; // Dimming effect for done issues
       case "on hold":
         return "bg-gray-900/40 text-gray-300";
       case "closed":
-        return "bg-red-900/40 text-red-300";
+        return "bg-red-900/40 text-red-300 opacity-50"; // Dimming effect for closed issues
       default:
         return "bg-gray-800 text-gray-400";
     }
   };
 
+  // Apply a style to disable interaction and move closed/done issues to the bottom
+  const isIssueClosed = issue.status === "done" || issue.status === "closed";
+
   return (
-    <li className="p-4 bg-[#0A0A0A] border border-neutral-800 rounded-xl">
+    <li
+      className={`p-4 bg-[#0A0A0A] border border-neutral-800 rounded-xl ${
+        !isAllDoneOrClosed && isIssueClosed
+          ? "opacity-50 pointer-events-none"
+          : ""
+      }`}
+    >
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1 flex flex-col justify-between">
           <div>

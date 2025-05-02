@@ -32,7 +32,12 @@ const PendingTasksSection: React.FC<Props> = ({ updates }) => {
             {section.updates.map((task, index) => (
               <li key={index}>
                 <div className="flex flex-col gap-2">
-                  <div className="text-white font-medium text-sm">- {task.title}</div>
+                  <div className="text-white flex gap-5 items-center font-medium text-sm">
+                    <div
+                      className={`mt-1 w-2 h-2 rounded-full bg-neutral-300 flex-shrink-0`}
+                    />
+                    {task.title}
+                  </div>
                   {/* <p className="text-sm text-neutral-400">{task.description}</p> */}
                 </div>
               </li>
@@ -50,7 +55,7 @@ function formatDate(dateString: string) {
   return date.toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   });
 }
 

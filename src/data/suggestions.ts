@@ -52,7 +52,7 @@ export const suggestions = [
         { task: "Test the navigation and responsiveness", time: "1–2 hours" },
       ],
       total: "6–9 hours",
-      cost: "$24–$36",
+      cost: "$36",
       rate: "$4/hr",
       workingDays: "1–2 working days",
     }

@@ -22,7 +22,7 @@ const App: React.FC = () => {
             <Tab.Panels>
               <Tab.Panel>
                 <h2 className="text-xl font-semibold text-white mb-4">
-                  UX/UI issues
+                  Frontend
                 </h2>
                 <div>
                   {issuesData.map((section, index) => (

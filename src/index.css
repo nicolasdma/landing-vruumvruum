@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global body styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #f3f4f6; /* light text */
-  background-color: #111827; /* dark background */
+  @apply bg-black text-neutral-200 leading-relaxed antialiased;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }

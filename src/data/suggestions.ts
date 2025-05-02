@@ -24,7 +24,7 @@ export const suggestions = [
     {
       title: "🛠 Code Refactoring for Better Maintainability",
       description: [
-        "The code is currently functional, but it has become quite messy. We have files with more than 2,000 lines, a lot of repeated code and logic, and some functions that are declared but not used anywhere. While this doesn’t affect performance or visuals right now, it could make future development and maintenance difficult as the project grows.",
+        "The code is currently functional, but it quite messy. We have files with more than 2,000 lines, a lot of repeated code and logic, functions that are declared but not used anywhere. While this doesn’t affect performance or visuals right now, it could make future development and maintenance difficult as the project grows.",
         "I suggest considering a refactoring in the near future to improve the organization of the codebase. A clean and well-structured codebase will help ensure that any developer can easily understand and maintain the project.",
         "This won't impact the functionality or performance, but it will make future work more manageable and less error-prone. We can start by addressing the most complex or messy files and gradually clean up the rest."
       ],

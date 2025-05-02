@@ -39,18 +39,12 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
   };
 
   return (
-    <li
-      className={`group mx-8 p-6 bg-[#0A0A0A] border border-neutral-800 transition-all hover:shadow-[0_0_0_2px_rgba(255,255,255,0.05)] last:mb-8 first:mt-8 first:rounded-t-xl last:rounded-b-xl last:border first:border-t
-        w-[700px]
-        `}
-    >
+    <li className="p-4 bg-[#0A0A0A] border border-neutral-800 rounded-xl">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1 flex flex-col justify-between">
           <div>
-            <h3 className="text-lg font-medium text-white group-hover:text-white/90 transition-colors">
-              {issue.title}
-            </h3>
-            <p className="mt-2 text-sm text-white">{issue.description}</p>
+            <div className="text-white font-medium">{issue.title}</div>
+            <p className="text-sm text-neutral-400">{issue.description}</p>
           </div>
           <div className="flex gap-2 mt-4 flex-wrap">
             <span
@@ -71,7 +65,7 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue }) => {
           </div>
         </div>
 
-        <div className="w-full md:w-[180px] h-[100px] bg-neutral-800 border border-neutral-700 rounded-xl overflow-hidden flex items-center justify-center">
+        <div className="w-full md:w-[160px] h-[90px] bg-neutral-800 border border-neutral-700 rounded-xl overflow-hidden flex items-center justify-center">
           {issue.src ? (
             <>
               <div

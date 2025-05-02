@@ -1,12 +1,24 @@
-const Header = () => {
+// Header.tsx
+import React from "react";
+import { Tab } from "@headlessui/react";
+
+const Header: React.FC = () => {
   return (
-    <header className="text-white py-6 mb-10 rounded-xl  shadow-sm">
-      <h1 className="text-left text-3xl font-semibold m-0">
-        Valley of Guardians
-      </h1>
-      <div className=" mt-2 text-neutral-400 text-sm">
-        UX/UI Review
-      </div>
+    <header className="text-black py-4 mb-8">
+      <h1 className="text-white text-left text-2xl font-medium mb-4">Valley of Guardians</h1>
+      <Tab.List className="flex space-x-6 border-b border-neutral-900">
+        {["Issues", "Activity", "Documents"].map((tab) => (
+          <Tab key={tab} className={({ selected }) =>
+            `px-1 pb-2 text-sm font-medium ${
+              selected
+                ? "text-white border-b-2 border-black"
+                : "text-gray-500 hover:text-white"
+            }`
+          }>
+            {tab}
+          </Tab>
+        ))}
+      </Tab.List>
     </header>
   );
 };

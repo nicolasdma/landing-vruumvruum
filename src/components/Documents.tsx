@@ -2,22 +2,26 @@ import React from "react";
 
 interface FileStatus {
   name: string;
-  progress: "not started" | "in progress" | "completed" | "review";
+  progress: "to do" | "in progress" | "done" | "review";
 }
 
 const Documents: React.FC = () => {
   const [files] = React.useState<FileStatus[]>([
-    { name: "QuestsVogSystem.xlsx", progress: "completed" },
-    { name: "InfoAndPrizesLogic.xlsx", progress: "in progress" },
+    { name: "GC and GS generation and usage VOG.xlsx", progress: "to do" },
+    { name: "classes and atributes vog.xlsx", progress: "in progress" },
+    { name: "chest info vog.xlsx", progress: "review" },
+    { name: "Season info and prizes logic.xlsx", progress: "done" },
+    { name: "quests vog system.xlsx", progress: "done" },
+    { name: "World Boss Damage Table and Info.xlsx", progress: "done" },
   ]);
 
   const getFileStatusClass = (status: FileStatus["progress"]) => {
     switch (status) {
-      case "not started":
+      case "to do":
         return "bg-neutral-800 text-neutral-400";
       case "in progress":
         return "bg-blue-900/40 text-blue-300";
-      case "completed":
+      case "done":
         return "bg-green-900/40 text-green-300";
       case "review":
         return "bg-purple-900/40 text-purple-300";
@@ -39,12 +43,12 @@ const Documents: React.FC = () => {
                 key={index}
                 className="flex items-start gap-4 p-3 hover:bg-neutral-800/30 rounded-lg transition-colors"
               >
-                <div className="mt-1 w-3 h-3 rounded-full bg-neutral-600 flex-shrink-0"></div>
+                <div className="mt-1 w-3 h-3 rounded-full bg-neutral-600 flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <p className="text-base text-neutral-300 font-medium">
                     {file.name}
                   </p>
-                  <div className="mt-2">
+                  <div className="mt-2 flex flex-wrap gap-2">
                     <span
                       className={`px-3 py-1.5 rounded-full text-sm font-medium ${getFileStatusClass(
                         file.progress

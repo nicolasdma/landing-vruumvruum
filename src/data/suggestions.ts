@@ -40,9 +40,9 @@ export const suggestions = [
       workingDays: "3 working days",
     },
     {
-      title: "🌐 Create Public User Tabs (Non-authenticated)",
+      title: "🌐 Create Public User Pages (Non-authenticated)",
       description: [
-        "Currently, the application only offers authenticated user features. To make the platform more accessible to new visitors or users without accounts, I suggest adding public tabs such as 'About', 'Contact', or 'FAQ'. These pages will provide general information about the platform without requiring authentication.",
+        "Currently, the application only offers authenticated user features. To make the platform more accessible to new visitors or users without accounts, I suggest adding public pages such as 'About', 'Contact', or 'FAQ'. These pages will provide general information about the platform without requiring authentication.",
         "The design and content for these pages should be provided in advance. With this in place, the implementation of routing and page structure will be straightforward.",
         "These public pages will enhance the user experience by providing easy access to essential information and improve user engagement."
       ],

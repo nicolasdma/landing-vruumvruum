@@ -9,27 +9,25 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
-    date: "2025-05-03",
+    date: "2025-05-04",
     updates: [
       { title: "Responsive fix for mobile devices." },
     ]
   },
   {
-    date: "2025-05-02",
+    date: "2025-05-03",
     updates: [
       { title: "Blocked routes for unauthorized users." },
       { title: "Fusion of guardians now available." },
       { title: "Inventory slots can now be purchased." },
-      { title: "Battle section complete." },
-      { title: "Shop section complete." },
-      { title: "Quest section complete." },
+      { title: "Season pass can now be purchased." },
       { title: "Email account creation template implemented." },
-      { title: "The password reset email is working with a implemented template." },
+      { title: "Password reset email now works and uses an implemented template." },
       { title: "New modal is displayed for reset password (final password update still pending)." },
     ]
   },
   {
-    date: "2025-05-01",
+    date: "2025-05-02",
     updates: [
       { title: "You can open chests and see the balance reflect that." },
       { title: "Guardians are showing up on the shofel (loading image is still broken)." },

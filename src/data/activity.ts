@@ -13,6 +13,8 @@ export const activity: DailyUpdate[] = [
     updates: [
       { title: "Responsive fix for mobile devices." },
       { title: "Now displaying Current Season Prize Pool on leaderboard." },
+      { title: "Now displaying Current Top 5 on the home tables." },
+      { title: "Now displaying Damage Ranking and Guardian Chart on leaderboard." }
     ]
   },
   {

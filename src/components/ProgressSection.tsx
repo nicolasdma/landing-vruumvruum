@@ -1,25 +1,11 @@
 import React from "react";
+import { ProgressItem } from '../App'
 
-interface ProgressItem {
-  title: string;
-  status: "done" | "pending" | "in progress";
+interface ProgressSectionProps {
+  progressItems: ProgressItem[];
 }
 
-const progressItems: ProgressItem[] = [
-  { title: "Home", status: "in progress" },
-  { title: "Battle", status: "done" },
-  { title: "Quests", status: "done" },
-  { title: "Leaderboard", status: "pending" },
-  { title: "Shop", status: "done" },
-  { title: "Buy GC", status: "pending" },
-  { title: "Claims GS", status: "done" },
-  { title: "Profile", status: "in progress" },
-  { title: "Inventory", status: "done" },
-  { title: "Invites", status: "pending" },
-  { title: "Logout", status: "done" },
-];
-
-const ProgressSection: React.FC = () => {
+const ProgressSection: React.FC<ProgressSectionProps> = ({progressItems}) => {
   const getStatusClass = (status: string) => {
     switch (status) {
       case "done":

@@ -31,13 +31,13 @@ const countIssues = (data: typeof issuesData) => {
   return { doneOrClosedCount, inProgressOrToDoCount };
 };
 
-
-interface ProgressItem {
+export interface ProgressItem {
   title: string;
   status: "done" | "pending" | "in progress";
 }
 
 const progressItems: ProgressItem[] = [
+  { title: "Auth", status: "in progress" },
   { title: "Home", status: "in progress" },
   { title: "Battle", status: "done" },
   { title: "Quests", status: "done" },
@@ -50,7 +50,6 @@ const progressItems: ProgressItem[] = [
   { title: "Invites", status: "pending" },
   { title: "Logout", status: "done" },
 ];
-
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -74,11 +73,15 @@ const App: React.FC = () => {
                 {/* Progress Bar */}
                 <div className="w-full h-2 bg-neutral-800 rounded-full mb-6 overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-green-500 to-lime-400 rounded-full transition-all duration-700 ease-out"
+                    className={`h-full rounded-full transition-all duration-700 ease-out ${
+                      percent === 100
+                        ? "bg-green-500"
+                        : "bg-gradient-to-r from-green-500 to-lime-400"
+                    }`}
                     style={{ width: `${percent}%` }}
                   ></div>
                 </div>
-                <ProgressSection />
+                <ProgressSection progressItems={progressItems} />
               </Tab.Panel>
               <Tab.Panel>
                 <div className="mb-6">

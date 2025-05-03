@@ -9,6 +9,7 @@ import PendingTasksSection from "./components/PendingTasksSection";
 import { activityLog } from "./data/tasks";
 import { Tab } from "@headlessui/react";
 import Suggestions from "./components/Suggestions";
+import ProgressSection from "./components/ProgressSection";
 
 const App: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -20,6 +21,9 @@ const App: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-6 w-full">
           <div className="w-full">
             <Tab.Panels>
+              <Tab.Panel>
+                <ProgressSection />
+              </Tab.Panel>
               <Tab.Panel>
                 <h2 className="text-xl font-semibold text-white mb-4">
                   Frontend

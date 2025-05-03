@@ -10,7 +10,7 @@ import Progress from "./pages/Progress";
 import Tasks from "./pages/Tasks";
 
 import { issuesData } from "./data/issues";
-import { activity } from "./data/tasks";
+import { activity } from "./data/activity";
 
 // Function to count done, closed, to-do, and in-progress issues
 const countIssues = (data: typeof issuesData) => {

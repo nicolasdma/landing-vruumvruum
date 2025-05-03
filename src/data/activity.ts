@@ -11,6 +11,12 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-03",
     updates: [
+      { title: "Responsive fix for mobile devices." },
+    ]
+  },
+  {
+    date: "2025-05-02",
+    updates: [
       { title: "Blocked routes for unauthorized users." },
       { title: "Fusion of guardians now available." },
       { title: "Inventory slots can now be purchased." },
@@ -23,7 +29,7 @@ export const activity: DailyUpdate[] = [
     ]
   },
   {
-    date: "2025-05-02",
+    date: "2025-05-01",
     updates: [
       { title: "You can open chests and see the balance reflect that." },
       { title: "Guardians are showing up on the shofel (loading image is still broken)." },

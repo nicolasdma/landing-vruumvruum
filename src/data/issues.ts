@@ -66,7 +66,7 @@ export const issuesData: Section[] = [
         description: "On mobile devices, the layout is broken and elements overlap.",
         priority: "high",
         src: "./mobile.jpeg",
-        status: "to do",
+        status: "done",
         fixEstimation: "2–3 hrs"
       },
     ],

@@ -42,7 +42,7 @@ const progressItems: ProgressItem[] = [
   { title: "Home", status: "done" },
   { title: "Battle", status: "done" },
   { title: "Quests", status: "done" },
-  { title: "Leaderboard", status: "in progress" },
+  { title: "Leaderboard", status: "done" },
   { title: "Shop", status: "done" },
   { title: "Buy GC", status: "pending" },
   { title: "Claims GS", status: "done" },

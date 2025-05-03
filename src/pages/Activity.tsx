@@ -2,9 +2,6 @@ import React from "react";
 
 export interface Task {
   title: string;
-  description: string;
-  type: "bug" | "task" | "idea";
-  status: "open" | "in progress" | "resolved";
 }
 
 export interface DailyUpdate {
@@ -16,7 +13,7 @@ interface Props {
   updates: DailyUpdate[];
 }
 
-const PendingTasksSection: React.FC<Props> = ({ updates }) => {
+const Activity: React.FC<Props> = ({ updates }) => {
   return (
     <>
       <h2 className="text-xl font-semibold text-white mb-4">Activity logs</h2>
@@ -38,7 +35,6 @@ const PendingTasksSection: React.FC<Props> = ({ updates }) => {
                     />
                     {task.title}
                   </div>
-                  {/* <p className="text-sm text-neutral-400">{task.description}</p> */}
                 </div>
               </li>
             ))}
@@ -59,4 +55,4 @@ function formatDate(dateString: string) {
   });
 }
 
-export default PendingTasksSection;
+export default Activity;

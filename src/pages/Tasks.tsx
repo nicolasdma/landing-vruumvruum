@@ -1,14 +1,14 @@
 import React from "react";
 import { Section } from "../data/issues";
-import IssueItem from "./IssueItem";
+import IssueItem from "../components/IssueItem";
 
-interface ReportSectionProps {
+interface TasksProps {
   section: Section;
   doneOrClosedCount: number;
   inProgressOrToDoCount: number;
 }
 
-const ReportSection: React.FC<ReportSectionProps> = ({
+const Tasks: React.FC<TasksProps> = ({
   section,
   doneOrClosedCount,
   inProgressOrToDoCount,
@@ -44,4 +44,4 @@ const ReportSection: React.FC<ReportSectionProps> = ({
   );
 };
 
-export default ReportSection;
+export default Tasks;

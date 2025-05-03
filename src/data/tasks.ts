@@ -5,57 +5,33 @@ export interface DailyUpdate {
 
 export interface Update {
   title: string;
-  description: string;
-  type: "bug" | "task" | "idea";
-  status: "open" | "in progress" | "resolved";
 }
 
-export const activityLog: DailyUpdate[] = [
+export const activity: DailyUpdate[] = [
+  {
+    date: "2025-05-03",
+    updates: [
+      { title: "Blocked routes for unauthorized users." },
+      { title: "Fusion of guardians now available." },
+      { title: "Inventory slots can now be purchased." },
+      { title: "Battle section complete." },
+      { title: "Shop section complete." },
+      { title: "Quest section complete." },
+      { title: "Email account creation template implemented." },
+      { title: "The password reset email is working with a implemented template." },
+      { title: "New modal is displayed for reset password (final password update still pending)." },
+    ]
+  },
   {
     date: "2025-05-02",
     updates: [
-      {
-        title: "You can open chests and see the balance reflect that",
-        description: "Players are now able to open chests and see the updated balance immediately.",
-        type: "task",
-        status: "resolved"
-      },
-      {
-        title: "Guardians are showing up on the shofel (loading image is still broken)",
-        description: "Guardians now appear correctly, though the loading image is still broken.",
-        type: "bug",
-        status: "in progress"
-      },
-      {
-        title: `You can see your heroes under the "Attack" section and in your inventory`,
-        description: "Players can now see their heroes both when attacking and in their inventory.",
-        type: "task",
-        status: "resolved"
-      },
-      {
-        title: "You can attack the boss, view the log, and get GS as a reward",
-        description: "Users can attack the boss, view battle logs, and receive GS as a reward.",
-        type: "task",
-        status: "resolved"
-      },
-      {
-        title: "Quests are updating, you can see the progress and claiming rewards also updates your GC balance",
-        description: "Quest progress is tracked properly, and claiming rewards updates the GC balance.",
-        type: "task",
-        status: "resolved"
-      },
-      {
-        title: "A session is active, but stats aren't being saved yet - no ranking for now",
-        description: "Sessions are functioning, but ranking and stats aren't being stored yet.",
-        type: "bug",
-        status: "open"
-      },
-      {
-        title: "Prize pool is set on the backend, but not updating from the frontend yet",
-        description: "The prize pool is correctly set on the backend, but the frontend doesn't reflect updates yet.",
-        type: "bug",
-        status: "in progress"
-      }
+      { title: "You can open chests and see the balance reflect that." },
+      { title: "Guardians are showing up on the shofel (loading image is still broken)." },
+      { title: "You can see your heroes under the 'Attack' section and in your inventory." },
+      { title: "You can attack the boss, view the log, and get GS as a reward." },
+      { title: "Quests are updating, you can see the progress and claiming rewards also updates your GC balance." },
+      { title: "A session is active, but stats aren't being saved yet - no ranking for now." },
+      { title: "Prize pool is set on the backend, but not updating from the frontend yet." }
     ]
   }
 ];

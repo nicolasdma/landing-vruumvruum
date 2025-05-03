@@ -1,11 +1,11 @@
 import React from "react";
 import { ProgressItem } from '../App'
 
-interface ProgressSectionProps {
+interface ProgressProps {
   progressItems: ProgressItem[];
 }
 
-const ProgressSection: React.FC<ProgressSectionProps> = ({progressItems}) => {
+const Progress: React.FC<ProgressProps> = ({progressItems}) => {
   const getStatusClass = (status: string) => {
     switch (status) {
       case "done":
@@ -44,4 +44,4 @@ const ProgressSection: React.FC<ProgressSectionProps> = ({progressItems}) => {
   );
 };
 
-export default ProgressSection;
+export default Progress;

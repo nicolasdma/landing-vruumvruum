@@ -1,15 +1,16 @@
 // App.tsx
 import React, { useState } from "react";
+import { Tab } from "@headlessui/react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ReportSection from "./components/ReportSection";
+import Documents from "./pages/Documents";
+import Activity from "./pages/Activity";
+import Suggestions from "./pages/Suggestions";
+import Progress from "./pages/Progress";
+import Tasks from "./pages/Tasks";
+
 import { issuesData } from "./data/issues";
-import Documents from "./components/Documents";
-import PendingTasksSection from "./components/PendingTasksSection";
-import { activityLog } from "./data/tasks";
-import { Tab } from "@headlessui/react";
-import Suggestions from "./components/Suggestions";
-import ProgressSection from "./components/ProgressSection";
+import { activity } from "./data/tasks";
 
 // Function to count done, closed, to-do, and in-progress issues
 const countIssues = (data: typeof issuesData) => {
@@ -81,7 +82,7 @@ const App: React.FC = () => {
                     style={{ width: `${percent}%` }}
                   ></div>
                 </div>
-                <ProgressSection progressItems={progressItems} />
+                <Progress progressItems={progressItems} />
               </Tab.Panel>
               <Tab.Panel>
                 <div className="mb-6">
@@ -124,7 +125,7 @@ const App: React.FC = () => {
 
                     return (
                       <div key={index}>
-                        <ReportSection
+                        <Tasks
                           key={index}
                           section={section}
                           doneOrClosedCount={doneOrClosedCount}
@@ -136,7 +137,7 @@ const App: React.FC = () => {
                 </div>
               </Tab.Panel>
               <Tab.Panel>
-                <PendingTasksSection updates={activityLog} />
+                <Activity updates={activity} />
               </Tab.Panel>
               <Tab.Panel>
                 <Documents />

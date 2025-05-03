@@ -12,6 +12,7 @@ export const activity: DailyUpdate[] = [
     date: "2025-05-04",
     updates: [
       { title: "Responsive fix for mobile devices." },
+      { title: "Now displaying Current Season Prize Pool on leaderboard." },
     ]
   },
   {
@@ -21,8 +22,8 @@ export const activity: DailyUpdate[] = [
       { title: "Fusion of guardians now available." },
       { title: "Inventory slots can now be purchased." },
       { title: "Season pass can now be purchased." },
-      { title: "Email account creation template implemented." },
-      { title: "Password reset email now works and uses an implemented template." },
+      { title: "Email account creation template implemented (issue with the button text color)." },
+      { title: "Password reset email now works and uses an implemented template (issue with the button text color)." },
       { title: "New modal is displayed for reset password (final password update still pending)." },
     ]
   },

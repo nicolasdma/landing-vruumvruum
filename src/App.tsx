@@ -39,13 +39,14 @@ export interface ProgressItem {
 
 const progressItems: ProgressItem[] = [
   { title: "Auth", status: "in progress" },
-  { title: "Home", status: "in progress" },
+  { title: "Home", status: "done" },
   { title: "Battle", status: "done" },
   { title: "Quests", status: "done" },
-  { title: "Leaderboard", status: "pending" },
+  { title: "Leaderboard", status: "in progress" },
   { title: "Shop", status: "done" },
   { title: "Buy GC", status: "pending" },
   { title: "Claims GS", status: "done" },
+  { title: "Prize Pool", status: "in progress" },
   { title: "Profile", status: "in progress" },
   { title: "Inventory", status: "done" },
   { title: "Invites", status: "pending" },

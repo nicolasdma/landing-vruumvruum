@@ -4,13 +4,17 @@ import IssueItem from "./IssueItem";
 
 interface ReportSectionProps {
   section: Section;
+  doneOrClosedCount: number;
+  inProgressOrToDoCount: number;
 }
 
-const ReportSection: React.FC<ReportSectionProps> = ({ section }) => {
+const ReportSection: React.FC<ReportSectionProps> = ({
+  section,
+  doneOrClosedCount,
+  inProgressOrToDoCount,
+}) => {
   // Check if all issues in the section are either "done" or "closed"
-  const isAllDoneOrClosed = section.issues.every(
-    (issue) => issue.status === "done" || issue.status === "closed"
-  );
+  const isAllDoneOrClosed = inProgressOrToDoCount === 0
 
   return (
     <div
@@ -18,10 +22,22 @@ const ReportSection: React.FC<ReportSectionProps> = ({ section }) => {
         isAllDoneOrClosed ? "opacity-50" : ""
       } bg-neutral-950/60`}
     >
-      <h2 className="text-xl font-semibold text-white mb-4">{section.title}</h2>
+      <div className="flex items-center gap-5 mb-4">
+        <h2 className="text-xl font-semibold text-white" >
+          {section.title}
+        </h2>
+        <h3 className="text-sm text-neutral-400">
+          {doneOrClosedCount}/{doneOrClosedCount + inProgressOrToDoCount}{" "}
+          {doneOrClosedCount === inProgressOrToDoCount ? "Done" : "Completed"}
+        </h3>
+      </div>
       <ul className="space-y-4">
         {section.issues.map((issue, index) => (
-          <IssueItem key={index} issue={issue} isAllDoneOrClosed={isAllDoneOrClosed} />
+          <IssueItem
+            key={index}
+            issue={issue}
+            isAllDoneOrClosed={doneOrClosedCount === inProgressOrToDoCount}
+          />
         ))}
       </ul>
     </div>

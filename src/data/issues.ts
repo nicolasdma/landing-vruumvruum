@@ -359,7 +359,7 @@ export const issuesData: Section[] = [
         title: "Buy buttons can be spammed repeatedly",
         description: "No protection against rapid clicks.",
         priority: "high",
-        status: "to do",
+        status: "done",
         fixEstimation: "1 hr"
       },
       {

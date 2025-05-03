@@ -33,6 +33,31 @@ const Documents: React.FC = () => {
   return (
     <div className="w-[570px]">
       <div className="sticky top-4">
+        {/* Buttons section */}
+        <div className="flex gap-4 mb-6">
+          <a href="https://github.com/jameskoulburn12/valleyofguardians" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+              GitHub
+            </button>
+          </a>
+          <a href="https://supabase.com/dashboard/project/ibbnabweekkflcdlodgf" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+              Supabase
+            </button>
+          </a>
+          <a href="https://vercel.com/valleyofguadians/valleyofguardians" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+              Vercel
+            </button>
+          </a>
+          <a href="https://valleyofguardians.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+              Website
+            </button>
+          </a>
+        </div>
+
+        {/* Files section */}
         <div className="p-6 rounded-lg border border-neutral-800 bg-neutral-950/60">
           <h3 className="text-xl font-semibold text-white mb-6">Related Files</h3>
           <div className="space-y-4">

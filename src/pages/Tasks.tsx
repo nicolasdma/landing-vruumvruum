@@ -28,7 +28,7 @@ const Tasks: React.FC<TasksProps> = ({
         </h2>
         <h3 className="text-sm text-neutral-400">
           {doneOrClosedCount}/{doneOrClosedCount + inProgressOrToDoCount}{" "}
-          {doneOrClosedCount === inProgressOrToDoCount ? "Done" : "Completed"}
+          {isAllDoneOrClosed ? "Done" : "Completed"}
         </h3>
       </div>
       <ul className="space-y-4">
@@ -36,7 +36,7 @@ const Tasks: React.FC<TasksProps> = ({
           <IssueItem
             key={index}
             issue={issue}
-            isAllDoneOrClosed={doneOrClosedCount === inProgressOrToDoCount}
+            isAllDoneOrClosed={isAllDoneOrClosed}
           />
         ))}
       </ul>

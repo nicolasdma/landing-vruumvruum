@@ -352,7 +352,7 @@ export const issuesData: Section[] = [
         description: "Visual glitch in the list after claiming.",
         priority: "low",
         src: "./claim.png",
-        status: "in progress",
+        status: "done",
         fixEstimation: "20 min"
       },
       {
@@ -367,7 +367,7 @@ export const issuesData: Section[] = [
         description: "Unnecessary scrollbars appear.",
         priority: "low",
         src: "./double.png",
-        status: "to do",
+        status: "done",
         fixEstimation: "10 min"
       },
     ],

@@ -20,13 +20,13 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-03",
     updates: [
-      { title: "Blocked routes for unauthorized users." },
-      { title: "Fusion of guardians now available." },
+      { title: "Blocked routes for unauthorized users (e.g., you can't access /shop if not logged in — you'll be redirected to the Home page)." },
+      { title: "Guardian fusion is now available." },
       { title: "Inventory slots can now be purchased." },
-      { title: "Season pass can now be purchased." },
-      { title: "Email account creation template implemented (issue with the button text color)." },
-      { title: "Password reset email now works and uses an implemented template (issue with the button text color)." },
-      { title: "New modal is displayed for reset password (final password update still pending)." },
+      { title: "Season Pass can now be purchased." },
+      { title: "Email account creation template implemented (note: issue with button text color remains)." },
+      { title: "Password reset email now works and uses the implemented template (note: issue with button text color remains)." },
+      { title: "A new modal is displayed for password reset (final password update is still pending)." },
     ]
   },
   {

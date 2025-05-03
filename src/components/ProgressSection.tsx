@@ -33,7 +33,6 @@ const ProgressSection: React.FC = () => {
 
   return (
     <div className="p-6 bg-[#0A0A0A] rounded-xl">
-      <h3 className="text-white text-xl font-semibold mb-4">Progress</h3>
       <ul className="space-y-4">
         {progressItems.map((item) => (
           <li

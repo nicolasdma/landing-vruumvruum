@@ -9,6 +9,7 @@ import Suggestions from "./pages/Suggestions";
 import Progress from "./pages/Progress";
 import Tasks from "./pages/Tasks";
 import Payments from "./pages/Payments";
+import PricingPolicy from "./pages/PricingPolicy";
 
 import { issuesData } from "./data/issues";
 import { activity } from "./data/activity";
@@ -155,6 +156,34 @@ const App: React.FC = () => {
                   Suggestions
                 </h2>
                 <Suggestions />
+              </Tab.Panel>
+              <Tab.Panel>
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  Pricing Policy
+                </h2>
+                <p className="text-sm text-neutral-400 mb-4">
+                  I like keeping things honest and flexible. The base rate is{" "}
+                  <span className="text-white font-medium">$16/hour</span>, but
+                  the final price adjusts depending on the context.
+                </p>
+                <p className="text-sm text-neutral-400 mb-4">
+                  If you're chill, flexible, or this is our first time working
+                  together – you get a discount. If it's a rush job, an
+                  emergency, or you're being difficult – expect a surcharge.
+                  This helps me prioritize fairly, protect my focus, and reward
+                  good vibes.
+                </p>
+                <div className="bg-indigo-950/60 border border-indigo-800 rounded-lg p-4 mb-6 shadow-sm">
+                  <h3 className="text-white font-semibold mb-1">
+                    🔥 One-time Offer
+                  </h3>
+                  <p className="text-sm text-indigo-200">
+                    First 3 projects get{" "}
+                    <span className="text-white font-semibold">75% OFF</span> –
+                    no strings, just a proper kickoff.
+                  </p>
+                </div>
+                <PricingPolicy />
               </Tab.Panel>
             </Tab.Panels>
           </div>

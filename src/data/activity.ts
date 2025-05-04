@@ -11,8 +11,8 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-05",
     updates: [
-      { title: "User profile updates now available — name, wallet address, avatar (pending Metamask connection and password update)." }
-
+      { title: "Optimized all images, resulting in approximately 80% performance improvement" },
+      { title: "User profile updates now supported — name, wallet address, and avatar (Metamask connection and password update still pending)" }      
     ]
   },
   {

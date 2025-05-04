@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useState } from "react";
-import { Tab } from "@headlessui/react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Documents from "./pages/Documents";
@@ -11,15 +11,14 @@ import Tasks from "./pages/Tasks";
 import Payments from "./pages/Payments";
 import PricingPolicy from "./pages/PricingPolicy";
 
+import { Tab } from "@headlessui/react";
 import { issuesData } from "./data/issues";
 import { activity } from "./data/activity";
 
-// Function to count done, closed, to-do, and in-progress issues
 const countIssues = (data: typeof issuesData) => {
   let doneOrClosedCount = 0;
   let inProgressOrToDoCount = 0;
 
-  // Loop through each section and issue to calculate the counts
   data.forEach((section) => {
     section.issues.forEach((issue) => {
       if (issue.status === "done" || issue.status === "closed") {
@@ -55,7 +54,7 @@ const progressItems: ProgressItem[] = [
   { title: "Logout", status: "done" },
 ];
 
-const App: React.FC = () => {
+const HomeTabs = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const { doneOrClosedCount, inProgressOrToDoCount } = countIssues(issuesData);
   const total = progressItems.length;
@@ -63,133 +62,133 @@ const App: React.FC = () => {
   const percent = Math.round((done / total) * 100);
 
   return (
-    <div className="container mx-12 px-5 py-4 w-full">
-      <Tab.Group selectedIndex={selectedTab} onChange={setSelectedTab}>
-        <Header />
-        <div className="flex flex-col lg:flex-row gap-6 w-full">
-          <div className="w-full">
-            <Tab.Panels>
-              <Tab.Panel>
-                <h3 className="text-white text-xl font-semibold mb-4">
-                  Overall Progress
-                </h3>
+    <Tab.Group selectedIndex={selectedTab} onChange={setSelectedTab}>
+      <Header />
+      <div className="flex flex-col lg:flex-row gap-6 w-full">
+        <div className="w-full">
+          <Tab.Panels>
+            <Tab.Panel>
+              <h3 className="text-white text-xl font-semibold mb-4">
+                Overall Progress
+              </h3>
+              <div className="w-full h-2 bg-neutral-800 rounded-full mb-6 overflow-hidden">
+                <div
+                  className={`h-full rounded-full transition-all duration-700 ease-out ${
+                    percent === 100
+                      ? "bg-green-500"
+                      : "bg-gradient-to-r from-green-500 to-lime-400"
+                  }`}
+                  style={{ width: `${percent}%` }}
+                ></div>
+              </div>
+              <Progress progressItems={progressItems} />
+            </Tab.Panel>
 
-                {/* Progress Bar */}
-                <div className="w-full h-2 bg-neutral-800 rounded-full mb-6 overflow-hidden">
+            <Tab.Panel>
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold text-white">Fronted</h2>
+                  <span className="text-sm text-neutral-400">
+                    {doneOrClosedCount}/
+                    {doneOrClosedCount + inProgressOrToDoCount} Completed
+                  </span>
+                </div>
+                <div className="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
                   <div
-                    className={`h-full rounded-full transition-all duration-700 ease-out ${
-                      percent === 100
-                        ? "bg-green-500"
-                        : "bg-gradient-to-r from-green-500 to-lime-400"
-                    }`}
-                    style={{ width: `${percent}%` }}
-                  ></div>
+                    className="h-full bg-green-500 transition-all duration-500"
+                    style={{
+                      width: `${
+                        (doneOrClosedCount /
+                          (doneOrClosedCount + inProgressOrToDoCount || 1)) *
+                        100
+                      }%`,
+                    }}
+                  />
                 </div>
-                <Progress progressItems={progressItems} />
-              </Tab.Panel>
-              <Tab.Panel>
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-xl font-semibold text-white">
-                      Fronted
-                    </h2>
-                    <span className="text-sm text-neutral-400">
-                      {doneOrClosedCount}/
-                      {doneOrClosedCount + inProgressOrToDoCount} Completed
-                    </span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
-                    <div
-                      className="h-full bg-green-500 transition-all duration-500"
-                      style={{
-                        width: `${
-                          (doneOrClosedCount /
-                            (doneOrClosedCount + inProgressOrToDoCount || 1)) *
-                          100
-                        }%`,
-                      }}
+              </div>
+              <div>
+                {issuesData.map((section, index) => {
+                  const doneOrClosedCount = section.issues.filter(
+                    (issue) =>
+                      issue.status === "done" || issue.status === "closed"
+                  ).length;
+
+                  const inProgressOrToDoCount = section.issues.filter(
+                    (issue) =>
+                      issue.status === "to do" || issue.status === "in progress"
+                  ).length;
+
+                  return (
+                    <Tasks
+                      key={index}
+                      section={section}
+                      doneOrClosedCount={doneOrClosedCount}
+                      inProgressOrToDoCount={inProgressOrToDoCount}
                     />
-                  </div>
-                </div>
-                <div>
-                  {issuesData.map((section, index) => {
-                    // Count done or closed issues
-                    const doneOrClosedCount = section.issues.filter(
-                      (issue) =>
-                        issue.status === "done" || issue.status === "closed"
-                    ).length;
+                  );
+                })}
+              </div>
+            </Tab.Panel>
 
-                    // Count issues that are still to do or in progress
-                    const inProgressOrToDoCount = section.issues.filter(
-                      (issue) =>
-                        issue.status === "to do" ||
-                        issue.status === "in progress"
-                    ).length;
-
-                    return (
-                      <div key={index}>
-                        <Tasks
-                          key={index}
-                          section={section}
-                          doneOrClosedCount={doneOrClosedCount}
-                          inProgressOrToDoCount={inProgressOrToDoCount}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
-              </Tab.Panel>
-              <Tab.Panel>
-                <Activity updates={activity} />
-              </Tab.Panel>
-              <Tab.Panel>
-                <Documents />
-              </Tab.Panel>
-              <Tab.Panel>
-                <h2 className="text-xl font-semibold text-white mb-4">
-                  Payments
-                </h2>
-                <Payments />
-              </Tab.Panel>
-              <Tab.Panel>
-                <h2 className="text-xl font-semibold text-white mb-4">
-                  Suggestions
-                </h2>
-                <Suggestions />
-              </Tab.Panel>
-              <Tab.Panel>
-                <h2 className="text-xl font-semibold text-white mb-4">
-                  Pricing Policy
-                </h2>
-                <p className="text-sm text-neutral-400 mb-4">
-                  I like keeping things honest and flexible. The base rate is{" "}
-                  <span className="text-white font-medium">$16/hour</span>, but
-                  the final price adjusts depending on the context.
-                </p>
-                <p className="text-sm text-neutral-400 mb-4">
-                  If you're chill, flexible, or this is our first time working
-                  together – you get a discount. If it's a rush job, an
-                  emergency, or you're being difficult – expect a surcharge.
-                  This helps me prioritize fairly, protect my focus, and reward
-                  good vibes.
-                </p>
-                <div className="bg-indigo-950/60 border border-indigo-800 rounded-lg p-4 mb-6 shadow-sm">
-                  <h3 className="text-white font-semibold mb-1">
-                    🔥 One-time Offer
-                  </h3>
-                  <p className="text-sm text-indigo-200">
-                    First 3 projects get{" "}
-                    <span className="text-white font-semibold">75% OFF</span> –
-                    no strings, just a proper kickoff.
-                  </p>
-                </div>
-                <PricingPolicy />
-              </Tab.Panel>
-            </Tab.Panels>
-          </div>
+            <Tab.Panel>
+              <Activity updates={activity} />
+            </Tab.Panel>
+            <Tab.Panel>
+              <Documents />
+            </Tab.Panel>
+            <Tab.Panel>
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Payments
+              </h2>
+              <Payments />
+            </Tab.Panel>
+            <Tab.Panel>
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Suggestions
+              </h2>
+              <Suggestions />
+            </Tab.Panel>
+          </Tab.Panels>
         </div>
-      </Tab.Group>
+      </div>
       <Footer />
+    </Tab.Group>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <div className="container mx-12 px-5 py-4 w-full">
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeTabs />} />
+          <Route
+            path="/pricing-policy"
+            element={
+              <>
+                <header className="text-black py-4 mb-8 flex items-center justify-between gap-4 space-x-6 border-b border-neutral-900">
+                  <div className="text-sm">
+                    <p>
+                      <a
+                        href="./"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-neutral-300 font-medium transition-colors w-10px"
+                      >
+                        Back
+                      </a>
+                    </p>
+                  </div>
+                  <h1 className="text-white text-left text-2xl font-medium">
+                    vroomvroom.studio
+                  </h1>
+                </header>
+                <PricingPolicy />
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 };

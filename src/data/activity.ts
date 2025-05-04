@@ -9,6 +9,13 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-05",
+    updates: [
+      { title: "User profile updates now available — name, wallet address, avatar (pending Metamask connection and password update)." }
+
+    ]
+  },
+  {
     date: "2025-05-04",
     updates: [
       { title: "Responsive fix for mobile devices." },
@@ -26,7 +33,7 @@ export const activity: DailyUpdate[] = [
       { title: "Season Pass can now be purchased." },
       { title: "Email account creation template implemented (note: issue with button text color remains)." },
       { title: "Password reset email now works and uses the implemented template (note: issue with button text color remains)." },
-      { title: "A new modal is displayed for password reset (final password update is still pending)." },
+      { title: "The new password reset modal now opens automatically when redirected (final password update is still pending)." },
     ]
   },
   {
@@ -40,5 +47,15 @@ export const activity: DailyUpdate[] = [
       { title: "A session is active, but stats aren't being saved yet - no ranking for now." },
       { title: "Prize pool is set on the backend, but not updating from the frontend yet." }
     ]
-  }
+  },
+  {
+    date: "2025-05-01",
+    updates: [
+      { title: "Authentication implemented — you can now log in, register, and log out." },
+      { title: "New email verification modal added." },
+      { title: "New password reset modal added." },
+      { title: "Broken image issues fixed." },
+      { title: "General UI/UX improvements." },      
+    ]
+  },
 ];

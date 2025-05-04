@@ -8,6 +8,7 @@ import Activity from "./pages/Activity";
 import Suggestions from "./pages/Suggestions";
 import Progress from "./pages/Progress";
 import Tasks from "./pages/Tasks";
+import Payments from "./pages/Payments";
 
 import { issuesData } from "./data/issues";
 import { activity } from "./data/activity";
@@ -142,6 +143,12 @@ const App: React.FC = () => {
               </Tab.Panel>
               <Tab.Panel>
                 <Documents />
+              </Tab.Panel>
+              <Tab.Panel>
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  Payments
+                </h2>
+                <Payments />
               </Tab.Panel>
               <Tab.Panel>
                 <h2 className="text-xl font-semibold text-white mb-4">

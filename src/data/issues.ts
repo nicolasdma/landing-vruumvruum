@@ -44,7 +44,7 @@ export const issuesData: Section[] = [
         description: "Could be related to current Supabase integration.",
         priority: "high",
         src: "./errors.png",
-        status: "to do",
+        status: "done",
         fixEstimation: "1.5–2 hrs"
       },
       {
@@ -306,7 +306,7 @@ export const issuesData: Section[] = [
         title: "Images take quite a long time to load",
         description: "Optimization needed for image loading performance.",
         priority: "high",
-        status: "to do",
+        status: "done",
         fixEstimation: "1.5-2 hrs"
       },
     ],

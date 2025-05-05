@@ -9,6 +9,12 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-06",
+    updates: [
+      { title: "Referral section now generates a referral code and links it to the user" }
+    ]
+  },
+  {
     date: "2025-05-05",
     updates: [
       { title: "Optimized all images, resulting in approximately 80% performance improvement" },

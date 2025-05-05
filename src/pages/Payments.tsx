@@ -29,7 +29,7 @@ const Payments: React.FC = () => {
       <h2 className="text-xl font-semibold text-white mb-4">💸 Payments Agreement</h2>
 
       <p className="text-white mb-4">
-        We can close everything (including the admin panel and post-delivery support) at <strong>$160 total</strong>,
+        We close everything (including the admin panel and post-delivery support) at <strong>$160 total</strong>,
         covering around <strong>35–50 hours</strong> of work (~40h). Supabase learning is not charged.
         Payment is split into 4 equal parts (25% each).
       </p>

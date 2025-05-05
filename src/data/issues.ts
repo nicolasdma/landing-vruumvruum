@@ -18,7 +18,7 @@ export interface Section {
     | "account"
     | "profile"
     | "inventory"
-    | "invites"
+    | "Referral"
     | "logout"
     | "bug"
     | "performance"
@@ -264,8 +264,8 @@ export const issuesData: Section[] = [
     ],
   },
   {
-    title: "Invites",
-    icon: "invites",
+    title: "Referral",
+    icon: "Referral",
     issues: [
       {
         title: "Background image position shifts between tabs",

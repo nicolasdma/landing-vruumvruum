@@ -50,7 +50,7 @@ const progressItems: ProgressItem[] = [
   { title: "Prize Pool", status: "in progress" },
   { title: "Profile", status: "in progress" },
   { title: "Inventory", status: "done" },
-  { title: "Invites", status: "pending" },
+  { title: "Referral", status: "pending" },
   { title: "Logout", status: "done" },
 ];
 

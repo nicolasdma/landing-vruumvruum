@@ -10,7 +10,6 @@ import Progress from "./pages/Progress";
 import Tasks from "./pages/Tasks";
 import Payments from "./pages/Payments";
 import PricingPolicy from "./pages/PricingPolicy";
-
 import { Tab } from "@headlessui/react";
 import { issuesData } from "./data/issues";
 import { activity } from "./data/activity";
@@ -87,7 +86,7 @@ const HomeTabs = () => {
             <Tab.Panel>
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h2 className="text-xl font-semibold text-white">Fronted</h2>
+                  <h2 className="text-xl font-semibold text-white">Frontend</h2>
                   <span className="text-sm text-neutral-400">
                     {doneOrClosedCount}/
                     {doneOrClosedCount + inProgressOrToDoCount} Completed
@@ -106,7 +105,7 @@ const HomeTabs = () => {
                   />
                 </div>
               </div>
-              <div>
+              <div className="space-y-6">
                 {issuesData.map((section, index) => {
                   const doneOrClosedCount = section.issues.filter(
                     (issue) =>
@@ -133,15 +132,18 @@ const HomeTabs = () => {
             <Tab.Panel>
               <Activity updates={activity} />
             </Tab.Panel>
+
             <Tab.Panel>
               <Documents />
             </Tab.Panel>
+
             <Tab.Panel>
               <h2 className="text-xl font-semibold text-white mb-4">
                 Payments
               </h2>
               <Payments />
             </Tab.Panel>
+
             <Tab.Panel>
               <h2 className="text-xl font-semibold text-white mb-4">
                 Suggestions
@@ -158,7 +160,7 @@ const HomeTabs = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="container mx-12 px-5 py-4 w-full">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 max-w-screen-2xl mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<HomeTabs />} />
@@ -166,17 +168,15 @@ const App: React.FC = () => {
             path="/pricing-policy"
             element={
               <>
-                <header className="text-black py-4 mb-8 flex items-center justify-between gap-4 space-x-6 border-b border-neutral-900">
+                <header className="text-black py-4 mb-8 flex items-center justify-between gap-4 border-b border-neutral-900">
                   <div className="text-sm">
-                    <p>
-                      <a
-                        href="./"
-                        rel="noopener noreferrer"
-                        className="text-white hover:text-neutral-300 font-medium transition-colors w-10px"
-                      >
-                        Back
-                      </a>
-                    </p>
+                    <a
+                      href="./"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-neutral-300 font-medium transition-colors"
+                    >
+                      Back
+                    </a>
                   </div>
                   <h1 className="text-white text-left text-2xl font-medium">
                     vroomvroom.studio

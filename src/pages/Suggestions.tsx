@@ -1,5 +1,5 @@
-import React from "react";// Importing the suggestions data
-import { suggestions } from "../data/suggestions";
+import React from "react"; // Importing React for the component
+import { suggestions } from "../data/suggestions"; // Importing the suggestions data
 
 const Suggestions: React.FC = () => {
   return (
@@ -46,7 +46,7 @@ const Suggestions: React.FC = () => {
 
           <p className="text-white mt-4 flex flex-row w-full justify-between items-center gap-2 whitespace-nowrap">
             <strong>{suggestion.workingDays} - {suggestion.rate}</strong>
-            {/* Violet badge for 70% discount */}
+            {/* Violet badge for 75% discount */}
             <span className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-white bg-violet-600 rounded-full">
               75% OFF
             </span>

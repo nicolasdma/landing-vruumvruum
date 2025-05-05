@@ -9,9 +9,21 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-07",
+    updates: [
+      { title: "Now Buy GC is enabled and updating the prize pool"},
+      { title: "Spinner now correctly displays the winner on both small and large devices" },  
+    ]
+  },
+  {
     date: "2025-05-06",
     updates: [
-      { title: "Referral section now generates a referral code and links it to the user" }
+      { title: "Referral section now generates a referral code and links it to the user" },
+      { title: "Registration modal now opens with the referral code" },
+      { title: "Referred users are now correctly linked to the owner of the referral code" },
+      { title: "My referrals are now displayed" },
+      { title: "Total commissions are now displayed" },
+      { title: "Update Total Purchases and Your Commission still pending" }
     ]
   },
   {

@@ -30,9 +30,7 @@ const Activity: React.FC<Props> = ({ updates }) => {
               <li key={index}>
                 <div className="flex flex-col gap-2">
                   <div className="text-white flex gap-5 items-center font-medium text-sm">
-                    <div
-                      className={`mt-1 w-2 h-2 rounded-full bg-neutral-300 flex-shrink-0`}
-                    />
+                    <div className="mt-1 w-2 h-2 rounded-full bg-neutral-300 flex-shrink-0" />
                     {task.title}
                   </div>
                 </div>

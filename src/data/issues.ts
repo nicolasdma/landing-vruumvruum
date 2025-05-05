@@ -80,7 +80,7 @@ export const issuesData: Section[] = [
         description: "Should stay dismissed after closing.",
         priority: "medium",
         src: "./announcement.png",
-        status: "in progress",
+        status: "done",
         fixEstimation: "1 hr"
       },
       {

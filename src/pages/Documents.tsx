@@ -96,7 +96,7 @@ const Documents: React.FC = () => {
                         {file.name}
                       </p>
                       <a
-                        href={`/excel/${file.name}`}
+                        href={`/excel/${encodeURIComponent(file.name)}`}
                         download
                         className="text-sm text-blue-400 hover:underline mt-1 block"
                       >
@@ -152,6 +152,19 @@ const Documents: React.FC = () => {
                   className="w-full h-full pointer-events-none"
                 />
               </div>
+              <noscript>
+                <p className="text-sm text-neutral-400 mt-2">
+                  Preview not available.{" "}
+                  <a
+                    href="https://docs.google.com/document/d/1SbNwBJkkFypgJFkB3JisS0_oV43khGXt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    Open in Google Docs
+                  </a>
+                </p>
+              </noscript>
             </div>
           </div>
         </div>

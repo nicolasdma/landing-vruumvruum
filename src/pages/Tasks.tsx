@@ -13,17 +13,16 @@ const Tasks: React.FC<TasksProps> = ({
   doneOrClosedCount,
   inProgressOrToDoCount,
 }) => {
-  // Check if all issues in the section are either "done" or "closed"
-  const isAllDoneOrClosed = inProgressOrToDoCount === 0
+  const isAllDoneOrClosed = inProgressOrToDoCount === 0;
 
   return (
     <div
-      className={`mt-6 border border-neutral-800 rounded-lg shadow-md p-6 ${
+      className={`mt-6 border border-neutral-800 rounded-2xl shadow-md p-4 sm:p-6 ${
         isAllDoneOrClosed ? "opacity-50" : ""
-      } bg-neutral-950/60`}
+      } bg-neutral-950/60 transition-opacity`}
     >
-      <div className="flex items-center gap-5 mb-4">
-        <h2 className="text-xl font-semibold text-white" >
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-5 mb-4">
+        <h2 className="text-lg sm:text-xl font-semibold text-white">
           {section.title}
         </h2>
         <h3 className="text-sm text-neutral-400">
@@ -31,7 +30,8 @@ const Tasks: React.FC<TasksProps> = ({
           {isAllDoneOrClosed ? "Done" : "Completed"}
         </h3>
       </div>
-      <ul className="space-y-4">
+
+      <ul className="space-y-3 sm:space-y-4">
         {section.issues.map((issue, index) => (
           <IssueItem
             key={index}

@@ -44,12 +44,12 @@ const progressItems: ProgressItem[] = [
   { title: "Quests", status: "done" },
   { title: "Leaderboard", status: "done" },
   { title: "Shop", status: "done" },
-  { title: "Buy GC", status: "pending" },
+  { title: "Buy GC", status: "done" },
   { title: "Claims GS", status: "done" },
   { title: "Prize Pool", status: "in progress" },
   { title: "Profile", status: "in progress" },
   { title: "Inventory", status: "done" },
-  { title: "Referral", status: "pending" },
+  { title: "Referral", status: "in progress" },
   { title: "Logout", status: "done" },
 ];
 

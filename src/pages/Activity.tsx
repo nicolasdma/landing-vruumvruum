@@ -1,5 +1,5 @@
 import React from "react";
-
+import { activity } from "../data/activity";
 export interface Task {
   title: string;
 }
@@ -9,24 +9,20 @@ export interface DailyUpdate {
   updates: Task[];
 }
 
-interface Props {
-  updates: DailyUpdate[];
-}
-
-const Activity: React.FC<Props> = ({ updates }) => {
+const Activity: React.FC = () => {
   return (
     <>
       <h2 className="text-xl font-semibold text-white mb-4">Activity logs</h2>
-      {updates.map((section) => (
+      {activity.map((tasks: DailyUpdate) => (
         <div
-          key={section.date}
+          key={tasks.date}
           className="mt-6 border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6"
         >
           <h3 className="text-lg font-semibold text-white mb-4">
-            {formatDate(section.date)}
+            {formatDate(tasks.date)}
           </h3>
           <ul className="space-y-4">
-            {section.updates.map((task, index) => (
+            {tasks.updates.map((task, index) => (
               <li key={index}>
                 <div className="flex flex-col gap-2">
                   <div className="text-white flex gap-5 items-center font-medium text-sm">

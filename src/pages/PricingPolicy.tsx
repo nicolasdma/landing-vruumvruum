@@ -58,6 +58,20 @@ const surcharges = [
 const PricingPolicy: React.FC = () => {
   return (
     <>
+      <header className="text-black py-4 mb-8 flex items-center justify-between gap-4 border-b border-neutral-900">
+        <div className="text-sm">
+          <a
+            href="./"
+            rel="noopener noreferrer"
+            className="text-white hover:text-neutral-300 font-medium transition-colors"
+          >
+            Back
+          </a>
+        </div>
+        <h1 className="text-white text-left text-2xl font-medium">
+          vroomvroom.studio
+        </h1>
+      </header>
       <h2 className="text-xl font-semibold text-white mb-4">Pricing Policy</h2>
       <p className="text-sm text-neutral-400 mb-4">
         I like keeping things honest and flexible. The base rate is{" "}

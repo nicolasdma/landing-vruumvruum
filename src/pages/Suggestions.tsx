@@ -4,8 +4,12 @@ import { suggestions } from "../data/suggestions"; // Importing the suggestions 
 const Suggestions: React.FC = () => {
   return (
     <>
+      <h2 className="text-xl font-semibold text-white mb-4">Suggestions</h2>
       {suggestions.map((suggestion, index) => (
-        <div key={index} className="mt-6 border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6">
+        <div
+          key={index}
+          className="mt-6 border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6"
+        >
           <h2 className="text-xl font-semibold text-white mb-4">
             {suggestion.title}
           </h2>
@@ -45,7 +49,9 @@ const Suggestions: React.FC = () => {
           </div>
 
           <p className="text-white mt-4 flex flex-row w-full justify-between items-center gap-2 whitespace-nowrap">
-            <strong>{suggestion.workingDays} - {suggestion.rate}</strong>
+            <strong>
+              {suggestion.workingDays} - {suggestion.rate}
+            </strong>
             {/* Violet badge for 75% discount */}
             <span className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-white bg-violet-600 rounded-full">
               75% OFF

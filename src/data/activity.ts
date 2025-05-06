@@ -11,9 +11,9 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-07",
     updates: [
-      { title: "Update Total Purchases and Your Commission now updating and displaying correctly" },
-      { title: "Now Buy GC is enabled and updating the prize pool"},
-      { title: "Spinner now correctly displays the winner on both small and large devices" },  
+      { title: `"Total Purchases" and "Your Commission" now update and display correctly` },
+      { title: `"Buy GC" is now enabled and updates the prize pool`},
+      { title: "Spinner correctly displays the winner on both small and large devices" },  
     ]
   },
   {

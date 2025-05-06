@@ -47,27 +47,37 @@ const Payments: React.FC = () => {
         {/* Total Summary */}
         <div className="text-white border border-neutral-800 rounded-lg p-4 bg-neutral-900/40 mb-6">
           <h3 className="text-lg font-semibold mb-2">🧾 Total Breakdown</h3>
+
           <div className="flex justify-between items-center mb-1">
             <span>Main scope</span>
-            <span>
-              ${baseTotal} → 4 payments of ${baseTotal / 4}
-            </span>
+            <span>${baseTotal}</span>
           </div>
-          <div className="flex justify-between items-center mb-1">
+
+          <div className="flex justify-between items-start mb-4">
             <div>
               <span>Extra tasks</span>
-              <ul className="list-disc list-inside text-white text-sm mb-6 space-y-1">
+              <ul className="list-disc list-inside text-white text-sm space-y-1">
                 <li>Referrals (est. 8h / $32 with discount)</li>
               </ul>
             </div>
-            <div className="flex flex-col items-end">
-              <span>${extraTotal}</span>
+            <div className="text-right">
+              <span className="text-sm">${extraTotal}</span>
             </div>
           </div>
-          <hr className="my-2 border-neutral-700" />
-          <div className="flex justify-between items-center font-semibold text-green-400">
-            <span>Total due</span>
-            <span>${grandTotal}</span>
+
+          <hr className="my-3 border-neutral-700" />
+
+          <div className="bg-green-900/20 border border-green-600 rounded-md px-4 py-3 mt-4">
+            <div className="flex justify-between items-center text-green-400 font-bold text-lg">
+              <span>Total due</span>
+              <span>${grandTotal}</span>
+            </div>
+            <p className="text-green-300 text-sm text-right mt-1 italic">
+              Or 4 payments of{" "}
+              <span className="font-semibold">
+                ${(grandTotal / 4).toFixed(2)}
+              </span>
+            </p>
           </div>
         </div>
 

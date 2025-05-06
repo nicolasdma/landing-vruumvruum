@@ -11,6 +11,7 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-07",
     updates: [
+      { title: "Password reset is now enabled from the Profile" },
       { title: `"Total Purchases" and "Your Commission" now update and display correctly` },
       { title: `"Buy GC" is now enabled and updates the prize pool`},
       { title: "Spinner correctly displays the winner on both small and large devices" },  

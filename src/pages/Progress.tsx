@@ -15,7 +15,7 @@ const progressItems: ProgressItem[] = [
   { title: "Buy GC", status: "done" },
   { title: "Claims GS", status: "done" },
   { title: "Prize Pool", status: "done" },
-  { title: "Profile", status: "in progress" },
+  { title: "Profile", status: "done" },
   { title: "Inventory", status: "done" },
   { title: "Referral", status: "done" },
   { title: "Logout", status: "done" },

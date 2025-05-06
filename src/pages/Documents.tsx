@@ -7,9 +7,9 @@ interface FileStatus {
 
 const Documents: React.FC = () => {
   const [files] = React.useState<FileStatus[]>([
-    { name: "GC and GS generation and usage VOG.xlsx", progress: "to do" },
-    { name: "classes and atributes vog.xlsx", progress: "in progress" },
-    { name: "chest info vog.xlsx", progress: "review" },
+    { name: "GC and GS generation and usage VOG.xlsx", progress: "done" },
+    { name: "classes and atributes vog.xlsx", progress: "done" },
+    { name: "chest info vog.xlsx", progress: "done" },
     { name: "Season info and prizes logic.xlsx", progress: "done" },
     { name: "quests vog system.xlsx", progress: "done" },
     { name: "World Boss Damage Table and Info.xlsx", progress: "done" },

@@ -8,13 +8,14 @@ export interface Update {
 }
 
 export const activity: DailyUpdate[] = [
-  // {
-  //   date: "2025-05-07",
-  //   updates: [
-  //     { title: "Now Buy GC is enabled and updating the prize pool"},
-  //     { title: "Spinner now correctly displays the winner on both small and large devices" },  
-  //   ]
-  // },
+  {
+    date: "2025-05-07",
+    updates: [
+      { title: "Update Total Purchases and Your Commission now updating and displaying correctly" },
+      { title: "Now Buy GC is enabled and updating the prize pool"},
+      { title: "Spinner now correctly displays the winner on both small and large devices" },  
+    ]
+  },
   {
     date: "2025-05-06",
     updates: [

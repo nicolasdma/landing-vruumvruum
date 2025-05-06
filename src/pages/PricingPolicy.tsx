@@ -75,7 +75,7 @@ const PricingPolicy: React.FC = () => {
         <p className="text-sm text-indigo-200">
           First 3 projects get{" "}
           <span className="text-white font-semibold">75% OFF</span> – no
-          strings, just a proper kickoff.
+          strings, just a proper kickoff. (2/3 In Progress)
         </p>
       </div>
       <div className="mt-10 space-y-8">

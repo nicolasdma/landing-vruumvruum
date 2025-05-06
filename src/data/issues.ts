@@ -52,7 +52,7 @@ export const issuesData: Section[] = [
         description: "Would be good to fix the vulnerabilities before go public.",
         priority: "high",
         src: "./vulnerabilities.png",
-        status: "to do",
+        status: "done",
         fixEstimation: "1–2 hrs"
       },
     ],

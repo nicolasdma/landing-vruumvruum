@@ -46,7 +46,7 @@ const progressItems: ProgressItem[] = [
   { title: "Shop", status: "done" },
   { title: "Buy GC", status: "done" },
   { title: "Claims GS", status: "done" },
-  { title: "Prize Pool", status: "in progress" },
+  { title: "Prize Pool", status: "done" },
   { title: "Profile", status: "in progress" },
   { title: "Inventory", status: "done" },
   { title: "Referral", status: "in progress" },
@@ -160,7 +160,7 @@ const HomeTabs = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 max-w-screen-2xl mx-auto">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 ">
       <Router>
         <Routes>
           <Route path="/" element={<HomeTabs />} />

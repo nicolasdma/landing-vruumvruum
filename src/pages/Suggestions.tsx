@@ -1,6 +1,39 @@
 import React from "react"; // Importing React for the component
 import { suggestions } from "../data/suggestions"; // Importing the suggestions data
 
+
+// const suggestions = [
+//   {
+//     title: "🚀 Performance, Maintainability & Public Access",
+//     description: [
+//       "This proposal bundles three high-impact improvements to the app in a single development cycle:",
+//       "",
+//       "**1. Global State & Optimistic UI Updates:** We’ll implement a global state (likely Zustand) to avoid redundant backend calls across navigation, improve perceived performance, and handle optimistic updates (like opening chests or fusing guardians).",
+//       "",
+//       "**2. Code Refactoring with React Query:** We'll gradually replace custom fetch logic and large `useEffect` blocks with `useQuery`, enabling automatic loading/error states, background refetching, and better structure.",
+//       "",
+//       "**3. Public User Pages:** We'll introduce public-facing pages like 'About', 'Contact', or 'FAQ', improving accessibility and platform transparency.",
+//       "",
+//       "Together, these initiatives will significantly enhance user experience, maintainability, and engagement.",
+//     ],
+//     timeEstimate: [
+//       { task: "Setup Zustand + global store helpers", time: "2h" },
+//       { task: "Refactor 8 pages to use Zustand state", time: "8–10h" },
+//       { task: "Add optimistic updates & error fallback", time: "4–5h" },
+//       { task: "Setup React Query + replace fetch logic", time: "4–5h" },
+//       { task: "Remove dead/duplicated code", time: "3–4h" },
+//       { task: "Refactor large files", time: "5–6h" },
+//       { task: "Create and integrate 3 public pages", time: "8h" },
+//       { task: "Routing, responsiveness & QA", time: "2–3h" },
+//     ],
+//     total: "36–45 hours",
+//     cost: "$180",
+//     rate: "$4/hr",
+//     workingDays: "6–8 working days",
+//     discountLabel: "75% OFF",
+//   },
+// ];
+
 const Suggestions: React.FC = () => {
   return (
     <>

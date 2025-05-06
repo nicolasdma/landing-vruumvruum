@@ -30,9 +30,10 @@ export const suggestions = [
   {
     title: "🛠 Code Refactoring for Better Maintainability",
     description: [
-      "The code is currently functional, but it quite messy. We have files with more than 2,000 lines, a lot of repeated code and logic, functions that are declared but not used anywhere. While this doesn’t affect performance or visuals right now, it could make future development and maintenance difficult as the project grows.",
+      "The code is currently functional, but it’s quite messy. We have files with more than 2,000 lines, a lot of repeated code and logic, and functions that are declared but not used anywhere. While this doesn’t affect performance or visuals right now, it could make future development and maintenance difficult as the project grows.",
+      "One clear improvement is replacing all standard fetch or Supabase calls wrapped in `useEffect` or async functions with `useQuery` from React Query. This will centralize data fetching, handle loading and error states automatically, and simplify logic across the app. It also introduces caching and background refetching, which improves both performance and developer experience.",
       "I suggest considering a refactoring in the near future to improve the organization of the codebase. A clean and well-structured codebase will help ensure that any developer can easily understand and maintain the project.",
-      "This won't impact the functionality or performance, but it will make future work more manageable and less error-prone. We can start by addressing the most complex or messy files and gradually clean up the rest.",
+      "This won't impact current functionality, but it will make future work more manageable, scalable, and less error-prone. We can start by addressing the most complex or messy files and gradually clean up the rest."
     ],
     timeEstimate: [
       {
@@ -43,17 +44,20 @@ export const suggestions = [
         task: "Refactor main files (structure, naming conventions, etc.)",
         time: "5–6 hours",
       },
-      { task: "Remove unused functions and dead code", time: "2–3 hours" },
       {
-        task: "Simplify complex logic and improve readability",
+        task: "Replace standard fetch logic with `useQuery` for cleaner data fetching",
         time: "4–5 hours",
       },
+      {
+        task: "Remove unused functions and dead code",
+        time: "2–3 hours",
+      },
     ],
-    total: "14–18 hours",
-    cost: "$72",
+    total: "18–22 hours",
+    cost: "$88",
     rate: "$4/hr",
-    workingDays: "3 working days",
-  },
+    workingDays: "3–4 working days",
+  },  
   {
     title: "🌐 Create Public User Pages (Non-authenticated)",
     description: [

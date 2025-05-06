@@ -59,10 +59,12 @@ const Tasks: React.FC = () => {
             (issue) =>
               issue.status === "to do" || issue.status === "in progress"
           ).length;
+
+          const sectionDone = doneOrClosedCount === section.issues.length 
           return (
             <div
               className={`mt-6 border border-neutral-800 rounded-2xl shadow-md p-4 sm:p-6 ${
-                isAllDoneOrClosed ? "opacity-50" : ""
+                sectionDone  ? "opacity-50" : ""
               } bg-neutral-950/60 transition-opacity`}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-5 mb-4">
@@ -81,7 +83,7 @@ const Tasks: React.FC = () => {
                   <IssueItem
                     key={index}
                     issue={issue}
-                    isAllDoneOrClosed={isAllDoneOrClosed}
+                    isAllDoneOrClosed={sectionDone}
                   />
                 ))}
               </ul>

@@ -69,7 +69,7 @@ const PricingPolicy: React.FC = () => {
           </a>
         </div>
         <h1 className="text-white text-left text-2xl font-medium">
-          vroomvroom.studio
+          vruumvruum.studio
         </h1>
       </header>
       <h2 className="text-xl font-semibold text-white mb-4">Pricing Policy</h2>

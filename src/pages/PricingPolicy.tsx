@@ -1,28 +1,27 @@
 // PricingPolicy.tsx
 import React from "react";
-
 const discounts = [
   {
     label: "First collaboration",
-    description: "Welcome offer to kick things off",
+    description: "A warm welcome for new clients",
     modifier: "-30%",
     color: "bg-green-600",
   },
   {
     label: "Low on jobs",
-    description: "Lucky you – I'm in need of work",
+    description: "Lucky timing – I’ve got bandwidth",
     modifier: "-40%",
     color: "bg-lime-600",
   },
   {
     label: "Whenever delivery",
-    description: "No rush, no stress, whenever works",
+    description: "No rush? You save more",
     modifier: "-60%",
     color: "bg-emerald-700",
   },
   {
     label: "Cool & respectful",
-    description: "Good vibes, good deals",
+    description: "Good vibes = good rates",
     modifier: "-10%",
     color: "bg-blue-600",
   },
@@ -31,25 +30,25 @@ const discounts = [
 const surcharges = [
   {
     label: "Need it NOW",
-    description: "Top priority, I'm dropping everything",
+    description: "Top priority – all hands on deck",
     modifier: "+20%",
     color: "bg-yellow-600",
   },
   {
     label: "Emergency mode",
-    description: "Armageddon? Servers down? Needed *yesterday*",
+    description: "Critical situation? I’m all in",
     modifier: "+30%",
     color: "bg-orange-600",
   },
   {
     label: "Difficult to work with",
-    description: "Rude, disrespectful, chaotic",
+    description: "Tension adds cost",
     modifier: "+60%",
     color: "bg-red-600",
   },
   {
     label: "Hard pass mode",
-    description: "Sorry, I don’t work with you",
+    description: "If we’re not a fit, I’ll decline",
     modifier: "🚫",
     color: "bg-neutral-700 text-red-400 border border-red-500",
   },
@@ -75,7 +74,7 @@ const PricingPolicy: React.FC = () => {
       <h2 className="text-xl font-semibold text-white mb-4">Pricing Policy</h2>
       <p className="text-sm text-neutral-400 mb-4">
         I like keeping things honest and flexible. The base rate is{" "}
-        <span className="text-white font-medium">$18/hour</span>, but the final
+        <span className="text-white font-medium">$16/hour</span>, but the final
         price adjusts depending on the context.
       </p>
       <p className="text-sm text-neutral-400 mb-4">
@@ -108,7 +107,7 @@ const PricingPolicy: React.FC = () => {
             Discounts & Surcharges
           </h2>
           <p className="text-sm text-neutral-400 mb-6">
-            Base rate: $18/hour – modifiers apply based on context.
+            Base rate: $16/hour – modifiers apply based on context.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">

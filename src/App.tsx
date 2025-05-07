@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Dashboard from "./pages/Dashboard";
 import PricingPolicy from "./pages/PricingPolicy";
+import { Analytics } from "@vercel/analytics/react"
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         </Router>
       </div>
       <Footer />
+      <Analytics />
     </div>
   );
 };

@@ -320,7 +320,7 @@ export const issuesData: Section[] = [
         description: "Currently needs refresh to update.",
         priority: "medium",
         src: "./balance.png",
-        status: "to do",
+        status: "done",
         fixEstimation: "45 min"
       },
       {
@@ -344,7 +344,7 @@ export const issuesData: Section[] = [
         description: "Maybe add a loader or indicator.",
         priority: "medium",
         src: "./feedback.png",
-        status: "to do",
+        status: "done",
         fixEstimation: "40 min"
       },
       {

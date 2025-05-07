@@ -9,6 +9,13 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-08",
+    updates: [
+      { title: "A loading spinner is now displayed when opening the box or purchase modal, providing immediate user feedback" },
+      { title: "The pool price now updates automatically after each GC purchase" },
+    ]
+  },
+  {
     date: "2025-05-07",
     updates: [
       { title: "Password reset is now enabled from the Profile" },

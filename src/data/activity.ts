@@ -12,7 +12,7 @@ export const activity: DailyUpdate[] = [
     date: "2025-05-08",
     updates: [
       { title: "A loading spinner is now displayed when opening the box or purchase modal, providing immediate user feedback" },
-      { title: "The pool price now updates automatically after each GC purchase" },
+      { title: "The pool prize now updates automatically after each GC purchase" },
     ]
   },
   {

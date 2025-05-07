@@ -41,7 +41,7 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue, isAllDoneOrClosed }) => {
 
   // Apply a style to disable interaction and move closed/done issues to the bottom
   const isIssueClosed = issue.status === "done" || issue.status === "closed";
-
+  console.log(issue.src);
   return (
     <li
       className={`p-4 bg-[#0A0A0A] border border-neutral-800 rounded-xl ${
@@ -81,9 +81,10 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue, isAllDoneOrClosed }) => {
               <div
                 className="w-full h-full cursor-zoom-in"
                 onClick={() => setIsOpen(true)}
+                key={issue.src}
               >
                 <img
-                  src={issue.src}
+                  src={`/${issue.src}`}
                   alt={issue.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -94,7 +95,7 @@ const IssueItem: React.FC<IssueItemProps> = ({ issue, isAllDoneOrClosed }) => {
                   onClick={() => setIsOpen(false)}
                 >
                   <img
-                    src={issue.src}
+                    src={`/${issue.src}`}
                     alt={issue.title}
                     className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
                     onClick={(e) => e.stopPropagation()}

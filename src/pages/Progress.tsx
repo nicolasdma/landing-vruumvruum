@@ -7,11 +7,11 @@ interface ProgressItem {
 
 const progressItems: ProgressItem[] = [
   { title: "Auth", status: "in progress" },
-  { title: "Home", status: "done" },
+  { title: "Home", status: "in progress" },
   { title: "Battle", status: "done" },
   { title: "Quests", status: "done" },
   { title: "Leaderboard", status: "done" },
-  { title: "Shop", status: "done" },
+  { title: "Shop", status: "in progress" },
   { title: "Buy GC", status: "done" },
   { title: "Claims GS", status: "done" },
   { title: "Prize Pool", status: "done" },

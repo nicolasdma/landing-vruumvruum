@@ -66,6 +66,7 @@ const Tasks: React.FC = () => {
               className={`mt-6 border border-neutral-800 rounded-2xl shadow-md p-4 sm:p-6 ${
                 sectionDone  ? "opacity-50" : ""
               } bg-neutral-950/60 transition-opacity`}
+              key={section.title}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-5 mb-4">
                 <h2 className="text-lg sm:text-xl font-semibold text-white">

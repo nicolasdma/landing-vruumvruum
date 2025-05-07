@@ -11,8 +11,11 @@ export const activity: DailyUpdate[] = [
   {
     date: "2025-05-08",
     updates: [
-      { title: "A loading spinner is now displayed when opening the box or purchase modal, providing immediate user feedback" },
-      { title: "The pool prize now updates automatically after each GC purchase" },
+      { title: "Automated prize pool updates after each GC purchase" },
+      { title: "Loading spinner added to box and purchase modals for improved user feedback" },
+      { title: "User is now redirected to the homepage after clicking the password recovery email link, ensuring token authentication" },
+      { title: "Password reset functionality now available directly from the recovery modal; users can also change passwords on the Profile page" },
+      { title: "Updated recovery email template to inform users that they will be logged in after redirect" },
     ]
   },
   {

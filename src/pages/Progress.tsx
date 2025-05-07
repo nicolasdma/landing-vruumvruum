@@ -6,7 +6,7 @@ interface ProgressItem {
 }
 
 const progressItems: ProgressItem[] = [
-  { title: "Auth", status: "in progress" },
+  { title: "Auth", status: "done" },
   { title: "Home", status: "done" },
   { title: "Battle", status: "done" },
   { title: "Quests", status: "done" },

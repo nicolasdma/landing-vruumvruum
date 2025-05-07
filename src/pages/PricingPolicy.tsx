@@ -75,7 +75,7 @@ const PricingPolicy: React.FC = () => {
       <h2 className="text-xl font-semibold text-white mb-4">Pricing Policy</h2>
       <p className="text-sm text-neutral-400 mb-4">
         I like keeping things honest and flexible. The base rate is{" "}
-        <span className="text-white font-medium">$16/hour</span>, but the final
+        <span className="text-white font-medium">$18/hour</span>, but the final
         price adjusts depending on the context.
       </p>
       <p className="text-sm text-neutral-400 mb-4">
@@ -92,13 +92,23 @@ const PricingPolicy: React.FC = () => {
           strings, just a proper kickoff. (2/3 In Progress)
         </p>
       </div>
+      <div className="bg-neutral-950/60 border border-neutral-800 rounded-lg p-4 mb-6 shadow-md">
+        <h3 className="text-white font-semibold mb-1">🤝 Referral Reward</h3>
+        <p className="text-sm text-neutral-300">
+          Send someone my way, and once they complete their first payment,
+          <span className="ml-2 text-green-400 font-semibold bg-green-900/30 px-2 py-1 rounded text-xs">
+            you get 20% off
+          </span>{" "}
+          your next project. It’s a win-win.
+        </p>
+      </div>
       <div className="mt-10 space-y-8">
         <div className="border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6">
           <h2 className="text-xl font-semibold text-white mb-4">
             Discounts & Surcharges
           </h2>
           <p className="text-sm text-neutral-400 mb-6">
-            Base rate: $16/hour – modifiers apply based on context.
+            Base rate: $18/hour – modifiers apply based on context.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -154,6 +164,25 @@ const PricingPolicy: React.FC = () => {
               </ul>
             </div>
           </div>
+        </div>
+        <div className="mt-12 text-sm text-neutral-400 border-t border-neutral-800 pt-6">
+          <h3 className="text-white font-semibold mb-2">What to Expect</h3>
+          <p className="mb-2">
+            We define the project and work through it phase by phase— each phase
+            typically ranges from{" "}
+            <span className="text-white font-medium">40–50 hours</span>,
+            depending on scope and complexity.
+          </p>
+          <p className="mb-2">
+            You'll receive regular builds, honest estimates, and no hidden
+            costs. We'll shape a workflow that suits you: async updates, Trello
+            boards, Notion docs, WhatsApp messages, or just plain
+            emails—whatever keeps things moving.
+          </p>
+          <p>
+            No hidden fees. Just structure, quality, and a rhythm that respects
+            both our time.
+          </p>
         </div>
       </div>
     </>

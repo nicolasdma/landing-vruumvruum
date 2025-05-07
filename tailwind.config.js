@@ -16,6 +16,8 @@ export default {
         error: "#ef4444",
         warning: "#f59e0b",
         success: "#10b981",
+
+        
       },
     },
   },

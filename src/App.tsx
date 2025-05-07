@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import About from "./components/About";
 import Project from "./components/Project";
 import Dashboard from "./pages/Dashboard";
 import PricingPolicy from "./pages/PricingPolicy";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/project/:projectId" element={<Project />} />
             <Route path="/pricing-policy" element={<PricingPolicy />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Router>
       </div>

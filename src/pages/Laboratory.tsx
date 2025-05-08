@@ -58,10 +58,10 @@ const Laboratory = () => {
             Welcome to the Lab 🧪
           </div>
           <p className="text-neutral-400 mt-4 text-lg max-w-2xl">
-            This is the playground — a space where we can explore ideas freely,
+            This is the playground — a space where we can explore ideas,
             test creative concepts, and bring wild experiments to life. From 3D
             visuals to shaders and interactive tools, it’s all about pushing
-            boundaries and finding new inspiration together.
+            boundaries and finding new inspiration.
           </p>
           <p className="text-neutral-500 mt-2 text-sm">
             Nothing here is final — it’s meant to spark thought, conversation,

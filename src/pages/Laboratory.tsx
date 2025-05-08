@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
 import { useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Bvh, Center } from "@react-three/drei";
@@ -18,6 +19,8 @@ function Model(props: any) {
     </group>
   );
 }
+
+
 
 // function Model1(props: any) {
 //   const { nodes } = useGLTF(
@@ -39,6 +42,10 @@ useGLTF.preload("/Infernal_Flamekeeper_0508023418_texture.glb");
 // useGLTF.preload("/Mystic_Oracle_0508015800_texture.glb");
 
 const Laboratory = () => {
+  React.useEffect(() => {
+    window.history.pushState({}, '', '/dashboard/lab');
+  }, []);
+  
   return (
     <div className="relative px-6 py-10">
       {/* Background mask effect */}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 interface FileStatus {
   name: string;
@@ -6,6 +6,11 @@ interface FileStatus {
 }
 
 const Documents: React.FC = () => {
+
+   useEffect(() => {
+      window.history.pushState({}, "", "/dashboard/documents");
+    }, []);
+
   const [files] = React.useState<FileStatus[]>([
     { name: "GC and GS generation and usage VOG.xlsx", progress: "done" },
     { name: "classes and atributes vog.xlsx", progress: "done" },

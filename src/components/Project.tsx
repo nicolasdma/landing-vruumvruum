@@ -10,22 +10,22 @@ import Payments from "../pages/Payments";
 const TAB_ITEMS = ["Progress", "Tasks", "Activity", "Payments"];
 
 interface ProjectData {
-    title: string;
-    tasks: string[];
-    status: string;
+  title: string;
+  tasks: string[];
+  status: string;
 }
 const projects: Record<string, ProjectData> = {
-    "admin-panel": {
-      title: "Admin Panel",
-      tasks: ["Connect/create Supabase DB", "Fix Frontend issues"],
-      status: "In Progress",
-    },
-    "project-1": {
-      title: "Project 1",
-      tasks: ["Connect/create Supabase DB", "Fix Frontend issues"],
-      status: "Completed",
-    },
-  };
+  "admin-panel": {
+    title: "Admin Panel",
+    tasks: ["Connect/create Supabase DB", "Fix Frontend issues"],
+    status: "In Progress",
+  },
+  "project-1": {
+    title: "Project 1",
+    tasks: ["Connect/create Supabase DB", "Fix Frontend issues"],
+    status: "Completed",
+  },
+};
 
 const Project = () => {
   const { projectId } = useParams();
@@ -36,7 +36,6 @@ const Project = () => {
     // Simulate a fetch or API call to get project data based on the `projectId`
     const fetchData = async () => {
       // Replace this with actual data fetching
-
 
       setProjectData(projects[projectId!]); // Set the data based on `projectId`
     };

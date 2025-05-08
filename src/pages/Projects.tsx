@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tab } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   const [selectedTab, setSelectedTab] = useState(0);
+
+  useEffect(() => {
+    window.history.pushState({}, "", "/dashboard/projects");
+  }, []);
 
   const projects = [
     // {

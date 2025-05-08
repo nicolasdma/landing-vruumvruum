@@ -28,8 +28,8 @@ const Header: React.FC<HeaderProps> = ({
         </h1>
       </div>
       <Tab.List className="flex space-x-6 border-b border-neutral-900">
-        {tabItems.map((tab, idx) => {
-          const isLast = idx === tabItems.length - 1;
+        {tabItems.map((tab) => {
+          const isLast = tab === "Laboratory";
           return (
             <Tab
               key={tab}
@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({
                     : "text-gray-500 hover:text-white"
                 }
                 
-                ${isLast && "text-yellow-500"}
+                ${isLast && "text-yellow-400"}
                 `
               }
             >

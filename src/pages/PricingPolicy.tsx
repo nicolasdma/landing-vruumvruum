@@ -1,19 +1,17 @@
 import React from "react";
 import { cn } from "../lib/utils";
-// import FlipWords from "../ui/FlipWords";
-import { basedIn } from "../data/about";
 
 const discounts = [
   {
     label: "First collaboration",
     description: "A warm welcome for new clients",
-    modifier: "-30%",
+    modifier: "-20%",
     color: "bg-green-600",
   },
   {
     label: "Low on jobs",
     description: "Lucky timing – I’ve got bandwidth",
-    modifier: "-40%",
+    modifier: "-30%",
     color: "bg-lime-600",
   },
   {
@@ -58,7 +56,6 @@ const surcharges = [
 ];
 
 const PricingPolicy: React.FC = () => {
-  const basedList = basedIn.sort(() => Math.random() - 0.5);
 
   return (
     <div className="relative px-6 py-10 lg:py-20">

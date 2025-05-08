@@ -3,9 +3,10 @@ import Header from "../components/Header";
 import Documents from "./Documents";
 import Suggestions from "./Suggestions";
 import Projects from "./Projects";
+import Laboratory from "./Laboratory";
 import { Tab } from "@headlessui/react";
 
-const TAB_ITEMS = ["Projects", "Documents", "Suggestions"];
+const TAB_ITEMS = ["Projects", "Documents", "Suggestions", "Laboratory"];
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -24,6 +25,9 @@ const Dashboard = () => {
             </Tab.Panel>
             <Tab.Panel>
               <Suggestions />
+            </Tab.Panel>
+            <Tab.Panel>
+              <Laboratory />
             </Tab.Panel>
           </Tab.Panels>
         </div>

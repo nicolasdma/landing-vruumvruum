@@ -249,7 +249,7 @@ export const navItems = [
     "El Salvador 🇸🇻",
     "Guatemala 🇬🇹",
     "Belize 🇧🇿",
-    "Mexico 🇲🇽n",
+    "Mexico 🇲🇽",
     "United States 🇺🇸",
     "Canada 🇨🇦",
   ];

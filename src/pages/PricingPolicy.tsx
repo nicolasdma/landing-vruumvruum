@@ -1,5 +1,8 @@
-// PricingPolicy.tsx
 import React from "react";
+import { cn } from "../lib/utils";
+// import FlipWords from "../ui/FlipWords";
+import { basedIn } from "../data/about";
+
 const discounts = [
   {
     label: "First collaboration",
@@ -55,77 +58,76 @@ const surcharges = [
 ];
 
 const PricingPolicy: React.FC = () => {
+  const basedList = basedIn.sort(() => Math.random() - 0.5);
+
   return (
-    <>
-      <header className="text-black py-4 mb-8 flex items-center justify-between gap-4 border-b border-neutral-900">
-        <div className="text-sm">
-          <a
-            href="./"
-            rel="noopener noreferrer"
-            className="text-white hover:text-neutral-300 font-medium transition-colors"
-          >
-            Back
-          </a>
+    <div className="relative px-6 py-10 lg:py-20">
+      {/* Background Mask Effect */}
+      <div className="absolute inset-0 bg-black dark:bg-black z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="relative z-10 max-w-4xl mx-auto">
+
+        {/* Header */}
+        <div className="mb-12">
+          {/* <TextGenerateEffect
+            words="How I price my work"
+            className="text-left text-4xl sm:text-5xl lg:text-6xl text-white"
+          /> */}
+             <div className={cn("font-bold", "text-left text-4xl sm:text-5xl lg:text-6xl text-white")}>
+                <div className="my-4">
+                  <div className=" dark:text-white text-black leading-tight tracking-tighter">
+                  How I price my work
+                  </div>
+                </div>
+              </div>
+          <p className="text-neutral-400 mt-4 text-md sm:text-lg">
+            Fair, flexible, transparent. Discounts for good vibes.
+            Surcharges for chaos.
+          </p>
         </div>
-        <h1 className="text-white text-left text-2xl font-medium">
-          vruumvruum.studio
-        </h1>
-      </header>
-      <h2 className="text-xl font-semibold text-white mb-4">Pricing Policy</h2>
-      <p className="text-sm text-neutral-400 mb-4">
-        I like keeping things honest and flexible. The base rate is{" "}
-        <span className="text-white font-medium">$16/hour</span>, but the final
-        price adjusts depending on the context.
-      </p>
-      <p className="text-sm text-neutral-400 mb-4">
-        If you're chill, flexible, or this is our first time working together –
-        you get a discount. If it's a rush job, an emergency, or you're being
-        difficult – expect a surcharge. This helps me prioritize fairly, protect
-        my focus, and reward good vibes.
-      </p>
-      <div className="bg-indigo-950/60 border border-indigo-800 rounded-lg p-4 mb-6 shadow-sm">
-        <h3 className="text-white font-semibold mb-1">🔥 One-time Offer</h3>
-        <p className="text-sm text-indigo-200">
-          First 3 projects get{" "}
-          <span className="text-white font-semibold">75% OFF</span> – no
-          strings, just a proper kickoff. (2/3 In Progress)
-        </p>
-      </div>
-      <div className="bg-neutral-950/60 border border-neutral-800 rounded-lg p-4 mb-6 shadow-md">
-        <h3 className="text-white font-semibold mb-1">🤝 Referral Reward</h3>
-        <p className="text-sm text-neutral-300">
-          Send someone my way, and once they complete their first payment,
-          <span className="ml-2 text-green-400 font-semibold bg-green-900/30 px-2 py-1 rounded text-xs">
-            you get 20% off
-          </span>{" "}
-          your next project. It’s a win-win.
-        </p>
-      </div>
-      <div className="mt-10 space-y-8">
-        <div className="border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6">
-          <h2 className="text-xl font-semibold text-white mb-4">
+
+        {/* One-Time Offer & Referral */}
+        <div className="grid sm:grid-cols-2 gap-6 mb-10">
+          <div className="bg-indigo-950/60 border border-indigo-800 rounded-lg p-5 shadow-md">
+            <h3 className="text-white font-semibold mb-1">🔥 One-time Offer</h3>
+            <p className="text-indigo-200 text-sm">
+              First 3 projects get{" "}
+              <span className="text-white font-bold">75% OFF</span> – just a
+              proper kickoff. (2/3 In Progress)
+            </p>
+          </div>
+          <div className="bg-neutral-950/60 border border-neutral-800 rounded-lg p-5 shadow-md">
+            <h3 className="text-white font-semibold mb-1">🤝 Referral Reward</h3>
+            <p className="text-neutral-300 text-sm">
+              Refer someone. Once they pay,{" "}
+              <span className="ml-1 text-green-400 font-semibold bg-green-900/30 px-2 py-1 rounded text-xs">
+                you get 20% off
+              </span>{" "}
+              your next project.
+            </p>
+          </div>
+        </div>
+
+        {/* Modifiers Section */}
+        <div className="bg-neutral-950/50 border border-neutral-800 rounded-xl p-6 mb-10 shadow-lg">
+          <h2 className="text-white text-2xl font-semibold mb-4">
             Discounts & Surcharges
           </h2>
           <p className="text-sm text-neutral-400 mb-6">
-            Base rate: $16/hour – modifiers apply based on context.
+            Base rate: <span className="text-white font-medium">$18/hour</span>
+            . The rest depends on how we work together.
           </p>
-
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold text-white mb-3">
-                Discounts
-              </h3>
+              <h3 className="text-lg text-white font-semibold mb-3">Discounts</h3>
               <ul className="space-y-3">
-                {discounts.map((item, index) => (
+                {discounts.map((item, i) => (
                   <li
-                    key={index}
-                    className="flex items-center justify-between border border-neutral-800 rounded-lg p-3"
+                    key={i}
+                    className="flex items-center justify-between border border-neutral-800 rounded-lg p-3 hover:scale-[1.02] transition-transform"
                   >
                     <div>
                       <p className="text-white font-medium">{item.label}</p>
-                      <p className="text-neutral-400 text-sm">
-                        {item.description}
-                      </p>
+                      <p className="text-neutral-400 text-sm">{item.description}</p>
                     </div>
                     <span
                       className={`text-white text-sm px-3 py-1 rounded-full ${item.color}`}
@@ -136,22 +138,17 @@ const PricingPolicy: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             <div>
-              <h3 className="text-lg font-semibold text-white mb-3">
-                Surcharges
-              </h3>
+              <h3 className="text-lg text-white font-semibold mb-3">Surcharges</h3>
               <ul className="space-y-3">
-                {surcharges.map((item, index) => (
+                {surcharges.map((item, i) => (
                   <li
-                    key={index}
-                    className="flex items-center justify-between border border-neutral-800 rounded-lg p-3"
+                    key={i}
+                    className="flex items-center justify-between border border-neutral-800 rounded-lg p-3 hover:scale-[1.02] transition-transform"
                   >
                     <div>
                       <p className="text-white font-medium">{item.label}</p>
-                      <p className="text-neutral-400 text-sm">
-                        {item.description}
-                      </p>
+                      <p className="text-neutral-400 text-sm">{item.description}</p>
                     </div>
                     <span
                       className={`text-white text-sm px-3 py-1 rounded-full ${item.color}`}
@@ -164,27 +161,23 @@ const PricingPolicy: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-12 text-sm text-neutral-400 border-t border-neutral-800 pt-6">
+
+        {/* Expectations */}
+        <div className="text-sm text-neutral-400 border-t border-neutral-800 pt-6">
           <h3 className="text-white font-semibold mb-2">What to Expect</h3>
           <p className="mb-2">
-            We define the project and work through it phase by phase— each phase
-            typically ranges from{" "}
-            <span className="text-white font-medium">40–50 hours</span>,
-            depending on scope and complexity.
+            Projects move in phases—usually around{" "}
+            <span className="text-white font-medium">40–50 hours</span> each.
+            You get builds, updates, and honest estimates.
           </p>
           <p className="mb-2">
-            You'll receive regular builds, honest estimates, and no hidden
-            costs. We'll shape a workflow that suits you: async updates, Trello
-            boards, Notion docs, WhatsApp messages, or just plain
-            emails—whatever keeps things moving.
+            Tools? Your call: Trello, Notion, WhatsApp, emails. We’ll find the
+            rhythm that works.
           </p>
-          <p>
-            No hidden fees. Just structure, quality, and a rhythm that respects
-            both our time.
-          </p>
+          <p>No hidden fees. Just structure, clarity, and good work.</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

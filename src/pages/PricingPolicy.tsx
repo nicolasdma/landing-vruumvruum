@@ -56,29 +56,32 @@ const surcharges = [
 ];
 
 const PricingPolicy: React.FC = () => {
-
   return (
     <div className="relative px-6 py-10 lg:py-20">
       {/* Background Mask Effect */}
       <div className="absolute inset-0 bg-black dark:bg-black z-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <div className="relative z-10 max-w-4xl mx-auto">
-
         {/* Header */}
         <div className="mb-12">
           {/* <TextGenerateEffect
             words="How I price my work"
             className="text-left text-4xl sm:text-5xl lg:text-6xl text-white"
           /> */}
-             <div className={cn("font-bold", "text-left text-4xl sm:text-5xl lg:text-6xl text-white")}>
-                <div className="my-4">
-                  <div className=" dark:text-white text-black leading-tight tracking-tighter">
-                  How I price my work
-                  </div>
-                </div>
+          <div
+            className={cn(
+              "font-bold",
+              "text-left text-4xl sm:text-5xl lg:text-6xl text-white"
+            )}
+          >
+            <div className="my-4">
+              <div className=" dark:text-white text-black leading-tight tracking-tighter">
+                How I price my work
               </div>
+            </div>
+          </div>
           <p className="text-neutral-400 mt-4 text-md sm:text-lg">
-            Fair, flexible, transparent. Discounts for good vibes.
-            Surcharges for chaos.
+            Fair, flexible, transparent. Discounts for good vibes. Surcharges
+            for chaos.
           </p>
         </div>
 
@@ -93,7 +96,9 @@ const PricingPolicy: React.FC = () => {
             </p>
           </div>
           <div className="bg-neutral-950/60 border border-neutral-800 rounded-lg p-5 shadow-md">
-            <h3 className="text-white font-semibold mb-1">🤝 Referral Reward</h3>
+            <h3 className="text-white font-semibold mb-1">
+              🤝 Referral Reward
+            </h3>
             <p className="text-neutral-300 text-sm">
               Refer someone. Once they pay,{" "}
               <span className="ml-1 text-green-400 font-semibold bg-green-900/30 px-2 py-1 rounded text-xs">
@@ -110,12 +115,14 @@ const PricingPolicy: React.FC = () => {
             Discounts & Surcharges
           </h2>
           <p className="text-sm text-neutral-400 mb-6">
-            Base rate: <span className="text-white font-medium">$18/hour</span>
-            . The rest depends on how we work together.
+            Base rate: <span className="text-white font-medium">$18/hour</span>.
+            The rest depends on how we work together.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg text-white font-semibold mb-3">Discounts</h3>
+              <h3 className="text-lg text-white font-semibold mb-3">
+                Discounts
+              </h3>
               <ul className="space-y-3">
                 {discounts.map((item, i) => (
                   <li
@@ -124,7 +131,9 @@ const PricingPolicy: React.FC = () => {
                   >
                     <div>
                       <p className="text-white font-medium">{item.label}</p>
-                      <p className="text-neutral-400 text-sm">{item.description}</p>
+                      <p className="text-neutral-400 text-sm">
+                        {item.description}
+                      </p>
                     </div>
                     <span
                       className={`text-white text-sm px-3 py-1 rounded-full ${item.color}`}
@@ -136,7 +145,9 @@ const PricingPolicy: React.FC = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg text-white font-semibold mb-3">Surcharges</h3>
+              <h3 className="text-lg text-white font-semibold mb-3">
+                Surcharges
+              </h3>
               <ul className="space-y-3">
                 {surcharges.map((item, i) => (
                   <li
@@ -145,7 +156,9 @@ const PricingPolicy: React.FC = () => {
                   >
                     <div>
                       <p className="text-white font-medium">{item.label}</p>
-                      <p className="text-neutral-400 text-sm">{item.description}</p>
+                      <p className="text-neutral-400 text-sm">
+                        {item.description}
+                      </p>
                     </div>
                     <span
                       className={`text-white text-sm px-3 py-1 rounded-full ${item.color}`}
@@ -170,6 +183,11 @@ const PricingPolicy: React.FC = () => {
           <p className="mb-2">
             Tools? Your call: Trello, Notion, WhatsApp, emails. We’ll find the
             rhythm that works.
+          </p>
+          <p className="mb-2">
+            In addition to regular communication, you’ll also get access to an
+            internal tool that shows task progress and activity logs—so you can
+            check in on the current status anytime.
           </p>
           <p>No hidden fees. Just structure, clarity, and good work.</p>
         </div>

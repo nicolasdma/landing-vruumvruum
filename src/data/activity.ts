@@ -12,7 +12,6 @@ export const activity: DailyUpdate[] = [
     date: "2025-05-10",
     updates: [
       { title: "Manage User tab fully enabled with detailed views and actions" },
-      { title: "Admin Panel now visible in the dropdown for admin users" },
       { title: "Non-admin users are now redirected to the Home page" },
       { title: "User search by email is now available" },
       { title: "Basic Info section includes ID, Wallet, Referral Code, and Referred By" },
@@ -22,6 +21,13 @@ export const activity: DailyUpdate[] = [
       { title: "Quest Progress is now displayed per user" },
       { title: "Inventory view shows slot count and active pass" },
       { title: "Timestamps are now displayed" },
+    ]
+  },
+  {
+    date: "2025-05-09",
+    updates: [
+      { title: "Basic admin panel permissions set up" },
+      { title: "Admin panel now accessible from the dropdown menu" },
     ]
   },
   {

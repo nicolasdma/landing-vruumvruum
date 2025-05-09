@@ -9,6 +9,22 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-09",
+    updates: [
+      { title: "Manage User tab fully enabled with detailed views and actions" },
+      { title: "Admin Panel now visible in the dropdown for admin users" },
+      { title: "Non-admin users are now redirected to the Home page" },
+      { title: "User search by email is now available" },
+      { title: "Basic Info section includes ID, Wallet, Referral Code, and Referred By" },
+      { title: "User overview shows full name, email, and join date" },
+      { title: "Account Actions: Freeze and Ban options are now enabled" },
+      { title: "Currency & Stats section now allows adding GC" },
+      { title: "Timestamps are now displayed" },
+      { title: "Inventory view shows slot count and active pass" },
+      { title: "Quest Progress is now displayed per user" },
+    ]
+  },
+  {
     date: "2025-05-08",
     updates: [
       { title: "Automated prize pool updates after each GC purchase" },

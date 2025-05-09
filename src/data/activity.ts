@@ -9,7 +9,7 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
-    date: "2025-05-09",
+    date: "2025-05-10",
     updates: [
       { title: "Manage User tab fully enabled with detailed views and actions" },
       { title: "Admin Panel now visible in the dropdown for admin users" },

@@ -19,9 +19,9 @@ export const activity: DailyUpdate[] = [
       { title: "User overview shows full name, email, and join date" },
       { title: "Account Actions: Freeze and Ban options are now enabled" },
       { title: "Currency & Stats section now allows adding GC" },
-      { title: "Timestamps are now displayed" },
-      { title: "Inventory view shows slot count and active pass" },
       { title: "Quest Progress is now displayed per user" },
+      { title: "Inventory view shows slot count and active pass" },
+      { title: "Timestamps are now displayed" },
     ]
   },
   {

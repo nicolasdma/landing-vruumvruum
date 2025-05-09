@@ -79,7 +79,7 @@ const Laboratory = () => {
                   dampingFactor={0.2}
                   autoRotate={true}
                   enableZoom={false}
-                  autoRotateSpeed={0.25}
+                  autoRotateSpeed={1}
                   minDistance={1}
                   maxDistance={3}
                 />

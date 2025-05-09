@@ -3,8 +3,8 @@ import React from "react";
 const payments = [
   {
     task: "Delivery #1 – Core features (excl. admin panel)",
-    delivered: false,
-    paid: false,
+    delivered: true,
+    paid: true,
   },
   {
     task: "Delivery #2 – Admin panel",

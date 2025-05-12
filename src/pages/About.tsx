@@ -4,6 +4,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import FlipWords from "../ui/FlipWords";
 import { basedIn } from "../data/about";
 import Lab from "./Lab";
+import Capabilities from "./Capabilities";
 const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);
   return (
@@ -41,6 +42,7 @@ const Hero = () => {
         </div>
       </div>
       <Lab />
+      <Capabilities />
     </>
   );
 };

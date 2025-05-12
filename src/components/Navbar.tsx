@@ -7,15 +7,15 @@ const Navbar = () => {
       <div className="text-white font-extrabold">vruumvruum.</div>
 
       {/* Center: Navigation Links */}
-      <div className="flex gap-8 text-neutral-400">
+      <div className="gap-8 text-neutral-400 hidden sm:flex">
         <a href="#" className="hover:text-white transition-colors duration-200">
           Home
         </a>
         <a href="#" className="hover:text-white transition-colors duration-200">
-          About
+          Lab
         </a>
         <a href="#" className="hover:text-white transition-colors duration-200">
-          Lab
+          About
         </a>
       </div>
 

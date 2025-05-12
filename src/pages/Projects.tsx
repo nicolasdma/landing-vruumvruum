@@ -11,12 +11,12 @@ const Projects = () => {
   }, []);
 
   const projects = [
-    // {
-    //   title: "Admin Panel",
-    //   tasks: ["Connect/create Supabase DB", "Fix Frontend issues"],
-    //   status: "In Progress",
-    //   url: "admin-panel",
-    // },
+    {
+      title: "Admin Panel",
+      tasks: ["Full admin panel"],
+      status: "To do",
+      url: "admin-panel",
+    },
     {
       title: "Project 1",
       tasks: ["Supabase", "Frontend", "Admin Panel"],

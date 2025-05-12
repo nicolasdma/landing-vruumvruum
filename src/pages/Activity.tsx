@@ -1,5 +1,4 @@
 import React from "react";
-import { activity } from "../data/activity";
 export interface Task {
   title: string;
 }
@@ -9,11 +8,15 @@ export interface DailyUpdate {
   updates: Task[];
 }
 
-const Activity: React.FC = () => {
+interface ActivityProps {
+  activityData: DailyUpdate[];
+}
+
+const Activity: React.FC<ActivityProps> = ({ activityData }) => {
   return (
     <>
       <h2 className="text-xl font-semibold text-white mb-4">Activity logs</h2>
-      {activity.map((tasks: DailyUpdate) => (
+      {activityData.map((tasks: DailyUpdate) => (
         <div
           key={tasks.date}
           className="mt-6 border border-neutral-800 rounded-lg bg-neutral-950/60 shadow-md p-6"

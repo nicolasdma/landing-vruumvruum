@@ -1,13 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Section } from "../data/issues";
 import IssueItem from "../components/IssueItem";
-import { issuesData } from "../data/issues";
 
-const countIssues = (data: typeof issuesData) => {
+const countIssues = (data: any) => {
   let doneOrClosedCount = 0;
   let inProgressOrToDoCount = 0;
 
-  data.forEach((section) => {
+  data.forEach((section: Section) => {
     section.issues.forEach((issue) => {
       if (issue.status === "done" || issue.status === "closed") {
         doneOrClosedCount++;
@@ -21,8 +21,12 @@ const countIssues = (data: typeof issuesData) => {
   return { doneOrClosedCount, inProgressOrToDoCount };
 };
 
-const Tasks: React.FC = () => {
-  const { doneOrClosedCount, inProgressOrToDoCount } = countIssues(issuesData);
+interface TasksProps {
+  tasksItems: Section[];
+}
+
+const Tasks: React.FC<TasksProps> = ({tasksItems}) => {
+  const { doneOrClosedCount, inProgressOrToDoCount } = countIssues(tasksItems);
   const isAllDoneOrClosed = inProgressOrToDoCount === 0;
 
   return (
@@ -50,7 +54,7 @@ const Tasks: React.FC = () => {
       </div>
 
       <div className="space-y-6">
-        {issuesData.map((section: Section) => {
+        {tasksItems.map((section: Section) => {
           const doneOrClosedCount = section.issues.filter(
             (issue) => issue.status === "done" || issue.status === "closed"
           ).length;

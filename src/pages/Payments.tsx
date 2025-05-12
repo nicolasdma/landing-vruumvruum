@@ -1,29 +1,11 @@
 import React from "react";
+import { PaymentsItem } from "../components/Project";
 
-const payments = [
-  {
-    task: "Delivery #1 – Core features (excl. admin panel)",
-    delivered: true,
-    paid: true,
-  },
-  {
-    task: "Delivery #2 – Admin panel",
-    delivered: false,
-    paid: false,
-  },
-  {
-    task: "Delivery #3 – Testing & tweaks (1 week)",
-    delivered: false,
-    paid: false,
-  },
-  {
-    task: "Delivery #4 – Support (3 extra weeks)",
-    delivered: false,
-    paid: false,
-  },
-];
+interface PaymentsProps {
+  payments: PaymentsItem[];
+}
 
-const Payments: React.FC = () => {
+const Payments: React.FC<PaymentsProps> = ({ payments }) => {
   const baseTotal = 160;
   const extraTotal = 32;
   const grandTotal = baseTotal + extraTotal;

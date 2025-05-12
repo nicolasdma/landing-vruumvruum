@@ -9,6 +9,17 @@ export interface Update {
 
 export const activity: DailyUpdate[] = [
   {
+    date: "2025-05-13",
+    updates: [
+      { title: "Enabled user list view with selectable users and detailed display" },
+      { title: "Added ability to create a new season with default start/end logic" },
+      { title: "Applied minimal styling using reused components like Tabs, Cards, and List items" },
+      { title: "Outlined MVP scope and requested alignment on specific data and task requirements" },
+      { title: "Enabled basic Vercel Analytics to track visitor data and insights" },
+      { title: "Attempted quest management integration; noted current frontend-only implementation and backend work needed" },
+    ]
+  },
+  {
     date: "2025-05-10",
     updates: [
       { title: "Manage User tab fully enabled with detailed views and actions" },

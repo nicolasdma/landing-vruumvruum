@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Capabilities = () => {
     return (
       <section className="relative w-full bg-black text-white px-6 md:px-16 py-32">

@@ -5,7 +5,7 @@ const EXPERIMENTS = [
   {
     title: "Wormhole Tunnel",
     description: "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
-    videoSrc: "/lab/wormhole.mov",
+    videoSrc: "/lab/wormhole.mp4",
     thumbnailSrc: "/lab/wormhole.webp",
     url: "https://lab-threejs-wormhole.vercel.app/",
   },

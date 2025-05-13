@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
       <Lab />
       <Capabilities />
-      <div className="h-screen w-full flex justify-center items-center">
+      {/* <div className="h-screen w-full flex justify-center items-center"> */}
         {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Model />
         </Canvas> */}
@@ -74,7 +74,7 @@ const Hero = () => {
             </Center>
           </Bvh>
         </Canvas> */}
-      </div>
+      {/* </div> */}
     </>
   );
 };

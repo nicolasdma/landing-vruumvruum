@@ -27,7 +27,7 @@ const CapabilityGroup = ({
 
 const Capabilities = () => {
   return (
-    <section className="relative w-full bg-black text-white px-6 md:px-16 pt-32">
+    <section className="relative w-full bg-black text-white px-6 md:px-16 py-32">
       <div className="max-w-6xl mx-auto space-y-24">
         {/* Intro */}
         {/* <div className="space-y-6 max-w-3xl">

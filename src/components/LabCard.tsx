@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
+
 interface LabCardProps {
   title: string;
   description: string;
@@ -40,10 +41,10 @@ const LabCard: React.FC<LabCardProps> = ({
   };
 
   return (
-    <a className="grid grid-cols-1 md:grid-cols-2 gap-12" href={url} target="_blank" rel="noopener noreferrer">
+    <a className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-black " href={url} target="_blank" rel="noopener noreferrer">
       {/* Video Preview Card with image preload */}
       <div
-        className="relative w-full aspect-video rounded-2xl overflow-hidden border border-neutral-800 shadow-lg cursor-pointer"
+        className="sticky top-0 w-full aspect-video rounded-2xl overflow-hidden border border-neutral-800 shadow-lg cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

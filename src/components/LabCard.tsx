@@ -58,7 +58,7 @@ const LabCard: React.FC<LabCardProps> = ({
         {/* Video element (always in DOM but hidden until loaded) */}
         <video
           ref={videoRef}
-          className={`w-full h-full object-cover absolute top-0 left-0 transition-opacity duration-300 ${(isHovered && isVideoLoaded) ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-full h-full object-cover absolute top-0 rounded-2xl left-0 transition-opacity duration-300 ${(isHovered && isVideoLoaded) ? 'opacity-100' : 'opacity-0'}`}
           src={videoSrc}
           autoPlay
           loop

@@ -52,7 +52,7 @@ const Lab = () => {
         </div>
         <div className="relative">
           {EXPERIMENTS.map((experiment, index) => (
-            <div key={index} className="sticky top-9 py-10">
+            <div key={index} className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-9 p-10">
               <LabCard
                 title={experiment.title}
                 description={experiment.description}

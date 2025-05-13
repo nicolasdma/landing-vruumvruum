@@ -44,7 +44,7 @@ const LabCard: React.FC<LabCardProps> = ({
     <a className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-black " href={url} target="_blank" rel="noopener noreferrer">
       {/* Video Preview Card with image preload */}
       <div
-        className="sticky top-0 w-full aspect-video rounded-2xl overflow-hidden border border-neutral-800 shadow-lg cursor-pointer"
+        className="w-full aspect-video rounded-2xl overflow-hidden border border-neutral-800 shadow-lg cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

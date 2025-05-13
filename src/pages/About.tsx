@@ -5,9 +5,9 @@ import FlipWords from "../ui/FlipWords";
 import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
-import { Canvas } from "@react-three/fiber";
-import { Model } from "./Model";
-import { Bvh, Center, OrbitControls } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Model } from "./Model";
+// import { Bvh, Center, OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);
@@ -52,7 +52,7 @@ const Hero = () => {
           <Model />
         </Canvas> */}
 
-        <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+        {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Bvh>
             <Center>
               <OrbitControls
@@ -73,7 +73,7 @@ const Hero = () => {
               />
             </Center>
           </Bvh>
-        </Canvas>
+        </Canvas> */}
       </div>
     </>
   );

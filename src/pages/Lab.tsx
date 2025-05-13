@@ -34,6 +34,14 @@ const EXPERIMENTS = [
     thumbnailSrc: "/lab/apple.webp",
     url: "https://studio-building.vercel.app/",
   },
+  {
+    title: "Just a moto",
+    description:
+      "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
+    videoSrc: "/lab/studio.mp4",
+    thumbnailSrc: "/lab/moto.webp",
+    url: "https://moto-model.vercel.app/",
+  },
 ];
 
 const Lab = () => {

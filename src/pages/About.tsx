@@ -5,6 +5,10 @@ import FlipWords from "../ui/FlipWords";
 import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
+import { Canvas } from "@react-three/fiber";
+import { Model } from "./Model";
+import { Bvh, Center, OrbitControls } from "@react-three/drei";
+
 const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);
   return (
@@ -43,6 +47,34 @@ const Hero = () => {
       </div>
       <Lab />
       <Capabilities />
+      <div className="h-screen w-full flex justify-center items-center">
+        {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+          <Model />
+        </Canvas> */}
+
+        <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+          <Bvh>
+            <Center>
+              <OrbitControls
+                enableDamping={true}
+                dampingFactor={0.2}
+                autoRotate={true}
+                enableZoom={false}
+                autoRotateSpeed={.1}
+                // minDistance={1}
+                // maxDistance={3}
+              />
+              <ambientLight intensity={3} />
+              <directionalLight position={[10, 10, 5]} intensity={1} />
+              <Model
+                position={[-1.2, -1.2, 0]}
+                rotation={[0, 0, 0]}
+                scale={.75}
+              />
+            </Center>
+          </Bvh>
+        </Canvas>
+      </div>
     </>
   );
 };

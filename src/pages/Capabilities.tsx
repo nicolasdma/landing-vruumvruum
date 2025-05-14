@@ -25,24 +25,57 @@ const CapabilityGroup = ({
   </div>
 );
 
+// const ExperienceSection = () => (
+//   <div className="pt-32 border-t border-neutral-800 space-y-12">
+//     <h3 className="text-2xl md:text-4xl font-semibold">
+//       Trusted by forward-thinking teams
+//     </h3>
+//     <p className="text-lg text-neutral-400 max-w-2xl">
+//       I’ve worked with teams who gave me the confidence to design, teach, and
+//       build products that ship — from teaching JavaScript to shipping for global
+//       platforms.
+//     </p>
+//     <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
+//       <div className="h-10 flex items-center justify-center">
+//         <img src="/experience/lemondata.png" alt="Lemondata" width="160px" className="h-full object-contain" />
+//       </div>
+//       <div className="h-10 flex items-center justify-center">
+//         <img src="/experience/coderhouse.png" alt="Coderhouse"  width="160px" className="h-full object-contain" />
+//       </div>
+//       <div className="h-10 flex items-center justify-center">
+//         <img src="/experience/nanoapps.png" alt="NanoApps"  width="160px"  className="h-full object-contain" />
+//       </div>
+//       <div className="h-10 flex items-center justify-center">
+//         <img src="/experience/powtoon.png" alt="Powtoon" className="h-full object-contain" />
+//       </div>
+//     </div>
+//   </div>
+// );
+
+// const FreelanceSection = () => (
+//   <div className="pt-32 border-t border-neutral-800 space-y-12">
+//     <h3 className="text-2xl md:text-4xl font-semibold">
+//       Independent Projects
+//     </h3>
+//     <p className="text-lg text-neutral-400 max-w-2xl">
+//       As a solo operator, I’ve partnered with early-stage startups, artists,
+//       and global clients to ship high-end web experiences — fully remote, fully
+//       async, always on the move.
+//     </p>
+//     <ul className="grid md:grid-cols-2 gap-4 text-neutral-300 text-base list-disc pl-6">
+//       <li>Custom portfolio sites for artists and photographers</li>
+//       <li>Product landing pages built for conversion</li>
+//       <li>Brand design systems from scratch</li>
+//       <li>Design-to-code handoffs and rapid MVPs</li>
+//     </ul>
+//   </div>
+// );
+
+
 const Capabilities = () => {
   return (
-    <section className="relative w-full bg-black text-white px-6 md:px-16 py-32">
+    <section className="relative w-full bg-black text-white md:px-16 py-32">
       <div className="max-w-6xl mx-auto space-y-24">
-        {/* Intro */}
-        {/* <div className="space-y-6 max-w-3xl">
-          <p className="text-sm uppercase tracking-widest text-neutral-400">
-            vruumvruum.capabilities
-          </p>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Built in motion. Made to move.
-          </h2>
-          <p className="text-lg text-neutral-400">
-            We’re not a traditional studio. We’re a moving one — literally. vruumvruum was born on the road, shaped by the unpredictable, and obsessed with what’s next. <br />
-            We design and build sharp digital experiences for teams who want to stand out — not blend in.
-          </p>
-        </div> */}
-
         <div className="space-y-6 max-w-3xl">
           <p className="text-sm uppercase tracking-widest text-neutral-400">
             vruumvruum.capabilities
@@ -60,7 +93,6 @@ const Capabilities = () => {
           </p>
         </div>
 
-        {/* Capabilities List */}
         <div className="grid md:grid-cols-2 gap-16">
           <CapabilityGroup
             title="Web Experiences"
@@ -88,6 +120,9 @@ const Capabilities = () => {
             items={["Campaign Assets", "Growth Design", "Sales Tools"]}
           />
         </div>
+
+        {/* <ExperienceSection />
+        <FreelanceSection /> */}
       </div>
     </section>
   );

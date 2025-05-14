@@ -5,6 +5,7 @@ import FlipWords from "../ui/FlipWords";
 import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
+// import Experience from "./Expirience";
 // import { Canvas } from "@react-three/fiber";
 // import { Model } from "./Model";
 // import { Bvh, Center, OrbitControls } from "@react-three/drei";
@@ -45,14 +46,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* <Experience /> */}
       <Lab />
       <Capabilities />
       {/* <div className="h-screen w-full flex justify-center items-center"> */}
-        {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+      {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Model />
         </Canvas> */}
 
-        {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+      {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Bvh>
             <Center>
               <OrbitControls
@@ -75,6 +77,11 @@ const Hero = () => {
           </Bvh>
         </Canvas> */}
       {/* </div> */}
+      <div className="relative z-10 flex flex-col justify-between bg-brand-k pb-4 lg:h-[calc(100dvh)]">
+        <h1 className="text-[16vw] font-extrabold border-b border-neutral-600 tracking-tighter uppercase leading-none text-[#C4C4C4]">
+          VRMVRM.25
+        </h1>
+      </div>
     </>
   );
 };

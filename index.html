@@ -10,4 +10,46 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+  <script>
+    const WORLD_LENGTH = 20;
+    const CHAR = '🛵';
+    const SCENE = '________vruumvruum_____studio________';
+    const EMPTY = ' ';
+    const GROUND = '|_';
+    
+    let gameInterval;
+    let world = Array(WORLD_LENGTH).fill(GROUND).join('');
+    
+    function updateTitle() {
+      let track = world.split('');
+      track[0] = EMPTY;
+      track[5] = CHAR;
+      
+      document.title = `${track.join('')}`;
+    }
+    
+    function generateScene() {
+      world = world.slice(1);
+      const lastScenePos = world.lastIndexOf(SCENE);
+      if (lastScenePos === -1 || (WORLD_LENGTH - lastScenePos > 4 && Math.random() < 0.1)) {
+        world += SCENE;
+      } else {
+        world += GROUND;
+      }
+    }
+    
+    function gameLoop() {
+      generateScene();
+      updateTitle();
+    }
+    
+
+    function startGame() {
+      world = Array(WORLD_LENGTH).fill(GROUND).join('');
+      updateTitle();
+      gameInterval = setInterval(gameLoop, 250); // Slower speed (300ms)
+    }
+  
+    startGame();
+  </script>
 </html>

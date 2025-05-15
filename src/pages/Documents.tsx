@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 interface FileStatus {
   name: string;
@@ -6,10 +6,9 @@ interface FileStatus {
 }
 
 const Documents: React.FC = () => {
-
-   useEffect(() => {
-      window.history.pushState({}, "", "/dashboard/documents");
-    }, []);
+  useEffect(() => {
+    window.history.pushState({}, "", "/dashboard/documents");
+  }, []);
 
   const [files] = React.useState<FileStatus[]>([
     { name: "GC and GS generation and usage VOG.xlsx", progress: "done" },
@@ -80,6 +79,39 @@ const Documents: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Left column */}
         <div className="w-full lg:w-[570px]">
+          {/* Google Doc preview */}
+          <div className="p-6 mb-10 rounded-lg border border-neutral-800 bg-neutral-950/60">
+            <h3 className="text-xl font-semibold text-white mb-6">
+              Admin Panel Scope
+            </h3>
+            <div
+              className="relative group cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/document/d/1LIUEgDVl4aCoNVlTGT9BUVlx8AAmLa3uoVImjLI8yzg/edit?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
+              <div className="w-full h-[420px] md:h-[600px] rounded-lg overflow-hidden border border-neutral-800 bg-black/70 relative">
+                {/* Overlay for click + visual cue */}
+                <div className="absolute inset-0 z-10 bg-black/40 opacity-0 group-hover:opacity-70 flex items-center justify-center transition-opacity pointer-events-none">
+                  <span className="text-white text-lg font-semibold">
+                    Click to open full document
+                  </span>
+                </div>
+                <iframe
+                  src="https://docs.google.com/document/d/1LIUEgDVl4aCoNVlTGT9BUVlx8AAmLa3uoVImjLI8yzg/preview"
+                  width="100%"
+                  height="100%"
+                  className="w-full h-full pointer-events-none"
+                  allowFullScreen
+                  title="Admin Panel Scope"
+                />
+              </div>           
+            </div>
+          </div>
+
           <div className="sticky top-4">
             <div className="p-6 rounded-lg border border-neutral-800 bg-neutral-950/60">
               <h3 className="text-xl font-semibold text-white mb-6">

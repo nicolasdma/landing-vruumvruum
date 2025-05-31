@@ -43,8 +43,8 @@ const payments: PaymentsItem[] = [
   },
   {
     task: "Delivery #2 – Admin panel",
-    delivered: false,
-    paid: false,
+    delivered: true,
+    paid: true,
   },
   {
     task: "Delivery #3 – Testing & tweaks (1 week)",

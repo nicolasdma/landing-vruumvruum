@@ -6,7 +6,7 @@ import Projects from "./Projects";
 import Laboratory from "./Laboratory";
 import { Tab } from "@headlessui/react";
 
-const TAB_ITEMS = ["Projects", "Documents", "Suggestions", "Laboratory"];
+const TAB_ITEMS = [];
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState(0);

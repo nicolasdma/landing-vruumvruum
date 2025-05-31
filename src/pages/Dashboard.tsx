@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import Header from "../components/Header";
 import Documents from "./Documents";
@@ -6,7 +7,7 @@ import Projects from "./Projects";
 import Laboratory from "./Laboratory";
 import { Tab } from "@headlessui/react";
 
-const TAB_ITEMS = [];
+const TAB_ITEMS = [] as any
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState(0);

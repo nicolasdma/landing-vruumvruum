@@ -2,18 +2,17 @@ export const suggestions = [
   {
     title: "💳 WalletConnect Integration for GC Payments",
     description: [
-      "We will implement a crypto-native payment system using WalletConnect, wagmi, and viem. Users will be able to buy in-game currency (GC) using EVM-compatible tokens like ETH, USDT, and MATIC.",
-      "The frontend will present 5 purchase options (1,000 GC to 10,000 GC) tied to fixed USD values. It fetches real-time conversion rates using the CoinGecko API, calculates the required crypto, initiates the transaction via the user’s wallet, and logs the transaction hash.",
-      "The backend (Supabase + optional Node.js/Edge Functions) confirms transactions using Alchemy webhooks or ethers.js polling. After validating the recipient, sender, and amount, it credits the user's GC balance and stores the transaction.",
-      "This system gives full control over the payment flow, avoids KYC requirements, and lays the foundation for a scalable Web3-native user experience.",
+      "WalletConnect enables a decentralized way to accept crypto payments directly from EVM-compatible wallets like MetaMask or Trust Wallet. It supports tokens such as ETH, USDT, MATIC, and more, without requiring any third-party intermediaries or KYC.",
+      "The frontend implementation involves displaying 5 purchase options tied to fixed USD amounts (e.g., 1,000 GC for $10). It uses the CoinGecko API to fetch real-time conversion rates, calculates the equivalent crypto amount, and initiates the transaction through the user’s wallet.",
+      "After the user completes the payment, the backend listens for on-chain confirmation using Alchemy webhooks or ethers.js polling. Once verified — including recipient, sender, and amount — it credits the user’s GC balance and logs the transaction in Supabase.",
+      "This setup provides full control over the payment process, avoids compliance friction, and lays the foundation for a Web3-native experience. However, it requires more technical effort and doesn’t support fiat or card payments.",
     ],
     timeEstimate: [
-      { task: "Setup WalletConnect, wagmi, and Web3Modal", time: "2–3 hours" },
-      { task: "Create 5 purchase buttons with USD values", time: "1 hour" },
+      { task: "Setup WalletConnect, wagmi, and Web3Modal", time: "3–4 hours" },
       { task: "Integrate CoinGecko API for real-time prices", time: "1 hour" },
       {
         task: "Handle transaction logic and send txHash to backend",
-        time: "2–3 hours",
+        time: "3–4 hours",
       },
       {
         task: "Implement backend logic to confirm transactions (Alchemy webhook or polling)",
@@ -25,8 +24,8 @@ export const suggestions = [
       },
       { task: "Test on Sepolia or Polygon Amoy testnet", time: "2–3 hours" },
     ],
-    total: "13–17 hours",
-    cost: "$64",
+    total: "14–18 hours",
+    cost: "$72",
     rate: "$4/hr",
     workingDays: "2–3 working days",
   },

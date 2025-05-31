@@ -3,7 +3,7 @@ export const suggestions = [
     title: "💳 WalletConnect Integration for GC Payments",
     description: [
       "WalletConnect enables a decentralized way to accept crypto payments directly from EVM-compatible wallets like MetaMask or Trust Wallet. It supports tokens such as ETH, USDT, MATIC, and more, without requiring any third-party intermediaries or KYC.",
-      "The frontend implementation involves displaying 5 purchase options tied to fixed USD amounts (e.g., 1,000 GC for $10). It uses the CoinGecko API to fetch real-time conversion rates, calculates the equivalent crypto amount, and initiates the transaction through the user’s wallet.",
+      "The frontend implementation involves displaying purchases options tied to fixed USD amounts (e.g., 1,000 GC for $10). It uses the CoinGecko API to fetch real-time conversion rates, calculates the equivalent crypto amount, and initiates the transaction through the user’s wallet.",
       "After the user completes the payment, the backend listens for on-chain confirmation using Alchemy webhooks or ethers.js polling. Once verified — including recipient, sender, and amount — it credits the user’s GC balance and logs the transaction in Supabase.",
       "This setup provides full control over the payment process, avoids compliance friction, and lays the foundation for a Web3-native experience. However, it requires more technical effort and doesn’t support fiat or card payments.",
     ],

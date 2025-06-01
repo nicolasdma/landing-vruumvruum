@@ -91,7 +91,7 @@ const Suggestions: React.FC = () => {
             <tbody className="text-neutral-200">
               <tr className="border-t border-neutral-800">
                 <td className="px-4 py-2">Setup Time</td>
-                <td className="px-4 py-2">13–17 hours</td>
+                <td className="px-4 py-2">14–18 hours</td>
                 <td className="px-4 py-2">7–8 hours</td>
               </tr>
               <tr className="border-t border-neutral-800">

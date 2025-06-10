@@ -46,29 +46,40 @@ const EXPERIMENTS = [
 
 const Lab = () => {
   return (
-    <section className="relative w-full py-24 px-0 md:px-16 bg-black text-white">
-      {/* Grid background */}
-      <div className="absolute inset-0 bg-black dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_2px)] dark:bg-[size:80px_80px] pointer-events-none z-0" />
+    <section className="relative w-full min-h-screen bg-black text-white py-24 sm:py-32">
+      {/* Grid Background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
+      {/* Radial Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
+      
+      {/* Blue Glow Effect */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
 
-      <div className="relative top-20 z-10 max-w-7xl mx-auto space-y-16">
-        {/* Title Section */}
-        <div className="max-w-3xl relative">
-          <p className="text-sm uppercase tracking-widest text-neutral-400 mb-2">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="max-w-3xl space-y-6 mb-16">
+          <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
             vruumvruum.lab
           </p>
           <TextGenerateEffect
             words="👋 Hi there. You're on the experimental corner."
-            className="text-3xl md:text-5xl font-bold leading-tight sticky"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400"
           />
-          <p className="mt-4 text-lg text-neutral-400">
-            Here you’ll find all kinds of 3D visuals, animations, shaders and
+          <p className="text-lg text-neutral-400 leading-relaxed">
+            Here you'll find all kinds of 3D visuals, animations, shaders and
             creative development related stuff. Take a look at the examples
-            below
+            below.
           </p>
         </div>
-        <div className="relative">
+
+        {/* Experiments Grid */}
+        <div className="space-y-8">
           {EXPERIMENTS.map((experiment, index) => (
-            <div key={index} className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-9 sm:p-10">
+            <div 
+              key={index} 
+              className="group relative bg-black/50 backdrop-blur-sm border border-neutral-800/50 rounded-2xl overflow-hidden hover:border-neutral-700 transition-all duration-500"
+            >
               <LabCard
                 title={experiment.title}
                 description={experiment.description}

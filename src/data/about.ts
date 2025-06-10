@@ -1,15 +1,15 @@
 export const navItems = [
-    { name: "Essence", link: "#about" },
-    { name: "Masterclass", link: "#projects" },
-    { name: "Admiration", link: "#testimonials" },
-    { name: "Sacred Channel", link: "#contact" },
+    { name: "Work", link: "#work" },
+    { name: "Lab", link: "#lab" },
+    { name: "About", link: "#about" },
+    { name: "Contact", link: "#contact" },
   ];
   
   export const gridItems = [
     {
       id: 1,
-      title: "I champion client collaboration, curating seamless communication channels that redefine success",
-      description: "",
+      title: "Building digital experiences that move",
+      description: "Fast, fluid, and conversion-focused",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
@@ -18,8 +18,8 @@ export const navItems = [
     },
     {
       id: 2,
-      title: "Flexibility with time zones? I transcend geographical limitations",
-      description: "",
+      title: "Global reach, local impact",
+      description: "Working across time zones and borders",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -28,8 +28,8 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "My Tech Stack: A carefully curated array of technologies that power innovation",
-      description: "Perfection is a continuous pursuit",
+      title: "Modern tech stack",
+      description: "Built for performance and scale",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
       titleClassName: "justify-center",
@@ -38,8 +38,8 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "An insatiable passion for technology fuels my relentless drive for development excellence",
-      description: "",
+      title: "Driven by innovation",
+      description: "Pushing the boundaries of web development",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -49,8 +49,8 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently engineering a cutting-edge JavaScript Animation Library",
-      description: "A pioneering contribution to the world of interactive web experiences",
+      title: "Building the future of web animation",
+      description: "Creating tools that empower developers",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -59,8 +59,8 @@ export const navItems = [
     },
     {
       id: 6,
-      title: "Are you ready to collaborate on an extraordinary project?",
-      description: "",
+      title: "Ready to build something extraordinary?",
+      description: "Let's create something amazing together",
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -155,29 +155,29 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Sr. React Developer",
-      desc: "Built sleek, modular interfaces with React. Helped millions create animated stories with cutting-edge tools.",
+      title: "Senior Frontend Developer",
+      desc: "Building modern web applications with React and TypeScript. Focused on performance and user experience.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Jr. Full Stack",
-      desc: "Tackled full stack tasks in a fast-moving startup. React, Node.js, MongoDB—learned fast, shipped faster.",
+      title: "Full Stack Developer",
+      desc: "Developing full-stack solutions with React, Node.js, and modern databases. Fast-paced startup environment.",
       className: "md:col-span-2",
       thumbnail: "/exp2.svg",
     },
     {
       id: 3,
-      title: "JavaScript Tutor",
-      desc: "Guided new devs through JS fundamentals and real-world projects. Made hard concepts click.",
+      title: "JavaScript Instructor",
+      desc: "Teaching modern JavaScript and web development. Creating engaging learning experiences.",
       className: "md:col-span-2",
       thumbnail: "/exp3.svg",
     },
     {
       id: 4,
-      title: "Turning Data into UI",
-      desc: "Created internal tools and dashboards with React. Led the move to modern frontend workflows.",
+      title: "UI/UX Developer",
+      desc: "Creating beautiful and functional user interfaces. Leading the transition to modern frontend workflows.",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
@@ -188,17 +188,20 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
-      link: "https://github.com/nicolasdma"
+      link: "https://github.com/nicolasdma",
+      name: "GitHub"
     },
     {
       id: 2,
       img: "/twit.svg",
-      link: "https://www.instagram.com/nicolas.demaria/"
+      link: "https://www.instagram.com/nicolas.demaria/",
+      name: "Instagram"
     },
     {
       id: 3,
       img: "/link.svg",
-      link: "https://www.linkedin.com/in/nicolasdemaria/"
+      link: "https://www.linkedin.com/in/nicolasdemaria/",
+      name: "LinkedIn"
     },
   ];
   

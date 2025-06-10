@@ -5,6 +5,7 @@ import FlipWords from "../ui/FlipWords";
 import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
+import Contact from "./Contact";
 // import Experience from "./Expirience";
 // import { Canvas } from "@react-three/fiber";
 // import { Model } from "./Model";
@@ -14,41 +15,70 @@ const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);
   return (
     <>
-      <div className="pb-48 pt-1 h-[100vh] flex justify-center">
-        <div className="flex h-screen w-full items-center justify-center bg-white dark:bg-black absolute top-0 left-0 dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.075)_1px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.075)_2px,transparent_1px)] dark:bg-[size:100px_100px]">
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" />
-        </div>
-        <div className="flex relative py-5 sm:mt-10 sm:mb-20 z-10 h-[80vh] sm:w-[65vw] my-o mx-auto justify-center">
-          <div className="flex flex-col items-center justify-between">
-            <div className="flex flex-col items-start sm:items-center">
-              <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+      <div className="relative min-h-screen bg-black text-white overflow-hidden">
+        {/* Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
+        
+        {/* Blue Glow Effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
+
+        {/* Main Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl w-full space-y-8">
+            {/* Header Section */}
+            <div className="space-y-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium text-center">
                 Argentina-born. Web-bound.
               </p>
 
-              <TextGenerateEffect
-                // words="Turning Smooth Ideas into Bold Digital Journeys"
-                words="Frontend that moves. Fast."
-                className="text-left text-[45px] md:text-5xl lg:text-8xl lg:tracking-tighter"
-              />
-              <p className="text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl w-full h-24 text-neutral-500 dark:text-neutral-300">
-                I&apos;m Nicolás, a frontend developer building fast, expressive
-                digital products — based in
-                <FlipWords words={basedList} />
-              </p>
+              <div className="space-y-4">
+                <TextGenerateEffect
+                  words="Frontend that moves. Fast."
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400"
+                />
+                
+                <p className="text-base sm:text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl">
+                  I&apos;m Nicolás, a frontend developer building fast, expressive
+                  digital products — based in{" "}
+                  <span className="text-blue-400">
+                    <FlipWords words={basedList} />
+                  </span>
+                </p>
+              </div>
             </div>
 
-            <a href="about">
-              <MagicButton
-                title="Send me a message"
-                trailingIcon={<FaLocationArrow />}
-              />
-            </a>
+            {/* CTA Button */}
+            <div className="flex justify-center sm:justify-start pt-4">
+              <a 
+                href="about"
+                className="group"
+              >
+                <MagicButton
+                  title="Send me a message"
+                  trailingIcon={<FaLocationArrow className="group-hover:translate-x-1 transition-transform duration-300" />}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Section */}
+        <div className="relative z-10 border-t border-neutral-800/50 mt-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h1 className="text-[16vw] sm:text-[12vw] font-extrabold tracking-tighter uppercase leading-none text-neutral-900 hover:text-neutral-800 transition-colors duration-500">
+              VRMVRM.25
+            </h1>
           </div>
         </div>
       </div>
       {/* <Experience /> */}
       <Lab />
       <Capabilities />
+
+      <Contact />
       {/* <div className="h-screen w-full flex justify-center items-center"> */}
       {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Model />
@@ -77,11 +107,6 @@ const Hero = () => {
           </Bvh>
         </Canvas> */}
       {/* </div> */}
-      <div className="relative z-10 flex flex-col justify-between bg-brand-k pb-4 lg:h-[calc(100dvh)]">
-        <h1 className="text-[16vw] font-extrabold border-b border-neutral-600 tracking-tighter uppercase leading-none text-[#C4C4C4]">
-          VRMVRM.25
-        </h1>
-      </div>
     </>
   );
 };

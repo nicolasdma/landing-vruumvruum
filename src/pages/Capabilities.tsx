@@ -30,14 +30,14 @@ const CapabilityGroup = ({
   description,
   items,
 }: CapabilityGroupProps) => (
-  <div>
-    <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-    <p className="text-neutral-400 mb-6">{description}</p>
+  <div className="group">
+    <h3 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-blue-400 transition-colors duration-300">{title}</h3>
+    <p className="text-neutral-400 mb-6 leading-relaxed">{description}</p>
     <div className="flex flex-wrap gap-3">
       {items.map((item, index) => (
         <div
           key={index}
-          className="text-sm px-4 py-1.5 bg-neutral-900 text-white rounded-full border border-neutral-800 hover:border-white transition-colors duration-300"
+          className="text-sm px-4 py-1.5 bg-neutral-900/50 text-white rounded-full border border-neutral-800 hover:border-blue-400 hover:bg-neutral-800/50 transition-all duration-300 ease-out"
         >
           {item}
         </div>
@@ -48,19 +48,19 @@ const CapabilityGroup = ({
 
 const ExperienceSection = () => (
   <section className="relative w-full bg-black text-white py-24 sm:py-32 overflow-hidden">
-    {/* Blue Glow */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
+    {/* Enhanced Glow Effect */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
 
-    <div className="relative z-10 max-w-7xl mx-auto">
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
-        <p className="text-xs uppercase tracking-[0.2em] text-blue-400">
+        <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
           vruumvruum.web3
         </p>
-        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400">
           Latest Drop
         </h2>
-        <p className="text-base sm:text-lg text-neutral-500 max-w-xl">
+        <p className="text-base sm:text-lg text-neutral-500 max-w-xl leading-relaxed">
           A selection of ongoing work for forward-thinking teams building at the
           edge of web3. Real clients, real users, and real results — designed
           and developed with a focus on performance, clarity, and scale.
@@ -68,25 +68,26 @@ const ExperienceSection = () => (
       </div>
 
       {/* Project Block */}
-      <div className="relative rounded-xl h-[70vh] mt-20 overflow-hidden border border-neutral-800 bg-neutral-950">
+      <div className="relative rounded-xl h-[70vh] mt-20 overflow-hidden border border-neutral-800 bg-neutral-950/50 backdrop-blur-sm hover:border-neutral-700 transition-colors duration-500">
         {/* Background image */}
         <img
           src="/lab/valleyofguardians-full.png"
           alt="Valley of Guardians"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90 z-0" />
 
         <a
           href="https://valleyofguardians.xyz"
           target="_blank"
           rel="noopener noreferrer"
+          className="group block h-full"
         >
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center">
-            {/* Text (shown second on small screens, first on md+) */}
-            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center h-full">
+            {/* Text */}
+            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm sm:p-8 rounded-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500">
               <div className="space-y-4">
-                <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Valley of Guardians
                 </p>
                 <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
@@ -96,13 +97,12 @@ const ExperienceSection = () => (
                   immersive experience.
                 </p>
               </div>
-              <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
+              <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800/50 group-hover:border-neutral-700 transition-colors duration-300">
                 Web3 Gaming · Instant Payments · Multi-Chain
-                {/* Web3 · Onchain Payments · Edge Functions */}
               </p>
             </div>
 
-            {/* Canvas (shown first on small screens, second on md+) */}
+            {/* Canvas */}
             <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
               <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
                 <Bvh>
@@ -120,7 +120,7 @@ const ExperienceSection = () => (
                     <directionalLight position={[10, 10, 5]} intensity={1} />
                     <Model
                       position={[-1.2, -1.2, 0]}
-                      rotation={[0, -0.3, 0]} // rotated slightly left
+                      rotation={[0, -0.3, 0]}
                       scale={0.5}
                     />
                   </Center>
@@ -132,12 +132,9 @@ const ExperienceSection = () => (
       </div>
 
       {/* Additional Project Summary */}
-      <div className="grid grid-cols-1 md:grid-cols-2 items-start mt-8">
-        {/* Left side: more description */}
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start mt-8 gap-8">
+        {/* Left side */}
         <div className="space-y-4 max-w-xl">
-          {/* <h3 className="text-xl font-semibold text-white">
-            About this project
-          </h3> */}
           <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
             Built for a growing web3 gaming studio, Valley of Guardians merges
             blockchain infrastructure with compelling gameplay. From real-time
@@ -145,25 +142,19 @@ const ExperienceSection = () => (
             delivers a frictionless player experience powered by modern
             architecture and smart contract integrations.
           </p>
-
-          {/* CTA link */}
         </div>
 
-        {/* Right side: tech stack or rating */}
+        {/* Right side */}
         <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm items-end">
           <div className="flex items-center gap-3 flex-wrap">
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Vite</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">
-              Tailwind
-            </span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Reown</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">wagmi</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">
-              Supabase
-            </span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">
-              QuickNode
-            </span>
+            {["Vite", "Tailwind", "Reown", "wagmi", "Supabase", "QuickNode"].map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 bg-neutral-900/50 rounded-full border border-neutral-800/50 hover:border-blue-400/50 hover:bg-neutral-800/50 transition-all duration-300"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
 
           <div className="flex items-center gap-1 text-yellow-400 mt-2 sm:mt-0">
@@ -185,14 +176,14 @@ const Capabilities = () => {
       <div className="max-w-6xl mx-auto space-y-24">
         <ExperienceSection />
         <div className="space-y-6 max-w-3xl">
-          <p className="text-sm uppercase tracking-widest text-neutral-400">
+          <p className="text-sm uppercase tracking-widest text-neutral-400 font-medium">
             vruumvruum.capabilities
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400">
             Crafted on the road
           </h2>
-          <p className="text-lg text-neutral-400">
-            Because greatness isn’t shaped in stillness — it’s forged in chaos,
+          <p className="text-lg text-neutral-400 leading-relaxed">
+            Because greatness isn't shaped in stillness — it's forged in chaos,
             fueled by the need to keep evolving and creating things that move
             forward. vruumvruum is a one-person studio, born on the road, built
             in unpredictable conditions, and driven by motion. <br />
@@ -228,9 +219,6 @@ const Capabilities = () => {
             items={["Campaign Assets", "Growth Design", "Sales Tools"]}
           />
         </div>
-
-        {/*
-        <FreelanceSection /> */}
       </div>
     </section>
   );

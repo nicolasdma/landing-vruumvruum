@@ -51,23 +51,23 @@ const ExperienceSection = () => (
     {/* Blue Glow */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
 
-    <div className="relative z-10 max-w-7xl mx-auto space-y-20">
+    <div className="relative z-10 max-w-7xl mx-auto">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <p className="text-xs uppercase tracking-[0.2em] text-blue-400">
           vruumvruum.web3
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
-          Featured projects
+          Latest Drop
         </h2>
         <p className="text-base sm:text-lg text-neutral-500 max-w-xl">
-          You’ve hit the onchain zone. Real-time payments, no KYC, just pure
-          web3 magic — all built straight into the UX.
+          A glimpse into what’s taking shape right now. Built live, iterated
+          fast, and grounded in real onchain experiments.
         </p>
       </div>
 
       {/* Project Block */}
-      <div className="relative rounded-xl h-[70vh] overflow-hidden border border-neutral-800 bg-neutral-950">
+      <div className="relative rounded-xl h-[70vh] mt-20 overflow-hidden border border-neutral-800 bg-neutral-950">
         {/* Background image */}
         <img
           src="/lab/valleyofguardians-full.png"
@@ -76,80 +76,79 @@ const ExperienceSection = () => (
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-0" />
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-12 items-center">
-          {/* Text (shown second on small screens, first on md+) */}
-          <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
-            <div className="space-y-4">
-              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-                Valley of Guardians
-              </p>
-              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                A web3-native game with real-time wallet payments and onchain
-                rewards — fast, seamless, and fully decentralized.
+        <a
+          href="https://valleyofguardians.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center">
+            {/* Text (shown second on small screens, first on md+) */}
+            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
+              <div className="space-y-4">
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+                  Valley of Guardians
+                </p>
+                <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+                  A web3-native game with real-time wallet payments and onchain
+                  rewards — fast, seamless, and fully decentralized.
+                </p>
+              </div>
+              <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
+                Web3 · Onchain Payments · Edge Functions
               </p>
             </div>
-            <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
-              Web3 · Onchain Payments · Edge Functions
-            </p>
-          </div>
 
-          {/* Canvas (shown first on small screens, second on md+) */}
-          <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
-            <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
-              <Bvh>
-                <Center>
-                  <OrbitControls
-                    enableDamping
-                    dampingFactor={0.2}
-                    enableZoom={false}
-                    minDistance={1}
-                    maxDistance={3}
-                  />
-                  <ambientLight intensity={3} />
-                  <directionalLight position={[10, 10, 5]} intensity={1} />
-                  <Model
-                    position={[-1.2, -1.2, 0]}
-                    rotation={[0, -0.3, 0]} // rotated slightly left
-                    scale={0.5}
-                  />
-                </Center>
-              </Bvh>
-            </Canvas>
+            {/* Canvas (shown first on small screens, second on md+) */}
+            <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
+              <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+                <Bvh>
+                  <Center>
+                    <OrbitControls
+                      enableDamping
+                      dampingFactor={0.2}
+                      enableZoom={false}
+                      minDistance={1}
+                      maxDistance={3}
+                    />
+                    <ambientLight intensity={3} />
+                    <directionalLight position={[10, 10, 5]} intensity={1} />
+                    <Model
+                      position={[-1.2, -1.2, 0]}
+                      rotation={[0, -0.3, 0]} // rotated slightly left
+                      scale={0.5}
+                    />
+                  </Center>
+                </Bvh>
+              </Canvas>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       {/* Additional Project Summary */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-16 border-t border-neutral-800">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start mt-8">
         {/* Left side: more description */}
         <div className="space-y-4 max-w-xl">
-          <h3 className="text-xl font-semibold text-white">
+          {/* <h3 className="text-xl font-semibold text-white">
             About this project
-          </h3>
+          </h3> */}
           <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-            Valley of Guardians is more than a game — it's a proof of concept
-            for frictionless web3 UX. It combines onchain logic, real-time
-            payment validation, and multi-chain support across Ethereum, Solana,
-            and Bitcoin, all built with modern frontend architecture and
-            edge-first APIs.
+            Valley of Guardians is where game design meets infrastructure. Built
+            to test what's possible with onchain mechanics, real-time payments,
+            and seamless wallet interactions—across Ethereum, Solana, and
+            Bitcoin. It’s not just playable—it’s architectural. A technical
+            foundation wrapped in a story-first experience.
           </p>
 
           {/* CTA link */}
-          <a
-            href="https://valleyofguardians.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 text-sm text-blue-400 hover:underline"
-          >
-            Launch project ↗
-          </a>
         </div>
 
         {/* Right side: tech stack or rating */}
-        <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm">
+        <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm items-end">
           <div className="flex items-center gap-3 flex-wrap">
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">Vite</span>
             <span className="px-3 py-1 bg-neutral-800 rounded-full">
-              Next.js
+              Tailwind
             </span>
             <span className="px-3 py-1 bg-neutral-800 rounded-full">Reown</span>
             <span className="px-3 py-1 bg-neutral-800 rounded-full">wagmi</span>
@@ -173,25 +172,6 @@ const ExperienceSection = () => (
     </div>
   </section>
 );
-
-// const FreelanceSection = () => (
-//   <div className="pt-32 border-t border-neutral-800 space-y-12">
-//     <h3 className="text-2xl md:text-4xl font-semibold">
-//       Independent Projects
-//     </h3>
-//     <p className="text-lg text-neutral-400 max-w-2xl">
-//       As a solo operator, I’ve partnered with early-stage startups, artists,
-//       and global clients to ship high-end web experiences — fully remote, fully
-//       async, always on the move.
-//     </p>
-//     <ul className="grid md:grid-cols-2 gap-4 text-neutral-300 text-base list-disc pl-6">
-//       <li>Custom portfolio sites for artists and photographers</li>
-//       <li>Product landing pages built for conversion</li>
-//       <li>Brand design systems from scratch</li>
-//       <li>Design-to-code handoffs and rapid MVPs</li>
-//     </ul>
-//   </div>
-// );
 
 const Capabilities = () => {
   return (

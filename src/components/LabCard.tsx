@@ -71,7 +71,7 @@ const LabCard: React.FC<LabCardProps> = ({
       </div>
 
       {/* Description */}
-      <div className="flex flex-col justify-center text-neutral-300">
+      <div className="flex flex-col justify-center text-neutral-300 px-4 pb-4 sm:p-0">
         <h3 className="text-2xl font-semibold mb-4">
           0{index} — {title}
         </h3>

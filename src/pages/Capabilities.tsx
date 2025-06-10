@@ -1,3 +1,24 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Bvh, Center } from "@react-three/drei";
+
+function Model(props: any) {
+  const { nodes } = useGLTF(
+    "/Infernal_Flamekeeper_0508023418_texture.glb"
+  ) as any;
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.mesh_0.geometry}
+        material={nodes.mesh_0.material}
+      />
+    </group>
+  );
+}
+
 interface CapabilityGroupProps {
   title: string;
   description: string;
@@ -26,52 +47,77 @@ const CapabilityGroup = ({
 );
 
 const ExperienceSection = () => (
-  <section className="relative w-full bg-black text-white py-32 overflow-hidden">
-    {/* Electric blue background glow */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
+  <section className="relative w-full bg-black text-white py-24 sm:py-32 overflow-hidden">
+    {/* Blue Glow */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
 
-    <div className="max-w-7xl mx-auto space-y-20 relative z-10">
-      {/* Section Heading */}
-      <div className="space-y-6 max-w-3xl">
-        <p className="text-sm uppercase tracking-widest text-blue-400">
+    {/* Section Content */}
+    <div className="relative z-10 max-w-7xl mx-auto space-y-20 sm:px-6">
+      {/* Header */}
+      <div className="space-y-4 max-w-3xl">
+        <p className="text-xs uppercase tracking-[0.2em] text-blue-400">
           vruumvruum.web3
         </p>
-        <h2 className="text-5xl md:text-7xl font-bold">Featured projects</h2>
-        <p className="text-lg text-neutral-400">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
+          Featured projects
+        </h2>
+        <p className="text-base sm:text-lg text-neutral-500 max-w-xl">
           You’ve hit the onchain zone. Real-time payments, no KYC, just pure
           web3 magic — all built straight into the UX.
         </p>
       </div>
 
-      {/* Asymmetric Project Grid */}
-      <div className="grid md:grid-cols-[1.5fr_1fr] gap-6 items-center">
-        {/* Larger Image Column */}
-        <div className="w-full overflow-hidden border border-neutral-800">
-          <img
-            src="/lab/valleyofguardians-full.png"
-            alt="Valley of Guardians"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+      {/* Project Block */}
+      <div className="relative rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950">
+        {/* Background image */}
+        <img
+          src="/lab/valleyofguardians-full.png"
+          alt="Valley of Guardians"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
+        />
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-0" />
 
-        {/* Text Column */}
-        <div className="space-y-6">
-          <p className="text-2xl font-semibold text-white">
-            Valley of Guardians
-          </p>
-          <p className="text-lg text-neutral-400 leading-relaxed">
-            By combining real-time payments with seamless wallet interactions,
-            Valley of Guardians reimagines the web3 gaming experience. Built
-            with Reown AppKit, wagmi, and custom Solana and Bitcoin adapters, it
-            bridges blockchain infrastructure and gameplay in a way that feels
-            effortless. Serverless confirmations via Supabase Edge Functions and
-            QuickNode ensure every transaction is fast, verifiable, and
-            KYC-free—delivering a crypto-native experience that’s as smooth as
-            it is scalable.
-          </p>
-          <p className="text-sm text-blue-400 uppercase tracking-widest mt-8">
-            Web3 · Onchain Payments · Edge Functions
-          </p>
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12 p-6 sm:p-10 md:p-16 items-center">
+          {/* Canvas */}
+          <div className="w-full h-[300px] sm:h-[400px] md:h-full">
+            <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+              <Bvh>
+                <Center>
+                  <OrbitControls
+                    enableDamping
+                    dampingFactor={0.2}
+                    enableZoom={false}
+                    minDistance={1}
+                    maxDistance={3}
+                  />
+                  <ambientLight intensity={3} />
+                  <directionalLight position={[10, 10, 5]} intensity={1} />
+                  <Model
+                    position={[-1.2, -1.2, 0]}
+                    rotation={[0, 0, 0]}
+                    scale={0.5}
+                  />
+                </Center>
+              </Bvh>
+            </Canvas>
+          </div>
+
+          {/* Text */}
+          <div className="flex flex-col justify-between h-full bg-black sm:p-8 rounded-xl">
+            <div className="space-y-4">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+                Valley of Guardians
+              </p>
+              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+                A web3-native game with real-time wallet payments and onchain
+                rewards — fast, seamless, and fully decentralized.
+              </p>
+            </div>
+            <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
+              Web3 · Onchain Payments · Edge Functions
+            </p>
+          </div>
         </div>
       </div>
     </div>

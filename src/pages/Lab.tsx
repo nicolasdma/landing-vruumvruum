@@ -46,7 +46,7 @@ const EXPERIMENTS = [
 
 const Lab = () => {
   return (
-    <section className="relative w-full py-24 px-6 md:px-16 bg-black text-white">
+    <section className="relative w-full py-24 px-0 md:px-16 bg-black text-white">
       {/* Grid background */}
       <div className="absolute inset-0 bg-black dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_2px)] dark:bg-[size:80px_80px] pointer-events-none z-0" />
 
@@ -68,7 +68,7 @@ const Lab = () => {
         </div>
         <div className="relative">
           {EXPERIMENTS.map((experiment, index) => (
-            <div key={index} className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-9 p-10">
+            <div key={index} className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-9 sm:p-10">
               <LabCard
                 title={experiment.title}
                 description={experiment.description}

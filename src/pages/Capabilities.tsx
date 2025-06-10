@@ -177,6 +177,7 @@ const Capabilities = () => {
   return (
     <section className="relative w-full bg-black text-white md:px-16 py-32">
       <div className="max-w-6xl mx-auto space-y-24">
+      <ExperienceSection />
         <div className="space-y-6 max-w-3xl">
           <p className="text-sm uppercase tracking-widest text-neutral-400">
             vruumvruum.capabilities
@@ -221,7 +222,7 @@ const Capabilities = () => {
             items={["Campaign Assets", "Growth Design", "Sales Tools"]}
           />
         </div>
-        <ExperienceSection />
+
         {/*
         <FreelanceSection /> */}
       </div>

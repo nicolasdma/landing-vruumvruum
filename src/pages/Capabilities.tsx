@@ -61,8 +61,9 @@ const ExperienceSection = () => (
           Latest Drop
         </h2>
         <p className="text-base sm:text-lg text-neutral-500 max-w-xl">
-          A glimpse into what’s taking shape right now. Built live, iterated
-          fast, and grounded in real onchain experiments.
+          A selection of ongoing work for forward-thinking teams building at the
+          edge of web3. Real clients, real users, and real results — designed
+          and developed with a focus on performance, clarity, and scale.
         </p>
       </div>
 
@@ -89,12 +90,15 @@ const ExperienceSection = () => (
                   Valley of Guardians
                 </p>
                 <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                  A web3-native game with real-time wallet payments and onchain
-                  rewards — fast, seamless, and fully decentralized.
+                  A next-gen web3 game designed for scale. Seamless wallet
+                  payments, instant onchain rewards, and native support for
+                  Ethereum, Solana, and Bitcoin — all wrapped in a rich,
+                  immersive experience.
                 </p>
               </div>
               <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
-                Web3 · Onchain Payments · Edge Functions
+                Web3 Gaming · Instant Payments · Multi-Chain
+                {/* Web3 · Onchain Payments · Edge Functions */}
               </p>
             </div>
 
@@ -109,6 +113,8 @@ const ExperienceSection = () => (
                       enableZoom={false}
                       minDistance={1}
                       maxDistance={3}
+                      autoRotate
+                      autoRotateSpeed={0.1}
                     />
                     <ambientLight intensity={3} />
                     <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -133,11 +139,11 @@ const ExperienceSection = () => (
             About this project
           </h3> */}
           <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-            Valley of Guardians is where game design meets infrastructure. Built
-            to test what's possible with onchain mechanics, real-time payments,
-            and seamless wallet interactions—across Ethereum, Solana, and
-            Bitcoin. It’s not just playable—it’s architectural. A technical
-            foundation wrapped in a story-first experience.
+            Built for a growing web3 gaming studio, Valley of Guardians merges
+            blockchain infrastructure with compelling gameplay. From real-time
+            wallet transactions to cross-chain compatibility, this project
+            delivers a frictionless player experience powered by modern
+            architecture and smart contract integrations.
           </p>
 
           {/* CTA link */}
@@ -177,7 +183,7 @@ const Capabilities = () => {
   return (
     <section className="relative w-full bg-black text-white md:px-16 py-32">
       <div className="max-w-6xl mx-auto space-y-24">
-      <ExperienceSection />
+        <ExperienceSection />
         <div className="space-y-6 max-w-3xl">
           <p className="text-sm uppercase tracking-widest text-neutral-400">
             vruumvruum.capabilities

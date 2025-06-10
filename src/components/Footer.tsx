@@ -1,6 +1,8 @@
 import { socialMedia } from "../data/about";
+import { useLocale } from "../context/LocaleContext";
 
 const Footer = () => {
+  const { t } = useLocale();
   return (
     <footer className="relative border-t border-neutral-800/50 bg-black/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -11,10 +13,10 @@ const Footer = () => {
               href="/"
               className="text-white font-bold tracking-tight hover:text-blue-400 transition-colors duration-300"
             >
-              vruumvruum
+              {t.footer.brand}
             </a>
             <p className="text-sm text-neutral-500">
-              Building digital experiences that move
+              {t.footer.tagline}
             </p>
           </div>
 
@@ -24,13 +26,13 @@ const Footer = () => {
               href="/about"
               className="text-sm text-neutral-400 hover:text-white transition-colors duration-300"
             >
-              About
+              {t.footer.about}
             </a>
             <a
               href="/pricing-policy"
               className="text-sm text-neutral-400 hover:text-white transition-colors duration-300"
             >
-              Pricing
+              {t.footer.pricing}
             </a>
           </div>
 
@@ -58,7 +60,7 @@ const Footer = () => {
         {/* Bottom: Copyright */}
         <div className="mt-8 pt-8 border-t border-neutral-800/50">
           <p className="text-center text-sm text-neutral-500">
-            © {new Date().getFullYear()} vruumvruum. All rights reserved.
+            {t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}
           </p>
         </div>
       </div>

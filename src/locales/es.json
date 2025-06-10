@@ -1,0 +1,66 @@
+{
+  "contact": {
+    "title": "Contacto",
+    "mainStatement": "Construyamos lo que sigue.",
+    "email": "hola@vruumvruum.com",
+    "footer": "VRMVRM.25"
+  },
+  "about": {
+    "tagline": "Nacido en Argentina. Conectado a la web.",
+    "mainStatement": "Frontend que se mueve. Rápido.",
+    "description": "Soy Nicolás, desarrollador frontend creando productos digitales rápidos y expresivos — basado en {location}.",
+    "cta": "Envíame un mensaje",
+    "footer": "VRMVRM.25"
+  },
+  "lab": {
+    "title": "Laboratorio",
+    "mainStatement": "Experimentos en movimiento.",
+    "description": "Un espacio para experimentar, crear y probar nuevas ideas digitales."
+  },
+  "capabilities": {
+    "sectionTitle": "vruumvruum.capacidades",
+    "mainStatement": "Forjado en el camino.",
+    "description": "La grandeza no se forja en la quietud — nace del caos y la necesidad de evolucionar. vruumvruum es un estudio de una sola persona, nacido en la ruta, construido en condiciones impredecibles y movido por la acción.",
+    "groups": {
+      "web": {
+        "title": "Experiencias Web",
+        "description": "Sitios expresivos y de alto rendimiento, hechos para dejar huella — rápidos, fluidos y enfocados en la conversión."
+      },
+      "brand": {
+        "title": "Diseño de Marca",
+        "description": "Ayudando a marcas a encontrar su voz y escalar con sistemas que se mantienen afilados mientras evolucionan."
+      },
+      "spatial": {
+        "title": "Diseño Espacial & Presencial",
+        "description": "Experiencias físicas vivas, conectadas y con identidad propia."
+      },
+      "marketing": {
+        "title": "Lanzamiento & Marketing",
+        "description": "Campañas y activos de marketing que generan tracción — y se ven increíbles haciéndolo."
+      }
+    }
+  },
+  "navbar": {
+    "work": "Trabajo",
+    "lab": "Lab",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "brand": "vruumvruum",
+    "tagline": "Creando experiencias digitales que se mueven",
+    "about": "Sobre mí",
+    "pricing": "Precios",
+    "copyright": "© {year} vruumvruum. Todos los derechos reservados."
+  },
+  "aboutData": {
+    "gridItems": [
+      "Creando experiencias digitales que se mueven",
+      "Alcance global, impacto local",
+      "Stack tecnológico moderno",
+      "Impulsado por la innovación",
+      "Construyendo el futuro de la animación web",
+      "¿Listo para crear algo extraordinario?"
+    ]
+  }
+} 

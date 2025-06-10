@@ -1,7 +1,7 @@
-// Removed unused import
-// import { TextGenerateEffect } from "../ui/TextGenerateEffect";
+import { useLocale } from "../context/LocaleContext";
 
 const Contact = () => {
+  const { t } = useLocale();
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Subtle Diagonal Line Background */}
@@ -15,16 +15,16 @@ const Contact = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl w-full space-y-10">
           <div className="space-y-2">
-            <p className="text-lg sm:text-xl text-neutral-400 font-medium mb-2">Contact</p>
+            <p className="text-lg sm:text-xl text-neutral-400 font-medium mb-2">{t.contact.title}</p>
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-none tracking-tight mb-4">
-              Let&apos;s make an<br />impact together.
+              {t.contact.mainStatement}
             </h1>
             <a
-              href="mailto:hello@vruumvruum.com"
+              href={`mailto:${t.contact.email}`}
               className="block w-fit text-3xl sm:text-5xl md:text-6xl font-extrabold underline underline-offset-8 decoration-white hover:text-blue-400 transition-colors duration-300 shadow-[0_0_32px_0_rgba(255,255,255,0.15)]"
               style={{ textShadow: "0 2px 24px rgba(255,255,255,0.15)" }}
             >
-              hello@vruumvruum.com
+              {t.contact.email}
             </a>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Contact = () => {
       <div className="relative z-10 border-t border-neutral-800/50 mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-[16vw] sm:text-[12vw] font-extrabold tracking-tighter uppercase leading-none text-neutral-900 hover:text-neutral-800 transition-colors duration-500">
-            VRMVRM.25
+            {t.contact.footer}
           </h1>
         </div>
       </div>

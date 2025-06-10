@@ -6,10 +6,6 @@ import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
 import Contact from "./Contact";
-// import Experience from "./Expirience";
-// import { Canvas } from "@react-three/fiber";
-// import { Model } from "./Model";
-// import { Bvh, Center, OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);

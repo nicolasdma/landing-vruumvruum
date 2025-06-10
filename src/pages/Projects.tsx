@@ -1,9 +1,9 @@
 
-import Suggestions from "./Suggestions";
+import About from "./About";
 
 const Projects = () => {
   return (
-    <Suggestions />
+    <About />
   );
 };
 

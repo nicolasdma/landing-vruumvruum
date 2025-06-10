@@ -1,0 +1,66 @@
+{
+  "contact": {
+    "title": "Contact",
+    "mainStatement": "Let's build what's next.",
+    "email": "hello@vruumvruum.com",
+    "footer": "VRMVRM.25"
+  },
+  "about": {
+    "tagline": "Argentina-born. Web-bound.",
+    "mainStatement": "Frontend that moves. Fast.",
+    "description": "I'm Nicolás, a frontend developer building fast, expressive digital products — based in {location}.",
+    "cta": "Send me a message",
+    "footer": "VRMVRM.25"
+  },
+  "lab": {
+    "title": "Lab",
+    "mainStatement": "Experiments in motion.",
+    "description": "A playground for digital experiments, creative code, and new ideas."
+  },
+  "capabilities": {
+    "sectionTitle": "vruumvruum.capabilities",
+    "mainStatement": "Crafted on the road.",
+    "description": "Greatness isn't shaped in stillness — it's forged in chaos, fueled by the need to keep evolving. vruumvruum is a one-person studio, born on the road, built in unpredictable conditions, and driven by motion.",
+    "groups": {
+      "web": {
+        "title": "Web Experiences",
+        "description": "Expressive, high-performance sites built to leave a mark — fast, fluid, and conversion-focused."
+      },
+      "brand": {
+        "title": "Brand Design",
+        "description": "Helping brands find their voice and scale with systems that stay sharp as they evolve."
+      },
+      "spatial": {
+        "title": "IRL & Spatial Design",
+        "description": "Physical experiences that feel alive, connected, and unmistakably on-brand."
+      },
+      "marketing": {
+        "title": "Launch & Marketing",
+        "description": "Launch campaigns and marketing assets that drive traction — and look damn good doing it."
+      }
+    }
+  },
+  "navbar": {
+    "work": "Work",
+    "lab": "Lab",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "brand": "vruumvruum",
+    "tagline": "Building digital experiences that move",
+    "about": "About",
+    "pricing": "Pricing",
+    "copyright": "© {year} vruumvruum. All rights reserved."
+  },
+  "aboutData": {
+    "gridItems": [
+      "Building digital experiences that move",
+      "Global reach, local impact",
+      "Modern tech stack",
+      "Driven by innovation",
+      "Building the future of web animation",
+      "Ready to build something extraordinary?"
+    ]
+  }
+} 

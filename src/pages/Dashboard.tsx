@@ -1,20 +1,18 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
-import Header from "../components/Header";
 import Documents from "./Documents";
 import Suggestions from "./Suggestions";
 import Projects from "./Projects";
 import Laboratory from "./Laboratory";
 import { Tab } from "@headlessui/react";
 
-const TAB_ITEMS = [] as any
+
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
     <Tab.Group selectedIndex={selectedTab} onChange={setSelectedTab}>
-      <Header tabItems={TAB_ITEMS} />
+
       <div className="flex flex-col lg:flex-row gap-6 w-full">
         <div className="w-full">
           <Tab.Panels>

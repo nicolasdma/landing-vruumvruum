@@ -124,7 +124,7 @@ const Project = () => {
 
   return (
     <Tab.Group selectedIndex={selectedTab} onChange={setSelectedTab}>
-      <Header title={projectData.title} tabItems={tabItems} />
+
       <div className="flex flex-col lg:flex-row gap-6 w-full">
         <div className="w-full">
           <Tab.Panels>

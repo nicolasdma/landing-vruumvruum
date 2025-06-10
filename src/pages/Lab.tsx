@@ -63,7 +63,7 @@ const Lab = () => {
           <p className="mt-4 text-lg text-neutral-400">
             Here you’ll find all kinds of 3D visuals, animations, shaders and
             creative development related stuff. Take a look at the examples
-            below and don’t forget to leave a ⭐️ on the GitHub repo.
+            below
           </p>
         </div>
         <div className="relative">

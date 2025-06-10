@@ -25,32 +25,58 @@ const CapabilityGroup = ({
   </div>
 );
 
-// const ExperienceSection = () => (
-//   <div className="pt-32 border-t border-neutral-800 space-y-12">
-//     <h3 className="text-2xl md:text-4xl font-semibold">
-//       Trusted by forward-thinking teams
-//     </h3>
-//     <p className="text-lg text-neutral-400 max-w-2xl">
-//       I’ve worked with teams who gave me the confidence to design, teach, and
-//       build products that ship — from teaching JavaScript to shipping for global
-//       platforms.
-//     </p>
-//     <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
-//       <div className="h-10 flex items-center justify-center">
-//         <img src="/experience/lemondata.png" alt="Lemondata" width="160px" className="h-full object-contain" />
-//       </div>
-//       <div className="h-10 flex items-center justify-center">
-//         <img src="/experience/coderhouse.png" alt="Coderhouse"  width="160px" className="h-full object-contain" />
-//       </div>
-//       <div className="h-10 flex items-center justify-center">
-//         <img src="/experience/nanoapps.png" alt="NanoApps"  width="160px"  className="h-full object-contain" />
-//       </div>
-//       <div className="h-10 flex items-center justify-center">
-//         <img src="/experience/powtoon.png" alt="Powtoon" className="h-full object-contain" />
-//       </div>
-//     </div>
-//   </div>
-// );
+const ExperienceSection = () => (
+  <section className="relative w-full bg-black text-white py-32 overflow-hidden">
+    {/* Electric blue background glow */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
+
+    <div className="max-w-7xl mx-auto space-y-20 relative z-10">
+      {/* Section Heading */}
+      <div className="space-y-6 max-w-3xl">
+        <p className="text-sm uppercase tracking-widest text-blue-400">
+          vruumvruum.web3
+        </p>
+        <h2 className="text-5xl md:text-7xl font-bold">Featured projects</h2>
+        <p className="text-lg text-neutral-400">
+          You’ve hit the onchain zone. Real-time payments, no KYC, just pure
+          web3 magic — all built straight into the UX.
+        </p>
+      </div>
+
+      {/* Asymmetric Project Grid */}
+      <div className="grid md:grid-cols-[1.5fr_1fr] gap-6 items-center">
+        {/* Larger Image Column */}
+        <div className="w-full overflow-hidden border border-neutral-800">
+          <img
+            src="/lab/valleyofguardians-full.png"
+            alt="Valley of Guardians"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
+        {/* Text Column */}
+        <div className="space-y-6">
+          <p className="text-2xl font-semibold text-white">
+            Valley of Guardians
+          </p>
+          <p className="text-lg text-neutral-400 leading-relaxed">
+            By combining real-time payments with seamless wallet interactions,
+            Valley of Guardians reimagines the web3 gaming experience. Built
+            with Reown AppKit, wagmi, and custom Solana and Bitcoin adapters, it
+            bridges blockchain infrastructure and gameplay in a way that feels
+            effortless. Serverless confirmations via Supabase Edge Functions and
+            QuickNode ensure every transaction is fast, verifiable, and
+            KYC-free—delivering a crypto-native experience that’s as smooth as
+            it is scalable.
+          </p>
+          <p className="text-sm text-blue-400 uppercase tracking-widest mt-8">
+            Web3 · Onchain Payments · Edge Functions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 // const FreelanceSection = () => (
 //   <div className="pt-32 border-t border-neutral-800 space-y-12">
@@ -70,7 +96,6 @@ const CapabilityGroup = ({
 //     </ul>
 //   </div>
 // );
-
 
 const Capabilities = () => {
   return (
@@ -96,7 +121,7 @@ const Capabilities = () => {
         <div className="grid md:grid-cols-2 gap-16">
           <CapabilityGroup
             title="Web Experiences"
-            description="From concept to shipping, we craft expressive, high-performance sites that leave a mark — fast, fluid, and built to convert."
+            description="From concept to launch, expressive, high-performance sites built to leave a mark — fast, fluid, and conversion-focused."
             items={[
               "Product Strategy",
               "UX/UI Design",
@@ -106,22 +131,22 @@ const Capabilities = () => {
           />
           <CapabilityGroup
             title="Brand Design"
-            description="We help brands find their voice, sharpen their edge, and scale with systems that stay consistent — even as they evolve."
+            description="Helping brands find their voice, sharpen their edge, and scale with systems that stay consistent — even as they evolve."
             items={["Visual Identity", "Brand Systems"]}
           />
           <CapabilityGroup
             title="IRL & Spatial Design"
-            description="Pop-ups, summits, or anything in between — we design physical experiences that feel alive, connected, and on-brand."
+            description="Designing physical experiences that feel alive, connected, and unmistakably on-brand — from pop-ups to summits and beyond."
             items={["Space Design", "Keynote Design", "Interactive Moments"]}
           />
           <CapabilityGroup
             title="Launch & Marketing"
-            description="We build launch campaigns and marketing assets that drive traction — and look damn good while doing it."
+            description="Creating launch campaigns and marketing assets that drive traction — and look damn good doing it."
             items={["Campaign Assets", "Growth Design", "Sales Tools"]}
           />
         </div>
-
-        {/* <ExperienceSection />
+        <ExperienceSection />
+        {/*
         <FreelanceSection /> */}
       </div>
     </section>

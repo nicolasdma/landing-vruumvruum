@@ -51,8 +51,7 @@ const ExperienceSection = () => (
     {/* Blue Glow */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/20 blur-3xl rounded-full pointer-events-none z-0" />
 
-    {/* Section Content */}
-    <div className="relative z-10 max-w-7xl mx-auto space-y-20 sm:px-6">
+    <div className="relative z-10 max-w-7xl mx-auto space-y-20">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <p className="text-xs uppercase tracking-[0.2em] text-blue-400">
@@ -68,19 +67,34 @@ const ExperienceSection = () => (
       </div>
 
       {/* Project Block */}
-      <div className="relative rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950">
+      <div className="relative rounded-xl h-[70vh] overflow-hidden border border-neutral-800 bg-neutral-950">
         {/* Background image */}
         <img
           src="/lab/valleyofguardians-full.png"
           alt="Valley of Guardians"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-20"
         />
-        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-0" />
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12 p-6 sm:p-10 md:p-16 items-center">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-12 items-center">
+          {/* Text */}
+          <div className="flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
+            <div className="space-y-4">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+                Valley of Guardians
+              </p>
+              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+                A web3-native game with real-time wallet payments and onchain
+                rewards — fast, seamless, and fully decentralized.
+              </p>
+            </div>
+            <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
+              Web3 · Onchain Payments · Edge Functions
+            </p>
+          </div>
+
           {/* Canvas */}
-          <div className="w-full h-[300px] sm:h-[400px] md:h-full">
+          <div className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
             <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
               <Bvh>
                 <Center>
@@ -95,34 +109,69 @@ const ExperienceSection = () => (
                   <directionalLight position={[10, 10, 5]} intensity={1} />
                   <Model
                     position={[-1.2, -1.2, 0]}
-                    rotation={[0, 0, 0]}
+                    rotation={[0, -0.3, 0]} // rotated slightly left
                     scale={0.5}
                   />
                 </Center>
               </Bvh>
             </Canvas>
           </div>
+        </div>
+      </div>
 
-          {/* Text */}
-          <div className="flex flex-col justify-between h-full bg-black sm:p-8 rounded-xl">
-            <div className="space-y-4">
-              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-                Valley of Guardians
-              </p>
-              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                A web3-native game with real-time wallet payments and onchain
-                rewards — fast, seamless, and fully decentralized.
-              </p>
-            </div>
-            <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800">
-              Web3 · Onchain Payments · Edge Functions
-            </p>
+      {/* Additional Project Summary */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-16 border-t border-neutral-800">
+        {/* Left side: more description */}
+        <div className="space-y-4 max-w-xl">
+          <h3 className="text-xl font-semibold text-white">
+            About this project
+          </h3>
+          <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+            Valley of Guardians is more than a game — it's a proof of concept
+            for frictionless web3 UX. It combines onchain logic, real-time
+            payment validation, and multi-chain support across Ethereum,
+            Solana, and Bitcoin, all built with modern frontend architecture
+            and edge-first APIs.
+          </p>
+
+          {/* CTA link */}
+          <a
+            href="https://valleyofguardians.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 text-sm text-blue-400 hover:underline"
+          >
+            Launch project ↗
+          </a>
+        </div>
+
+        {/* Right side: tech stack or rating */}
+        <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm">
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">Next.js</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">Reown</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">wagmi</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">Supabase</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">QuickNode</span>
+          </div>
+
+          <div className="flex items-center gap-1 text-yellow-400 mt-2 sm:mt-0">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg
+                key={i}
+                className="w-4 h-4 fill-current"
+                viewBox="0 0 20 20"
+              >
+                <path d="M10 15l-5.878 3.09L5.4 12.545.8 8.545l6.61-.955L10 2l2.59 5.59 6.61.955-4.6 4 1.278 5.545z" />
+              </svg>
+            ))}
           </div>
         </div>
       </div>
     </div>
   </section>
 );
+
 
 // const FreelanceSection = () => (
 //   <div className="pt-32 border-t border-neutral-800 space-y-12">

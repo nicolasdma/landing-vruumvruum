@@ -77,8 +77,8 @@ const ExperienceSection = () => (
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80 z-0" />
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_2.5fr] gap-12 items-center">
-          {/* Text */}
-          <div className="flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
+          {/* Text (shown second on small screens, first on md+) */}
+          <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 sm:p-8 rounded-xl">
             <div className="space-y-4">
               <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
                 Valley of Guardians
@@ -93,8 +93,8 @@ const ExperienceSection = () => (
             </p>
           </div>
 
-          {/* Canvas */}
-          <div className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
+          {/* Canvas (shown first on small screens, second on md+) */}
+          <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
             <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
               <Bvh>
                 <Center>
@@ -129,9 +129,9 @@ const ExperienceSection = () => (
           <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
             Valley of Guardians is more than a game — it's a proof of concept
             for frictionless web3 UX. It combines onchain logic, real-time
-            payment validation, and multi-chain support across Ethereum,
-            Solana, and Bitcoin, all built with modern frontend architecture
-            and edge-first APIs.
+            payment validation, and multi-chain support across Ethereum, Solana,
+            and Bitcoin, all built with modern frontend architecture and
+            edge-first APIs.
           </p>
 
           {/* CTA link */}
@@ -148,20 +148,22 @@ const ExperienceSection = () => (
         {/* Right side: tech stack or rating */}
         <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm">
           <div className="flex items-center gap-3 flex-wrap">
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Next.js</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">
+              Next.js
+            </span>
             <span className="px-3 py-1 bg-neutral-800 rounded-full">Reown</span>
             <span className="px-3 py-1 bg-neutral-800 rounded-full">wagmi</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Supabase</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">QuickNode</span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">
+              Supabase
+            </span>
+            <span className="px-3 py-1 bg-neutral-800 rounded-full">
+              QuickNode
+            </span>
           </div>
 
           <div className="flex items-center gap-1 text-yellow-400 mt-2 sm:mt-0">
             {Array.from({ length: 5 }).map((_, i) => (
-              <svg
-                key={i}
-                className="w-4 h-4 fill-current"
-                viewBox="0 0 20 20"
-              >
+              <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path d="M10 15l-5.878 3.09L5.4 12.545.8 8.545l6.61-.955L10 2l2.59 5.59 6.61.955-4.6 4 1.278 5.545z" />
               </svg>
             ))}
@@ -171,7 +173,6 @@ const ExperienceSection = () => (
     </div>
   </section>
 );
-
 
 // const FreelanceSection = () => (
 //   <div className="pt-32 border-t border-neutral-800 space-y-12">

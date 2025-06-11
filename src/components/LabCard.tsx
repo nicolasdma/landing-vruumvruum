@@ -25,23 +25,24 @@ const LabCard: React.FC<LabCardProps> = ({
 
   // Intersection Observer for preloading
   useEffect(() => {
+    const node = videoRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInViewport(entry.isIntersecting);
       },
       {
-        rootMargin: "200px", // Start preloading when within 200px of viewport
+        rootMargin: "200px",
         threshold: 0.1,
       }
     );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+  
+    if (node) {
+      observer.observe(node);
     }
-
+  
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);

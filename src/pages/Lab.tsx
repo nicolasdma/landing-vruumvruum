@@ -50,12 +50,13 @@ const Lab = () => {
 
   // Optimize scroll performance with will-change
   useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.style.willChange = "transform";
+    const node = containerRef.current;
+    if (node) {
+      node.style.willChange = "transform";
     }
     return () => {
-      if (containerRef.current) {
-        containerRef.current.style.willChange = "auto";
+      if (node) {
+        node.style.willChange = "auto";
       }
     };
   }, []);
@@ -87,7 +88,7 @@ const Lab = () => {
           {EXPERIMENTS.map((experiment, index) => (
             <div 
               key={index} 
-              className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-9 sm:p-10 transform-gpu"
+              className="sticky bg-black border border-neutral-800 rounded-2xl my-4 top-[84px] sm:p-10 transform-gpu"
               style={{ 
                 willChange: "transform",
                 transform: "translateZ(0)"

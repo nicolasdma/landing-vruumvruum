@@ -31,7 +31,7 @@ const Contact = () => {
       </div>
 
       {/* Footer Statement */}
-      <div className="relative z-10 border-t border-neutral-800/50 mt-24">
+      <div className="relative z-10 mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-[16vw] sm:text-[12vw] font-extrabold tracking-tighter uppercase leading-none text-neutral-900 hover:text-neutral-800 transition-colors duration-500">
             {t.contact.footer}

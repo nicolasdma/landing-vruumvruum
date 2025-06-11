@@ -31,7 +31,9 @@ const CapabilityGroup = ({
   items,
 }: CapabilityGroupProps) => (
   <div className="group">
-    <h3 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-blue-400 transition-colors duration-300">{title}</h3>
+    <h3 className="text-2xl font-semibold mb-4 tracking-tight group-hover:text-blue-400 transition-colors duration-300">
+      {title}
+    </h3>
     <p className="text-neutral-400 mb-6 leading-relaxed">{description}</p>
     <div className="flex flex-wrap gap-3">
       {items.map((item, index) => (
@@ -55,7 +57,7 @@ const ExperienceSection = () => (
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
-          vruumvruum.web3
+          vruumvruum.featured
         </p>
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400">
           Latest Drop
@@ -77,15 +79,15 @@ const ExperienceSection = () => (
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90 z-0" />
 
-        <a
-          href="https://valleyofguardians.xyz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block h-full"
-        >
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center h-full">
-            {/* Text */}
-            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm sm:p-8 rounded-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center h-full">
+          {/* Text */}
+          <a
+            href="https://valleyofguardians.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block h-full cursor-alias"
+          >
+            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm sm:p-8 rounded-tl-xl rounded-bl-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500">
               <div className="space-y-4">
                 <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Valley of Guardians
@@ -101,34 +103,33 @@ const ExperienceSection = () => (
                 Web3 Gaming · Instant Payments · Multi-Chain
               </p>
             </div>
-
-            {/* Canvas */}
-            <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
-              <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
-                <Bvh>
-                  <Center>
-                    <OrbitControls
-                      enableDamping
-                      dampingFactor={0.2}
-                      enableZoom={false}
-                      minDistance={1}
-                      maxDistance={3}
-                      autoRotate
-                      autoRotateSpeed={0.1}
-                    />
-                    <ambientLight intensity={3} />
-                    <directionalLight position={[10, 10, 5]} intensity={1} />
-                    <Model
-                      position={[-1.2, -1.2, 0]}
-                      rotation={[0, -0.3, 0]}
-                      scale={0.5}
-                    />
-                  </Center>
-                </Bvh>
-              </Canvas>
-            </div>
+          </a>
+          {/* Canvas */}
+          <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh] cursor-grabbing">
+            <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
+              <Bvh>
+                <Center>
+                  <OrbitControls
+                    enableDamping
+                    dampingFactor={0.2}
+                    enableZoom={false}
+                    minDistance={1}
+                    maxDistance={3}
+                    autoRotate
+                    autoRotateSpeed={0.1}
+                  />
+                  <ambientLight intensity={3} />
+                  <directionalLight position={[10, 10, 5]} intensity={1} />
+                  <Model
+                    position={[-1.2, -1.2, 0]}
+                    rotation={[0, -0.3, 0]}
+                    scale={0.5}
+                  />
+                </Center>
+              </Bvh>
+            </Canvas>
           </div>
-        </a>
+        </div>
       </div>
 
       {/* Additional Project Summary */}
@@ -147,7 +148,14 @@ const ExperienceSection = () => (
         {/* Right side */}
         <div className="flex flex-col md:justify-end gap-4 text-neutral-500 text-sm items-end">
           <div className="flex items-center gap-3 flex-wrap">
-            {["Vite", "Tailwind", "Reown", "wagmi", "Supabase", "QuickNode"].map((tech, index) => (
+            {[
+              "Vite",
+              "Tailwind",
+              "Reown",
+              "wagmi",
+              "Supabase",
+              "QuickNode",
+            ].map((tech, index) => (
               <span
                 key={index}
                 className="px-3 py-1 bg-neutral-900/50 rounded-full border border-neutral-800/50 hover:border-blue-400/50 hover:bg-neutral-800/50 transition-all duration-300"

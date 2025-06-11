@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
 
           {/* Center: Navigation */}
-          <div className="flex space-x-8">
+          {/* <div className="flex space-x-8">
             <a
               href="/about"
               className="text-sm text-neutral-400 hover:text-white transition-colors duration-300"
@@ -34,7 +34,7 @@ const Footer = () => {
             >
               {t.footer.pricing}
             </a>
-          </div>
+          </div> */}
 
           {/* Right: Social Links */}
           <div className="flex space-x-6">
@@ -58,11 +58,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom: Copyright */}
-        <div className="mt-8 pt-8 border-t border-neutral-800/50">
+        {/* <div className="mt-8 pt-8 border-t border-neutral-800/50">
           <p className="text-center text-sm text-neutral-500">
             {t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

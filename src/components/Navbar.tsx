@@ -4,9 +4,9 @@ import { useLocale } from "../context/LocaleContext";
 const Navbar = () => {
   const { t } = useLocale();
   const navLinks = [
-    { name: t.navbar.work, link: "#work" },
-    { name: t.navbar.lab, link: "#lab" },
-    { name: t.navbar.about, link: "#about" },
+    // { name: t.navbar.work, link: "#work" },
+    // { name: t.navbar.lab, link: "#lab" },
+    // { name: t.navbar.about, link: "#about" },
     { name: t.navbar.contact, link: "#contact" },
   ];
   return (

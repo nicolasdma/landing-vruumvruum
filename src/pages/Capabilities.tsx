@@ -69,7 +69,7 @@ const ExperienceSection = () => (
       </div>
 
       {/* Project Block */}
-      <div className="relative rounded-xl h-[70vh] mt-20 overflow-hidden border border-neutral-800 bg-neutral-950/50 backdrop-blur-sm hover:border-neutral-700 transition-colors duration-500">
+      <div className="relative rounded-xl mt-10 sm:mt-20 overflow-hidden border border-neutral-800 bg-neutral-950/50 backdrop-blur-sm hover:border-neutral-700 transition-colors duration-500 w-full max-w-full sm:h-[70vh] flex flex-col">
         {/* Background image */}
         <img
           src="/lab/valleyofguardians-full.png"
@@ -78,7 +78,7 @@ const ExperienceSection = () => (
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90 z-0" />
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-12 items-center h-full">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-4 md:gap-12 items-center h-full">
           {/* Text */}
           <a
             href="https://valleyofguardians.xyz"
@@ -86,25 +86,22 @@ const ExperienceSection = () => (
             rel="noopener noreferrer"
             className="group block h-full cursor-alias"
           >
-            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm sm:p-8 rounded-tl-xl rounded-bl-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500">
-              <div className="space-y-4">
+            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm p-4 sm:p-8 rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500 w-full max-w-full">
+              <div className="space-y-2 sm:space-y-4">
                 <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Valley of Guardians
                 </p>
                 <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                  A next-gen web3 game designed for scale. Seamless wallet
-                  payments, instant onchain rewards, and native support for
-                  Ethereum, Solana, and Bitcoin — all wrapped in a rich,
-                  immersive experience.
+                  A next-gen web3 game designed for scale. Seamless wallet payments, instant onchain rewards, and native support for Ethereum, Solana, and Bitcoin — all wrapped in a rich, immersive experience.
                 </p>
               </div>
-              <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-6 pt-4 border-t border-neutral-800/50 group-hover:border-neutral-700 transition-colors duration-300">
+              <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-4 sm:mt-6 pt-2 sm:pt-4 border-t border-neutral-800/50 group-hover:border-neutral-700 transition-colors duration-300">
                 Web3 Gaming · Instant Payments · Multi-Chain
               </p>
             </div>
           </a>
           {/* Canvas */}
-          <div className="order-1 md:order-2 w-full h-[50vh] sm:h-[60vh] md:h-[70vh] cursor-grabbing">
+          <div className="order-1 md:order-2 w-full h-[40vw] min-h-[180px] max-h-[300px] sm:h-[50vh] md:h-[70vh] cursor-grabbing">
             <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
               <Bvh>
                 <Center>

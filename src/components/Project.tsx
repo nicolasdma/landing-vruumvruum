@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Tab } from "@headlessui/react";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Progress from "../pages/Progress";
 import Tasks from "../pages/Tasks";
 import Activity from "../pages/Activity";
@@ -94,18 +94,18 @@ const Project = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [projectData, setProjectData] = useState<ProjectData | null>(null);
 
-  const getTabItems = (data: ProjectData | null) => {
-    if (!data) return [];
-    const items = [];
+  // const getTabItems = (data: ProjectData | null) => {
+  //   if (!data) return [];
+  //   const items = [];
 
-    if (data.progress) items.push("Progress");
-    if (data.tasks) items.push("Tasks");
-    if (data.activity) items.push("Activity");
-    if (data.payments) items.push("Payments");
+  //   if (data.progress) items.push("Progress");
+  //   if (data.tasks) items.push("Tasks");
+  //   if (data.activity) items.push("Activity");
+  //   if (data.payments) items.push("Payments");
 
-    return items;
-  };
-  const tabItems = getTabItems(projectData);
+  //   return items;
+  // };
+  // const tabItems = getTabItems(projectData);
 
   useEffect(() => {
     // Simulate a fetch or API call to get project data based on the `projectId`

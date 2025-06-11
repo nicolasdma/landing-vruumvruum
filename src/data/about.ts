@@ -183,28 +183,6 @@ export const navItems = [
     },
   ];
   
-  
-  export const socialMedia = [
-    {
-      id: 1,
-      img: "/git.svg",
-      link: "https://github.com/nicolasdma",
-      name: "GitHub"
-    },
-    {
-      id: 2,
-      img: "/twit.svg",
-      link: "https://www.instagram.com/nicolas.demaria/",
-      name: "Instagram"
-    },
-    {
-      id: 3,
-      img: "/link.svg",
-      link: "https://www.linkedin.com/in/nicolasdemaria/",
-      name: "LinkedIn"
-    },
-  ];
-  
   // export const basedIn = [
   //   "Argentina 🇦🇷: A Land of Untapped Potential",
   //   "Chile 🇨🇱: The Beating Heart of Innovation",

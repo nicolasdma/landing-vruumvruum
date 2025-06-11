@@ -1,5 +1,33 @@
-import { socialMedia } from "../data/about";
 import { useLocale } from "../context/LocaleContext";
+import { FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
+
+// Example for mapping:
+const socialMedia = [
+  {
+    id: "instagram",
+    name: "Instagram",
+    link: "https://www.instagram.com/nicolas.demaria/",
+    icon: <FaInstagram />,
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    link: "https://github.com/nicolasdma",
+    icon: <FaGithub />,
+  },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/nicolasdemaria/",
+    icon: <FaLinkedin />,
+  },
+  // {
+  //   id: "twitter",
+  //   name: "Twitter",
+  //   link: "https://twitter.com",
+  //   icon: <FaTwitter />,
+  // },
+];
 
 const Footer = () => {
   const { t } = useLocale();
@@ -15,9 +43,7 @@ const Footer = () => {
             >
               {t.footer.brand}
             </a>
-            <p className="text-sm text-neutral-500">
-              {t.footer.tagline}
-            </p>
+            <p className="text-sm text-neutral-500">{t.footer.tagline}</p>
           </div>
 
           {/* Center: Navigation */}
@@ -47,11 +73,7 @@ const Footer = () => {
                 className="text-neutral-400 hover:text-white transition-colors duration-300"
                 aria-label={social.name}
               >
-                <img
-                  src={social.img}
-                  alt={social.name}
-                  className="h-5 w-5"
-                />
+                <span className="text-xl">{social.icon}</span>
               </a>
             ))}
           </div>

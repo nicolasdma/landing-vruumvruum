@@ -21,18 +21,48 @@ const LabCard: React.FC<LabCardProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isInViewport, setIsInViewport] = useState(false);
 
+  // Intersection Observer for preloading
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInViewport(entry.isIntersecting);
+      },
+      {
+        rootMargin: "200px", // Start preloading when within 200px of viewport
+        threshold: 0.1,
+      }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
+  // Handle video loading
+  useEffect(() => {
+    if (isInViewport && videoRef.current) {
+      // Start preloading when in viewport
+      videoRef.current.preload = "auto";
+      videoRef.current.load();
+    }
+  }, [isInViewport]);
+
+  // Handle hover state
   useEffect(() => {
     if (isHovered && videoRef.current) {
-      // Reset loaded state when hover starts
-      setIsVideoLoaded(false);
-      
-      // Check if video is already loaded
-      if (videoRef.current.readyState >= 3) { // 3 = HAVE_FUTURE_DATA
+      if (videoRef.current.readyState >= 3) {
         setIsVideoLoaded(true);
-      } else {
-        videoRef.current.load();
       }
+    } else {
+      setIsVideoLoaded(false);
     }
   }, [isHovered]);
 
@@ -52,13 +82,18 @@ const LabCard: React.FC<LabCardProps> = ({
         <img
           src={thumbnailSrc}
           alt="Preview thumbnail"
-          className={`w-full h-full object-cover transition-opacity duration-300 ${(isHovered && isVideoLoaded) ? 'opacity-0' : 'opacity-100'}`}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isHovered && isVideoLoaded ? "opacity-0" : "opacity-100"
+          }`}
+          loading="lazy"
         />
         
         {/* Video element (always in DOM but hidden until loaded) */}
         <video
           ref={videoRef}
-          className={`w-full h-full object-cover absolute top-0 rounded-2xl left-0 transition-opacity duration-300 ${(isHovered && isVideoLoaded) ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-full h-full object-cover absolute top-0 rounded-2xl left-0 transition-opacity duration-300 ${
+            isHovered && isVideoLoaded ? "opacity-100" : "opacity-0"
+          }`}
           src={videoSrc}
           autoPlay
           loop

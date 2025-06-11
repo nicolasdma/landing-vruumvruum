@@ -63,8 +63,7 @@ const ExperienceSection = () => (
           Latest Drop
         </h2>
         <p className="text-base sm:text-lg text-neutral-500 max-w-xl leading-relaxed">
-          A selection of ongoing work for forward-thinking teams building at the
-          edge of web3. Real clients, real users, and real results — designed
+          A selection of ongoing work for forward-thinking teams. Real clients, real users, and real results — designed
           and developed with a focus on performance, clarity, and scale.
         </p>
       </div>

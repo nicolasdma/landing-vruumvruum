@@ -18,8 +18,9 @@ const LocaleContext = createContext<LocaleContextProps | undefined>(undefined);
 
 export const LocaleProvider = ({ children }: { children: ReactNode }) => {
   const getInitialLang = (): Lang => {
-    const browserLang = navigator.language.slice(0, 2);
-    return LANGS.includes(browserLang as Lang) ? (browserLang as Lang) : "en";
+    // const browserLang = navigator.language.slice(0, 2);
+    // return LANGS.includes(browserLang as Lang) ? (browserLang as Lang) : "en";
+    return LANGS[0];
   };
 
   const [lang, setLang] = useState<Lang>(getInitialLang());

@@ -22,8 +22,8 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
 
         {/* Main Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl w-full space-y-8">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
+          <div className="max-w-4xl w-full space-y-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             {/* Header Section */}
             <div className="space-y-6">
               <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium text-center">

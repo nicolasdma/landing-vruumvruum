@@ -61,11 +61,11 @@ const Lab = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-24 px-0 md:px-16 bg-black text-white">
+    <section className="relative w-full py-24 bg-black text-white">
       {/* Grid background */}
       <div className="absolute inset-0 bg-black dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_2px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_2px)] dark:bg-[size:80px_80px] pointer-events-none z-0" />
 
-      <div ref={containerRef} className="relative top-20 z-10 max-w-7xl mx-auto space-y-16">
+      <div ref={containerRef} className="relative top-20 z-10 max-w-7xl mx-auto space-y-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Title Section */}
         <div className="max-w-3xl relative">
           <p className="text-sm uppercase tracking-widest text-neutral-400 mb-2">

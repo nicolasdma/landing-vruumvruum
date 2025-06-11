@@ -53,7 +53,7 @@ const ExperienceSection = () => (
     {/* Enhanced Glow Effect */}
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
 
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative z-10 max-w-7xl mx-auto">
       {/* Header */}
       <div className="space-y-4 max-w-3xl">
         <p className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
@@ -176,8 +176,8 @@ const ExperienceSection = () => (
 
 const Capabilities = () => {
   return (
-    <section className="relative w-full bg-black text-white md:px-16 py-32">
-      <div className="max-w-6xl mx-auto space-y-24">
+    <section className="relative w-full bg-black text-white py-32">
+      <div className="max-w-6xl mx-auto space-y-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <ExperienceSection />
         <div className="space-y-6 max-w-3xl">
           <p className="text-sm uppercase tracking-widest text-neutral-400 font-medium">

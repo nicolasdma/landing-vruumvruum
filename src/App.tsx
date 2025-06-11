@@ -13,7 +13,7 @@ import { LocaleProvider } from "./context/LocaleContext";
 const App: React.FC = () => {
   return (
     <LocaleProvider>
-      <div className="flex flex-col min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 pb-4">
+      <div className="flex flex-col min-h-screen pt-6 pb-4">
         <Navbar />
         <div className="flex-grow w-full">
           <Router>

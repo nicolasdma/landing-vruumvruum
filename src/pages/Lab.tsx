@@ -14,7 +14,7 @@ const EXPERIMENTS = [
   {
     title: "Stickers",
     description:
-      "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
+      "Testing Three.js decal system with Drei and Fiber. The experiment focuses on attaching multiple geometries to a sphere's surface while maintaining the original mesh's topology. Each sticker follows the sphere's curvature without performance impact, even with multiple layers.",
     videoSrc: "/lab/stickers.mp4",
     thumbnailSrc: "/lab/stickers.webp",
     url: "https://dma-laboratory.vercel.app/",
@@ -22,7 +22,7 @@ const EXPERIMENTS = [
   {
     title: "Studio",
     description:
-      "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
+      "Blender model experiment with sound reactivity. The model is baked and optimized for web rendering, with camera position triggering different audio samples. Testing the limits of browser-based 3D with audio-visual synchronization.",
     videoSrc: "/lab/studio.mp4",
     thumbnailSrc: "/lab/studio.webp",
     url: "https://studio-building.vercel.app/",
@@ -30,7 +30,7 @@ const EXPERIMENTS = [
   {
     title: "Phone model",
     description:
-      "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
+      "iPhone 3D model test using Three.js material system. Experimenting with dynamic color changes and PBR materials in real-time. Testing performance optimization techniques for complex product visualization in the browser.",
     videoSrc: "/lab/studio.mp4",
     thumbnailSrc: "/lab/apple.webp",
     url: "https://studio-building.vercel.app/",
@@ -38,7 +38,7 @@ const EXPERIMENTS = [
   {
     title: "Just a moto",
     description:
-      "A Three.js experiment blending GLSL noise, displacement mapping and interactivity. This is where creative coding meets performance-optimized frontend.",
+      "Testing AI-generated 3D model integration with Three.js. The experiment explores automated model generation and optimization for web rendering, focusing on material quality and performance balance in the browser environment.",
     videoSrc: "/lab/studio.mp4",
     thumbnailSrc: "/lab/moto.webp",
     url: "https://moto-model.vercel.app/",

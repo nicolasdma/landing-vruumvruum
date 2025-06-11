@@ -14,10 +14,10 @@ const Hero = () => {
       <div className="relative min-h-screen bg-black text-white overflow-hidden">
         {/* Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-        
+
         {/* Radial Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
-        
+
         {/* Blue Glow Effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
 
@@ -35,10 +35,10 @@ const Hero = () => {
                   words="Frontend that moves. Fast."
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-400"
                 />
-                
+
                 <p className="text-base sm:text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl">
-                  I&apos;m Nicolás, a frontend developer building fast, expressive
-                  digital products — based in{" "}
+                  I&apos;m Nicolás, a frontend developer building fast,
+                  expressive digital products — based in{" "}
                   <span className="text-blue-400">
                     <FlipWords words={basedList} />
                   </span>
@@ -48,15 +48,12 @@ const Hero = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center sm:justify-start pt-4">
-              <a 
-                href="about"
-                className="group"
-              >
-                <MagicButton
-                  title="Send me a message"
-                  trailingIcon={<FaLocationArrow className="group-hover:translate-x-1 transition-transform duration-300" />}
-                />
-              </a>
+              <MagicButton
+                title="Send me a message"
+                trailingIcon={
+                  <FaLocationArrow className="group-hover:translate-x-1 transition-transform duration-300" />
+                }
+              />
             </div>
           </div>
         </div>

@@ -63,8 +63,9 @@ const ExperienceSection = () => (
           Latest Drop
         </h2>
         <p className="text-base sm:text-lg text-neutral-500 max-w-xl leading-relaxed">
-          A selection of ongoing work for forward-thinking teams. Real clients, real users, and real results — designed
-          and developed with a focus on performance, clarity, and scale.
+          A selection of ongoing work for forward-thinking teams. Real clients,
+          real users, and real results — designed and developed with a focus on
+          performance, clarity, and scale.
         </p>
       </div>
 
@@ -86,13 +87,16 @@ const ExperienceSection = () => (
             rel="noopener noreferrer"
             className="group block h-full cursor-alias"
           >
-            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm p-4 sm:p-8 rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl border border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500 w-full max-w-full">
+            <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm p-4 sm:p-8   border-r border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500 w-full max-w-full">
               <div className="space-y-2 sm:space-y-4">
                 <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                   Valley of Guardians
                 </p>
                 <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                  A next-gen web3 game designed for scale. Seamless wallet payments, instant onchain rewards, and native support for Ethereum, Solana, and Bitcoin — all wrapped in a rich, immersive experience.
+                  A next-gen web3 game designed for scale. Seamless wallet
+                  payments, instant onchain rewards, and native support for
+                  Ethereum, Solana, and Bitcoin — all wrapped in a rich,
+                  immersive experience.
                 </p>
               </div>
               <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-4 sm:mt-6 pt-2 sm:pt-4 border-t border-neutral-800/50 group-hover:border-neutral-700 transition-colors duration-300">
@@ -196,7 +200,7 @@ const Capabilities = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16 cursor-default">
           <CapabilityGroup
             title="Web Experiences"
             description="From concept to launch, expressive, high-performance sites built to leave a mark — fast, fluid, and conversion-focused."

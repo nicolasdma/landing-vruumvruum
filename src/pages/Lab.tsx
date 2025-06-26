@@ -33,7 +33,7 @@ const EXPERIMENTS = [
       "iPhone 3D model test using Three.js material system. Experimenting with dynamic color changes and PBR materials in real-time. Testing performance optimization techniques for complex product visualization in the browser.",
     videoSrc: "/lab/studio.mp4",
     thumbnailSrc: "/lab/apple.webp",
-    url: "https://studio-building.vercel.app/",
+    url: "https://apple-clone-lyart-eta.vercel.app/",
   },
   {
     title: "Just a moto",

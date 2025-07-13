@@ -67,8 +67,6 @@ const Hero = () => {
             </h1>
           </div>
         </div>
-      </div>
-      {/* About Me Section */}
       <section id="about" className="flex flex-col md:flex-row items-center gap-8 mt-10 animate-fade-in-up bg-neutral-900/70 rounded-xl p-6 shadow-lg border border-neutral-800 max-w-4xl mx-auto mb-16">
         <img
           src="/nicolas.jpg"
@@ -86,6 +84,8 @@ const Hero = () => {
           </p>
         </div>
       </section>
+      </div>
+      {/* About Me Section */}
 
       <section id="lab">
         <Lab />

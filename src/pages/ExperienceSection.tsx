@@ -42,24 +42,9 @@ const ExperienceSection = () => (
 
       {/* Project Block */}
       <div className="relative rounded-xl mt-10 sm:mt-20 overflow-hidden border border-neutral-800 bg-neutral-950/50 backdrop-blur-sm hover:border-neutral-700 transition-colors duration-500 w-full max-w-full sm:h-[70vh] flex flex-col">
-        {/* Background image */}
-        <a
-          href="https://valleyofguardians.xyz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block h-full cursor-alias"
-        >
-          <img
-            src="/lab/valleyofguardians-full.jpg"
-            alt="Valley of Guardians"
-            className="absolute inset-0 w-full h-full object-cover z-0 opacity-20 transition-opacity duration-500 group-hover:opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/90 z-0" />
-        </a>
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.25fr] gap-4 md:gap-12 items-center h-full">
-          {/* Text */}
-
-          <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm p-4 sm:p-8   border-r border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500 w-full max-w-full">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-0 items-center h-full">
+          {/* Text Section */}
+          <div className="order-2 md:order-1 flex flex-col justify-between h-full bg-black/40 backdrop-blur-sm p-4 sm:p-8 border-r border-neutral-800/50 group-hover:border-neutral-700 transition-all duration-500 w-full max-w-full">
             <div className="space-y-2 sm:space-y-4">
               <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
                 Valley of Guardians
@@ -70,7 +55,7 @@ const ExperienceSection = () => (
                 Ethereum, Solana, and Bitcoin — all wrapped in a rich, immersive
                 experience.
               </p>
-              <div className="order-1 md:order-2 w-full h-[40vw] min-h-[180px] max-h-[300px] sm:h-[50vh] md:h-[70vh] cursor-grabbing">
+              <div className="w-full h-[40vw] min-h-[180px] max-h-[300px] sm:h-[50vh] md:h-[70vh] cursor-grabbing">
                 <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
                   <Bvh>
                     <Center>
@@ -81,7 +66,7 @@ const ExperienceSection = () => (
                         minDistance={1}
                         maxDistance={3}
                         autoRotate
-                        autoRotateSpeed={0.1}
+                        autoRotateSpeed={1}
                       />
                       <ambientLight intensity={3} />
                       <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -98,6 +83,22 @@ const ExperienceSection = () => (
             <p className="text-xs sm:text-sm text-blue-400 uppercase tracking-widest mt-4 sm:mt-6 pt-2 sm:pt-4 border-t border-neutral-800/50 group-hover:border-neutral-700 transition-colors duration-300">
               Web3 Gaming · Instant Payments · Multi-Chain
             </p>
+          </div>
+
+          {/* Image Section */}
+          <div className="order-1 md:order-2 w-full h-full overflow-hidden">
+            <a
+              href="https://valleyofguardians.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block h-full cursor-alias"
+            >
+              <img
+                src="/valley_of_guardinas.png"
+                alt="Valley of Guardians"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { basedIn } from "../data/about";
 import Lab from "./Lab";
 import Capabilities from "./Capabilities";
 import Contact from "./Contact";
+import ExperienceSection from "./ExperienceSection";
 
 const Hero = () => {
   const basedList = basedIn.sort(() => Math.random() - 0.5);
@@ -15,8 +16,8 @@ const Hero = () => {
         {/* Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
-        {/* Radial Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-transparent" />
+
 
         {/* Blue Glow Effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none z-0 animate-pulse" />
@@ -67,11 +68,37 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {/* <Experience /> */}
-      <Lab />
-      <Capabilities />
+      {/* About Me Section */}
+      <section id="about" className="flex flex-col md:flex-row items-center gap-8 mt-10 animate-fade-in-up bg-neutral-900/70 rounded-xl p-6 shadow-lg border border-neutral-800 max-w-4xl mx-auto mb-16">
+        <img
+          src="/nicolas.jpg"
+          alt="Nicolás on Interceptor 650"
+          className="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-blue-400 shadow-xl mb-4 md:mb-0 hover:scale-105 transition-transform duration-300"
+        />
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl font-bold text-white mb-2">About Me</h2>
+          <p className="text-base md:text-lg text-neutral-300 max-w-xl">
+            With over <span className="text-blue-400 font-semibold">5 years of experience</span> crafting modern, high-performance React applications, I&apos;ve helped startups and established brands bring their digital visions to life. <br className="hidden md:block" />
+            <br />
+            Currently, I&apos;m traveling the world on my <span className="text-blue-400 font-semibold">Royal Enfield Interceptor 650</span>, blending my passion for adventure with my love for building beautiful, interactive web experiences. <br className="hidden md:block" />
+            <br />
+            Let&apos;s create something amazing together!
+          </p>
+        </div>
+      </section>
 
-      <Contact />
+      <section id="lab">
+        <Lab />
+      </section>
+      <section id="experience">
+        <ExperienceSection />
+      </section>
+      <section id="capabilities">
+        <Capabilities />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       {/* <div className="h-screen w-full flex justify-center items-center"> */}
       {/* <Canvas camera={{ fov: 50, position: [0, 0, 1.3] }}>
           <Model />

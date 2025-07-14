@@ -1,9 +1,7 @@
-import { useLocale } from "../context/LocaleContext";
 import { useRef, useState } from "react";
 import confetti from "canvas-confetti";
 
 const Navbar = () => {
-  const { t } = useLocale();
   const contactButtonRef = useRef<HTMLButtonElement | null>(null);
   const [copied, setCopied] = useState(false);
 

@@ -178,21 +178,21 @@ const PhotoCarousel = () => {
       image: "/workshop.jpg",
       style: { objectPosition: 'center 50%' }
     },
-    { 
-      title: "Strategy Planning", 
-      description: "Building the future of web experiences",
-      image: "/nicolas.jpg"
-    },
-    { 
-      title: "Strategy Planning", 
-      description: "Building the future of web experiences",
-      image: "/nicolas.jpg"
-    },
-    { 
-      title: "Strategy Planning", 
-      description: "Building the future of web experiences",
-      image: "/nicolas.jpg"
-    },
+    // { 
+    //   title: "Strategy Planning", 
+    //   description: "Building the future of web experiences",
+    //   image: "/nicolas.jpg"
+    // },
+    // { 
+    //   title: "Strategy Planning", 
+    //   description: "Building the future of web experiences",
+    //   image: "/nicolas.jpg"
+    // },
+    // { 
+    //   title: "Strategy Planning", 
+    //   description: "Building the future of web experiences",
+    //   image: "/nicolas.jpg"
+    // },
   ];
 
   const nextSlide = () => {
